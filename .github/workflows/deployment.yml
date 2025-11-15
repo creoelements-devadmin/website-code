@@ -55,7 +55,7 @@ jobs:
           rm -rf ./*
 
           # Copy new react build
-          cp -r react/* .
+          cp -r ../react/* .
 
           # Commit and push
           git add .
