@@ -1,0 +1,143 @@
+.clients-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25% !important;
+    z-index: 10;
+    position: relative;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.clients-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .clients-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .clients-slide-track {
+    display: flex;
+    animation: scroll 15s linear infinite;
+  }
+  
+  .client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-width: 150px;
+    height: 80px;
+  }
+  
+  .client-logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+
+  .swiper-free-mode > .swiper-wrapper{
+    transition-timing-function : linear;
+  }
+
+  .clients-container h2 {
+    color: #000000;
+    font-size: 3rem;
+    font-family: 'Poppins';
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.firstswiper-wrapper {
+    height: 100px;
+    width: 100%;
+}
+
+.secondswiper-wrapper {
+    height: 100px;
+    width: 100%;
+}
+
+.clients-container-wrapper {
+    height: fit-content;
+    width: 100%;
+}
+
+.clients-swiper-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.clients-swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.clients-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background: linear-gradient(90deg, white 0%, transparent 18%), linear-gradient(270deg, white 0%, transparent 18%);
+}
+
+
+@media screen and (max-width: 865px) {
+  .testimonials-container .testimonials-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.clients-container-wrapper {
+  height: fit-content;
+  width: 100%;
+}
+.testimonials-container .left-side-test {
+    width: 100%;
+    height: 50%;
+}
+
+.testimonials-container .right-side-test {
+    width: 100%;
+    height: 50%;
+    padding: 0px;
+}
+
+.testimonials-container .testimonial-content p {
+    font-size: 1rem !important;
+}
+
+.testimonials-container .testimonial-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: scroll;
+}
+}

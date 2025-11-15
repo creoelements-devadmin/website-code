@@ -1,0 +1,42 @@
+.text-animation {
+  display: inline;
+}
+
+.text-wrapper {
+  position: relative;
+}
+
+.text-wrapper h1 , .text-wrapper .wave-text {
+  z-index: 4;
+  color: #000;
+  white-space: nowrap;
+  position: absolute;
+  margin: 0px;
+  font-weight: 600;
+}
+
+.text-wrapper h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 1px #3eb8a2;
+
+}
+
+.text-wrapper .wave-text {
+  color: #3eb8a2;
+  animation: wave 4s ease-in-out infinite;
+  -webkit-text-stroke: 1px #3eb8a2;
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 46%, 17% 45%, 34% 50%, 56% 61%,
+        69% 62%, 86% 60%, 100% 51%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 59%, 16% 64%, 33% 65%, 52% 61%,
+        70% 52%, 85% 47%, 100% 48%, 100% 100%, 0% 100%);
+  }
+}

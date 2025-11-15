@@ -1,0 +1,89 @@
+.contact-page {
+    min-height: 100vh;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-page-wrapper{
+    width: 75%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 5px;
+    color: white;
+    align-items: flex-end;
+}
+
+.contact-form input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+input[type="text"], input[type="number"], input[type="email"], input[type="url"] {
+    background-color: transparent;
+    border: 0px solid white;
+    border-bottom: 2px solid white;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 0px;
+    height: 1.55rem;
+}
+
+input[type="text"]::placeholder, input[type="number"]::placeholder, input[type="email"]::placeholder, input[type="url"]::placeholder {
+    font-size: 1.25rem;
+}
+
+label {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+
+.page-title {
+    min-height: 12rem;
+}
+
+.submit-button {
+    width: 100%;
+}
+
+button.callback-button {
+    background-color: transparent;
+    border: none;
+}
+
+select {
+    font-size: 1.25rem;
+    /* height: 1.5rem; */
+    background-color: transparent;
+    border: none;
+    color: #757575;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+@media screen and (max-width: 825px) {
+    .page-title {
+        min-height: 12rem;
+        display: flex;
+        align-items: center;
+    }
+    input[type="text"], input[type="number"], input[type="email"], input[type="url"] {
+        min-width: 250px;
+    }
+}

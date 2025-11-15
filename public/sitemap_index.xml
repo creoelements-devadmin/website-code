@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://creo-elements.com/</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://creo-elements.com/about</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Work with Us -->
+  <url>
+    <loc>https://creo-elements.com/work-with-us</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://creo-elements.com/contact-us</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://creo-elements.com/blog</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Individual Blogs -->
+
+
+  <!-- Clients -->
+  <url>
+    <loc>https://creo-elements.com/clients</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://creo-elements.com/services/web-development</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/social-media</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/seo</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/digital-marketing</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/branding</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/performance-marketing</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/packaging</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/gifting-solutions</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/print-solutions</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/photography</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/services/pr</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Team Members -->
+  <url>
+    <loc>https://creo-elements.com/team/naeem-a-merchant</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/team/hiral-doctor</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/team/vinay</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/team/vidhi</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/team/rouhan</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/team/anindita</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/team/prasad</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://creo-elements.com/team/anand</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Not Found (404) -->
+  <url>
+    <loc>https://creo-elements.com/404</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.10</priority>
+  </url>
+
+</urlset>

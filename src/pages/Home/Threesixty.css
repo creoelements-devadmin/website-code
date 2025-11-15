@@ -1,0 +1,36 @@
+.threesixty {
+    height: 130vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.threesixty-container {
+    opacity: 0.5;
+    height: 300px;
+    width: 300px;
+    transform: rotate(45deg);
+    background-color: #242424;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.threesixty-text {
+    transform: translateX(10vw);
+    padding-top: 10%;
+    font-size: 0px;
+    color: white;
+    text-wrap: nowrap;
+}
+
+/* .threesixty-container {
+    height: 100vh;
+    width: 100vw;
+    transform: rotate(0deg);
+    border-radius: 0px;
+} */
+@media (max-width: 826px) {
+.threesixty-text{
+    padding-top: 40%;
+}
+}

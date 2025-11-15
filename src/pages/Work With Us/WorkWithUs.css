@@ -1,0 +1,83 @@
+.contact-page {
+    min-height: 100vh;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.work-with-us-page-wrapper{
+    width: 75%;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox input[type='checkbox'] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .custom-checkbox input[type='checkbox']:checked {
+    background-color: #333;
+  }
+  
+  .custom-checkbox input[type='checkbox']:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 3px;
+    top: -1px;
+  }
+  
+  .file-upload-wrapper {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  
+  .file-upload-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .file-upload-input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 2px dashed #999;
+    border-radius: 8px;
+    /* background-color: #f9f9f9; */
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .file-upload-input:hover {
+    border-color: #333;
+  }
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  

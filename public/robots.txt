@@ -1,0 +1,8 @@
+# Allow all web crawlers to access everything
+User-agent: *
+Disallow:
+
+# (Add disallowed pages here in the future)
+
+# Sitemap location (important for SEO)
+Sitemap: https://creo-elements.com/sitemap.xml

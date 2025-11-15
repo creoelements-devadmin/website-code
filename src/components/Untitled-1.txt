@@ -1,0 +1,195 @@
+<style>
+    
+  
+  .main-menu.open {
+    display: flex;
+    /* Styles when the menu is open (for mobile) */
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .sub-menu {
+    display: none;
+    list-style: none;
+  }
+  li.menu-items.has-sub-menu {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+ .has-sub-menu:hover .sub-menu {
+    display: flex;
+    gap: 0px;
+  }
+  
+  .hamburger {
+    display: none;
+    /* Other styles for the hamburger */
+  }
+  
+  
+  header {
+    position: fixed;
+    display: flex;
+    border-radius: 50px;
+    height: 50px;
+    font-size: 17.5px;
+    bottom: 20px;
+    left: 15vw;
+    width: 70vw;
+    line-height: 17px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins';
+    background-color: #ffffff14;
+    padding: 0px 15px 0px 15px;
+}
+
+
+ul.sub-menu {
+    display: none;
+}
+
+
+ul.sub-menu {
+  position: absolute;
+  bottom: calc(2rem + 20px);
+  list-style: none;
+  padding-left: 0px;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  box-shadow: 0px 0px 2px 2px grey;
+  background-color: white !important;
+}
+
+li.sub-menu-items {
+    height: calc((100% / 11) - 0.1rem);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+}
+
+li.sub-menu-items a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+li.sub-menu-items:hover {
+    background-color: #cccccc;
+}
+
+/* Default for desktop view */
+
+
+.main-menu.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media (min-width: 769px){
+  .main-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .main-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  ul.main-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    padding: 0px;
+}
+}
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    display: flex;
+    border-radius: 50px;
+    height: 50px;
+    font-size: 17.5px;
+    bottom: 20px;
+    left: 45vw;
+    width: 10vw;
+    line-height: 17px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins';
+    background-color: #ffffff14;
+    padding: 0px 15px 0px 15px;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger {
+  display: block;
+  z-index: 3;
+}
+  .main-menu {
+    /* display: none; */
+    width: 0vw;
+    overflow: hidden;
+    transition: width 0.5s ease,
+  }
+
+  .main-menu.open {
+    display: flex !important;
+    position: fixed !important;
+    top: -90vh;
+    left: -45vw;
+    width: 70vw;
+    list-style: none;
+    text-align: left;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+li.menu-items {
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+  .sub-menu {
+    position: static;
+    height: auto;
+    box-shadow: none;
+  }
+}
+
+</style><header><button class="hamburger" aria-label="Open Menu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></button><nav aria-label="Main Navigation"><ul class="main-menu"><li class="menu-items"><a class="clickable" href="/" style="cursor: none;">Home</a></li><li class="menu-items has-sub-menu"><span>What We Do</span><ul class="sub-menu"><li class="sub-menu-items"><a class="clickable" href="/services/social-media">Social Media</a></li><li class="sub-menu-items"><a class="clickable" href="/services/web-development">Web Design / Development</a></li><li class="sub-menu-items"><a class="clickable" href="/services/seo">SEO</a></li><li class="sub-menu-items"><a class="clickable" href="/services/digital-marketing">Digital Marketing</a></li><li class="sub-menu-items"><a class="clickable" href="/services/branding">Branding</a></li><li class="sub-menu-items"><a class="clickable" href="/services/performance-marketing">Performance Marketing</a></li><li class="sub-menu-items"><a class="clickable" href="/services/packaging" style="cursor: none;">Packaging</a></li><li class="sub-menu-items"><a class="clickable" href="/services/gifting-solutions" style="cursor: none;">Gifting Solutions</a></li><li class="sub-menu-items"><a class="clickable" href="/services/print-solutions" style="cursor: none;">Print Solutions</a></li><li class="sub-menu-items"><a class="clickable" href="/services/photography" style="cursor: none;">Photography</a></li><li class="sub-menu-items"><a class="clickable" href="/services/pr" style="cursor: none;">Public Relations (PR)</a></li></ul></li><li class="menu-items"><a class="clickable" href="/about" style="cursor: none;">About Us</a></li><li class="menu-items"><a class="clickable" href="/work-with-us" style="cursor: none;">Work With Us</a></li><li class="menu-items"><a class="clickable" href="/clients" style="cursor: none;">Our Clients</a></li><li class="menu-items"><a class="clickable" href="/contact-us" style="cursor: none;">Contact Us</a></li><li class="menu-items"><a class="clickable" href="/blog" style="cursor: none;">Blogs</a></li></ul></nav></header>

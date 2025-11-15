@@ -1,0 +1,58 @@
+.grid-container {
+    position: absolute; /* Keeps the grid positioned within its container */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .grid {
+    position: sticky; /* Sticks the grid within the boundaries of the parent */
+    top: 0; /* Adjust this to control how far from the top it sticks */
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .grid-one {
+    top: 10%; /* Adjust position within the section */
+    left: 10%;
+    width: 40vw;
+    height: 40vh;
+  }
+  
+  .grid-two {
+    top: 60%;
+    left: 90%;
+    width: 40vw;
+    height: 40vh;
+}
+  
+  .grid-svg {
+    z-index: 1;
+  }
+  
+  .blur {
+    position: absolute;
+    height: 12rem;
+    width: 12rem;
+    background-color: rgba(62, 184, 162, 0.9);
+    filter: blur(100px);
+    border-radius: 100px;
+    z-index: 0;
+  }
+  
+
+
+
+
+  .grid-1{
+    z-index: 1;
+}  .grid-2{
+  z-index: 2;
+}  .grid-3{
+  z-index: 3;
+}  .grid-4{
+  z-index: 4;
+}  .grid-5{
+  z-index: 5;
+}

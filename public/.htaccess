@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Exclude existing files (like JS, CSS, images) from being redirected to index.html
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # Redirect all other requests to index.html
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# Ensure proper MIME types for assets
+AddType application/javascript .js
+AddType text/css .css
+AddType image/png .png
+AddType image/jpeg .jpg .jpeg
+AddType image/x-icon .ico

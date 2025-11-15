@@ -1,0 +1,149 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden !important;
+}
+
+:root{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    margin: 0px;
+    padding: 0px;
+}
+.homepage{
+  width: 100vw;
+}
+a{
+    color: inherit;
+    font-size: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+@font-face {
+    font-family: 'Sukar';
+    src: url('/src/assets/fonts/sukar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Futura';
+    src: url('/src/assets/fonts/Futura URW Medium.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+ 
+*{
+    font-family: 'Poppins';
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.section_heading {
+    font-size: 5rem;
+    color: #3eb8a2;
+}
+h2{
+  font-size: 3rem;
+}
+
+h2, h3 {
+    font-weight: 500;
+}
+
+a.instagram-icon {
+  position: fixed;
+  right: 5vw;
+  z-index: 999;
+  top: 2.5vw;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+}
+
+a.instagram-icon.linkedin-icon{
+  right: calc(5vw + 2.5rem);
+}
+
+.clip {
+    clip-path: url("#clippath");
+  }
+  
+  #svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    pointer-events: none;
+  }
+  
+  .transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    pointer-events: none;
+  
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vmin;
+  }
+
+  .page-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+  
+  .page-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .page-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+  
+  img.creo-logo-top {
+    position: fixed;
+    height: 5vw;
+    width: 5vw;
+    top: 20px;
+    border-radius: 50%;
+    left: 20px;
+}
+
+.full-width{
+  width: 100vw;
+}
+
+@media (max-width: 768px) {
+.homepage{
+  width: 100vw;  
+  overflow-x: hidden !important;
+}
+}

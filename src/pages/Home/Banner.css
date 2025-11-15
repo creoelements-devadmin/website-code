@@ -1,0 +1,288 @@
+html{
+    --crefix: '';
+}
+#section1 {
+    /* background-color: #3eb8a2; */
+    height: 110vh;
+    width: 100vw;
+    display: flex;
+    z-index: -1;
+}
+/* header {
+    transform: translateY(10vh);
+} */
+div#scrolltoexplore {
+    opacity: 0;
+    color: black !important;
+    position: absolute;
+    left: 0;
+    font-size: 25px;
+    margin-top: 75px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+}
+
+div#scrolltoexplore .arrowdown {
+    font-size: 50px;
+    z-index: 5;
+    position: relative;
+}
+
+
+#circlecontainer {
+    height: 100vh;
+    width: 99vvw;
+    background-color: #3eb8a2;
+    overflow: hidden;
+}
+.banner_space {
+    height: 105vh !important;
+    width: 100vw !important;
+}
+/* Header Styles */
+.header {
+    position: fixed;
+    text-align: center;
+    /* background: linear-gradient(60deg, #000000 0%, rgba(0, 172, 193, 1) 100%); */
+    color: white;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.inner-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+/* Animation Styles */
+
+.waves {
+    transform: translateY(40vh);
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    margin-bottom: -10px;
+    min-height: 100px;
+    max-height: 40vh;
+}
+
+.parallax>.wave1 {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>.wave2 {
+    animation: move-forever 15s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>.wave3 {
+    animation: move-forever 5s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>.wave4 {
+    animation: move-forever 35s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* Logo Animation Styles */
+.creo_animated_logo_wrapper {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25% !important;
+}
+
+.creo_animated_logo_container {
+    display: flex;
+    align-items: center;
+    font-size: 162px;
+    line-height: 200px;
+    height: 200px;
+    font-family: 'Sukar';
+    height: 104px !important;
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+    justify-content: center;
+    /* position: fixed;
+    top: calc(50% - 162px);
+    left: calc(50% - 200px); */
+}
+
+.creo_animated_logo_container .char{
+    font-family: 'Sukar';
+    transform: translateY(-50vh);
+}
+.creo_animated_logo_circle {
+    /* position: fixed; */
+    top: calc(50% - 80px);
+    left: calc(50% - 80px);
+    margin-left: calc(-265px);
+    margin-top: 200px;
+    scale: 2;
+}
+
+.creo_animated_logo_container::after{
+    /* content : var(--crefix); */
+}
+.creo_animated_logo_circle {
+    width: 160px;
+    height: 160px;
+    scale: 0;
+    border-radius: 50%;
+    background-color: #3eb8a2;
+}
+
+
+
+.creo_animated_logo_pupil {
+    font-size: 162px;
+    color: white;
+    height: 31px !important;
+    max-height: 31px !important;
+    position: absolute;
+    z-index: 2;
+    font-family: 'Sukar';
+}
+div#creo_animated_logo_pupil {
+    transform: translateY(0px);
+}
+
+.creo_animated_logo_pupil .char{
+    font-family: 'Sukar';
+}
+
+.creo_animated_logo_elements_text {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px !important;
+    line-height: 90px;
+    font-weight: 800;
+    flex-direction: row;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+.creo_animated_logo_elements_text .char {
+    transform: translateY(150px);
+}
+.elements_underline {
+    width: 0%;
+    height: 9px;
+    background-color: black;
+    align-self:flex-start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 826px) {
+    .creo_animated_logo_circle {
+        /* position: fixed; */
+        top: calc(50% - 80px);
+        left: calc(50% - 80px);
+        margin-left: calc(-100px);
+        margin-top: 0px;
+        scale: 2;
+    }
+
+
+
+    .creo_animated_logo_container {
+        height: 60px !important;
+        font-size: 62px;
+        line-height: 62px;
+    }
+
+    .creo_animated_logo_circle {
+        height: 60px;
+        width: 60px;
+        /* transform: translateY(-10px); */
+    }
+
+    .creo_animated_logo_pupil {
+        height: 60px !important;
+        font-size: 62px !important;
+    }
+
+    .creo_animated_logo_elements_text {
+        font-size: 33px !important;
+        line-height: 35px !important;
+    }
+
+    .elements_underline{
+        height: 6px;
+    }
+    div#scrolltoexplore {
+    margin-top: 0px;
+    }
+
+
+
+
+
+    .inner-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+
+    .creo_animated_logo_wrapper {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 40% !important;
+    }
+
+    .waves {
+        position: relative;
+        width: 100%;
+        height: 20vh;
+        margin-bottom: -10px;
+        min-height: 20px;
+        max-height: 20vh;
+    }
+    .about_us_content{
+        width: 100% !important;
+        font-size: 1rem !important;
+    }
+}

@@ -1,0 +1,321 @@
+.experiment-fixed-sub-menu {
+  display: none;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 2px 2px grey;
+  z-index: 1000;
+  padding: 0.5rem 0;
+  min-width: 220px;
+  flex-direction: column;
+  gap: 0;
+}
+.experiment-fixed-sub-menu .sub-menu-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  background: transparent;
+  transition: background 0.2s;
+}
+.experiment-fixed-sub-menu .sub-menu-items a {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: #222;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.experiment-fixed-sub-menu .sub-menu-items:hover {
+  background: #cccccc;
+}
+
+/* Show sub-menu on hover of trigger */
+#experiment-whatwedo-trigger:hover ~ #experiment-whatwedo-submenu,
+#experiment-whatwedo-submenu:hover {
+  display: flex;
+}
+/* Header-style menu for Experiment */
+.experiment-container .main-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.experiment-container .menu-items {
+  position: relative;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+.experiment-container .has-sub-menu:hover .sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.experiment-container .sub-menu {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 2px 2px grey;
+  z-index: 10;
+  padding: 0.5rem 0;
+  min-width: 220px;
+}
+.experiment-container .sub-menu-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  background: transparent;
+  transition: background 0.2s;
+}
+.experiment-container .sub-menu-items a {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: #222;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.experiment-container .sub-menu-items:hover {
+  background: #cccccc;
+}
+/* ========== EXPERIMENT COMPONENT STYLES ========== */
+.experiment-container {
+  padding: 2rem 0;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  /* background: url("https://images.unsplash.com/photo-1551384963-cccb0b7ed94b?q=80&w=3247&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center/cover; */
+    background-color: transparent;
+  animation: bg-move 5s ease-in-out infinite alternate;
+}
+
+.experiment-container:root {
+  --lg-bg-color: rgba(255, 255, 255, 0.25);
+  --lg-highlight: rgba(255, 255, 255, 0.75);
+  --lg-text: #ffffff;
+  --lg-hover-glow: rgba(255, 255, 255, 0.4);
+  --lg-red: #fb4268;
+  --lg-grey: #5b5b5b;
+}
+
+@keyframes bg-move {
+  from {
+    background-position: center center;
+  }
+  to {
+    background-position: center top;
+  }
+}
+
+/* ========== CONTAINER ========== */
+.experiment-container .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.experiment-container .container--inline {
+  flex-direction: row;
+}
+
+/* ========== GLASS CONTAINER ========== */
+.experiment-container .glass-container {
+  position: relative;
+  display: flex;
+  /* font-weight: 600; */
+  /* color: var(--lg-text, #ffffff); */
+  cursor: pointer;
+  background: transparent;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+.experiment-container .glass-container--rounded {
+  border-radius: 5rem;
+  margin: 0.5rem;
+  fill: var(--lg-grey, #5b5b5b);
+}
+
+.experiment-container .glass-container--small {
+  margin: 5rem 0 1rem;
+  border-radius: 5rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.experiment-container .glass-container--large {
+  min-width: 32rem;
+}
+
+.experiment-container .glass-container--medium {
+  min-width: 25rem;
+}
+
+.experiment-container .glass-container svg {
+  fill: white;
+}
+
+/* ========== GLASS ITEM ========== */
+.experiment-container .glass-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  color: white;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.experiment-container .glass-item svg {
+  fill: white;
+  height: 50px;
+  margin-bottom: 0.25rem;
+}
+
+.experiment-container .glass-item--active {
+  background: rgba(0, 0, 0, 0.25);
+  color: black;
+  margin: 0 -0.5rem;
+  padding: 0.25rem 1.95rem;
+  border-radius: 5rem;
+}
+
+.experiment-container .glass-item--active svg {
+  fill: black;
+}
+
+.experiment-container .player {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+.experiment-container .player__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+}
+
+.experiment-container .player__img {
+  width: 5rem;
+  height: auto;
+  margin: 0.25rem 0;
+  border-radius: 0.5rem;
+}
+
+.experiment-container .player__legend {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  color: black;
+}
+
+.experiment-container .player__legend__title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.experiment-container .player__legend__sub-title {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.45;
+}
+
+.experiment-container .player__controls {
+  margin-right: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experiment-container .player__controls__play {
+  margin-right: 1rem;
+  display: flex;
+}
+
+.experiment-container .player__controls__ff {
+  display: flex;
+}
+
+/* ========== GLASS LAYERS ========== */
+.experiment-container .glass-filter {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  backdrop-filter: blur(0px);
+  filter: url(#lg-dist);
+  isolation: isolate;
+}
+
+.experiment-container .glass-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--lg-bg-color, rgba(255, 255, 255, 0.25));
+}
+
+.experiment-container .glass-specular {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  overflow: hidden;
+  box-shadow: inset 1px 1px 0 var(--lg-highlight, rgba(255, 255, 255, 0.75)),
+    inset 0 0 5px var(--lg-highlight, rgba(255, 255, 255, 0.75));
+}
+
+.experiment-container .glass-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0rem 1.5rem 0rem;
+}
+
+.experiment-container .glass-content--inline {
+  padding: 0.25rem 2rem 0.25rem 0.75rem;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+/* ========== ICONS AND IMAGES ========== */
+.experiment-container .glass-content a {
+  display: inline-block;
+  position: relative;
+  padding: 1px;
+  border-radius: 1.2rem;
+}
+
+.experiment-container .glass-content a img {
+  display: block;
+  width: 75px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+.experiment-container .glass-content a img:hover {
+  transform: scale(0.95);
+}

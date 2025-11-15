@@ -1,0 +1,55 @@
+.client-banner.z-2 {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+    /* background-color: #242424; */
+}
+
+.clients-page {
+    background: #242424;
+}
+
+.clients-page div#clients {
+    background-color: transparent !important;
+}
+img.client-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background-color: white;
+}
+.clients-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.logos-wrapper.z-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 85%;
+    align-self: center;
+    gap: 10px;
+}
+@media screen and (max-width: 825px){
+    .client-banner.z-2 {
+        min-height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    img.client-logo {
+        min-width: calc(21.25vw - 10px);
+        min-height: calc(21.25vw - 10px);
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+        background-color: white;
+    }
+    .clients-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+}

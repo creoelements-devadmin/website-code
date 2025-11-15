@@ -1,0 +1,24 @@
+.z-2{
+    position: relative;
+    z-index: 2;
+}
+.banner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: white;
+    font-weight: 300 !important;
+    line-height: 1.5rem;
+    /* font-family: Montserrat; */
+}

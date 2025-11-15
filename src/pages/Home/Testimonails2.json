@@ -1,0 +1,12 @@
+{
+
+"slidesData":
+[
+        { "id": 1, "testimonial": "Testimonial 1", "reviewer": "Reviewer Name 1" },
+        { "id": 2, "testimonial": "Testimonial 2", "reviewer": "Reviewer Name 2" },
+        { "id": 3, "testimonial": "Testimonial 3", "reviewer": "Reviewer Name 3" },
+        { "id": 4, "testimonial": "Testimonial 4", "reviewer": "Reviewer Name 4" }
+      ]
+
+
+    }

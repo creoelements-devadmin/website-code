@@ -1,0 +1,332 @@
+
+  
+  .main-menu.open {
+    display: flex;
+    /* Styles when the menu is open (for mobile) */
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .sub-menu {
+    display: none;
+    list-style: none;
+  }
+  .sub-menu-container{
+        position: absolute;
+    left: 0px;
+    width: 13rem;
+    bottom: 0px;
+    list-style: none;
+    padding-left: 0px;
+    height: calc(2rem + 20px);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* box-shadow: 0px 0px 2px 2px grey; */
+  }
+  li.menu-items.has-sub-menu {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 2rem 0rem 2rem ;
+}
+ .has-sub-menu:hover .sub-menu {
+    display: flex;
+    gap: 0px;
+  }
+  
+
+.hamburger {
+  display: none;
+  /* Other styles for the hamburger */
+}
+
+
+/* Glassmorphism Header Styles - Inspired by example.html */
+header {
+  position: fixed;
+  display: flex;
+  border-radius: 50px;
+  height: 50px;
+  font-size: 17.5px;
+  bottom: 20px;
+  left: 15vw;
+  width: 70vw;
+  line-height: 17px;
+  /* box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.25),
+    0 0.25em 0.125em -0.125em rgba(0, 0, 0, 0.2),
+    0 0 0.1em 0.25em inset rgba(255, 255, 255, 0.2),
+    0 0 0 0 rgba(255, 255, 255, 1),
+    0 0.225em 0.05em 0 rgba(0, 0, 0, 0.05),
+    0 0.25em 0 0 rgba(255, 255, 255, 0.75),
+    inset 0 0.25em 0.05em 0 rgba(0, 0, 0, 0.15); */
+  backdrop-filter: blur(4px) saturate(280%);
+  -webkit-backdrop-filter: blur(4px) saturate(280%);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  z-index: 100;
+  color: rgb(0, 0, 0);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  padding: 0px 15px 0px 15px;
+  transition: background 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow: visible;
+}
+
+/* Menu Item Glass Effect */
+.main-menu {
+  background: transparent;
+  border-radius: 999vw;
+  box-shadow: none;
+  padding: 0 0.5em;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-items {
+  position: relative;
+  border-radius: 999vw;
+  margin: 0 0.25em;
+  transition: box-shadow 0.4s var(--anim--hover-ease, cubic-bezier(0.25,1,0.5,1)),
+    background 0.4s var(--anim--hover-ease, cubic-bezier(0.25,1,0.5,1));
+  box-shadow: none;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.menu-items:hover, .menu-items:focus-within {
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.25) 0%,
+    rgba(255,255,255,0.35) 100%
+  );
+  box-shadow:
+    0 0.125em 0.125em rgba(0,0,0,0.05),
+    0 0.15em 0.05em -0.1em rgba(0,0,0,0.25),
+    0 0 0.05em 0.1em inset rgba(255,255,255,0.5);
+  color: #222;
+}
+
+.menu-items .clickable {
+  display: block;
+  padding: 0.75em 1.5em;
+  border-radius: 999vw;
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  transition: color 0.3s, background 0.3s;
+}
+
+.menu-items:hover .clickable, .menu-items:focus-within .clickable {
+  color: #111;
+}
+
+/* Sub-menu glass effect */
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+  left: 0px;
+  width: 13rem;
+  bottom: calc(2rem + 20px);
+  list-style: none;
+  padding-left: 0px;
+  height: 80vh;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border-radius: 1em;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.85) 100%
+  );
+  /* box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.18),
+    0 0.25em 0.125em -0.125em rgba(0, 0, 0, 0.13),
+    0 0 0.1em 0.25em inset rgba(255, 255, 255, 0.13),
+    0 0 0 0 rgba(255, 255, 255, 0.7),
+    0 0.225em 0.05em 0 rgba(0, 0, 0, 0.03),
+    0 0.25em 0 0 rgba(255, 255, 255, 0.35),
+    inset 0 0.25em 0.05em 0 rgba(0, 0, 0, 0.08); */
+  backdrop-filter: blur(4px) saturate(280%);
+  -webkit-backdrop-filter: blur(4px) saturate(280%);
+  /* border: 1.5px solid rgba(255, 255, 255, 0.18); */
+  margin-top: 0.5em;
+  z-index: 101;
+}
+
+.sub-menu-items {
+  border-radius: 1em;
+  margin: 0.15em 0.5em;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sub-menu-items:hover, .sub-menu-items:focus-within {
+  background: linear-gradient(120deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.85) 100%);
+  box-shadow: 0 0.1em 0.5em 0 rgba(0,0,0,0.10);
+}
+
+.sub-menu-items .clickable {
+  padding: 0.5em 1.25em;
+  border-radius: 1em;
+  color: #222;
+  font-size: 0.98em;
+}
+
+.sub-menu-items:hover .clickable, .sub-menu-items:focus-within .clickable {
+  color: #111;
+}
+
+/* Remove duplicate/old header block if present */
+  
+  
+
+
+
+ul.sub-menu {
+    display: none;
+}
+
+
+ul.sub-menu {
+  position: absolute;
+  left: 0px;
+  width: 13rem;
+  bottom: calc(2rem + 20px);
+  list-style: none;
+  padding-left: 0px;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  /* box-shadow: 0px 0px 2px 2px grey; */
+  /* background-color: white !important; */
+}
+
+li.sub-menu-items {
+  width: 90%;
+  min-height: 2.2em;
+  display: flex;
+  align-items: center;
+  border-radius: 1.2em;
+  margin: 0.18em 0.5em;
+  border: none;
+  background: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+li.sub-menu-items a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+li.sub-menu-items:hover, li.sub-menu-items:focus-within {
+  background: linear-gradient(120deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.45) 100%);
+  box-shadow:
+    0 0.125em 0.125em rgba(0,0,0,0.05),
+    0 0.15em 0.05em -0.1em rgba(0,0,0,0.18),
+    0 0 0.05em 0.1em inset rgba(255,255,255,0.18);
+}
+
+/* Default for desktop view */
+
+
+.main-menu.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media (min-width: 769px){
+  .main-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .main-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  ul.main-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    padding: 0px;
+}
+}
+@media (max-width: 768px) {
+  header {
+    left: 45vw;
+    width: 10vw;
+    align-items: center;
+    justify-content: center;
+  }
+.hamburger {
+  display: block;
+  z-index: 3;
+}
+  .main-menu {
+    /* display: none; */
+    width: 0vw;
+    overflow: hidden;
+    transition: width 0.5s ease,
+  }
+
+  .main-menu.open {
+    display: flex !important;
+    position: fixed !important;
+    top: -90vh;
+    left: -45vw;
+    width: 70vw;
+    list-style: none;
+    text-align: left;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+li.menu-items {
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+  .sub-menu {
+    position: static;
+    height: auto;
+    box-shadow: none;
+  }
+}

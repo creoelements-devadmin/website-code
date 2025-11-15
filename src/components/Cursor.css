@@ -1,0 +1,52 @@
+		
+a,
+button,
+.clickable {
+    cursor: none;
+}
+
+body {
+    pointer-events: auto;
+    cursor: none;
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999;
+
+    /* mix-blend-mode: difference; */
+}
+
+/* .circle:first-child{
+    height: 30px;
+    width: 30px;
+    display: flex;
+} */
+.circle:nth-child(-n+5) {
+    background-color: #3eb8a2;
+    /* height: 30px;
+width : 30px; */
+}
+
+.circle:nth-child(n+5) {
+    background-color: #DBDBDB;
+
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    transition: transform 1s ease;
+}
+
+.change-color {
+    background-color: #3EB8A2;
+}
