@@ -84,7 +84,7 @@ const membersData =[
   {
   "name": "Siddhi",
   "designation": "",
-  "description": "Siddhi approaches the web like a craft—carefully, curiously, and always with intent. With a growing toolkit and a natural feel for what makes a website work, she brings quiet focus and thoughtful energy to every layout she shapes. Eager to experiment and refine, she’s quickly becoming a dependable hand in turning design into experience.",
+  "description": "Siddhi approaches web like a craft—carefully, curiously, and always with intent. With a growing toolkit and a natural feel for what makes a website work, she brings quiet focus and thoughtful energy to every layout she shapes. Eager to experiment and refine, she’s quickly becoming a dependable hand in turning design into experience.",
   "meta_description": "Siddhi builds thoughtful, user-focused web interfaces at Creo Elements LLP, with clarity, care, and curiosity.",
   "image": "/images/Siddhi.png",
   "slug": "siddhi"
