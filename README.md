@@ -2,13 +2,11 @@
 
 > **A modern, animated React-based digital marketing agency website with scroll-triggered animations, smooth scrolling, and WordPress integration.**
 
-![Creo Elements Logo](public/images/logo.png)
-
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
 2. [Tech Stack](#tech-stack)
-3. [Installation & Setup](#installation--setup)
+3. [Installation &amp; Setup](#installation--setup)
 4. [Project Structure](#project-structure)
 5. [Animation System](#animation-system)
    - [GSAP ScrollTrigger Animations](#gsap-scrolltrigger-animations)
@@ -17,11 +15,11 @@
    - [Wavy Text Effect](#wavy-text-effect)
    - [Banner Eye Animation](#banner-eye-animation)
    - [Swiper Carousels](#swiper-carousels)
-6. [Page Sections & Components](#page-sections--components)
+6. [Page Sections &amp; Components](#page-sections--components)
 7. [WordPress Integration](#wordpress-integration)
 8. [SEO Implementation](#seo-implementation)
 9. [Responsive Design](#responsive-design)
-10. [Build & Deployment](#build--deployment)
+10. [Build &amp; Deployment](#build--deployment)
 11. [Contributing](#contributing)
 
 ---
@@ -43,18 +41,18 @@ Creo Elements is a 360° Digital Marketing agency website built with React and V
 
 ## Tech Stack
 
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **React** | 18.3.1 | UI Framework |
-| **Vite** | 5.4.8 | Build Tool & Dev Server |
-| **GSAP** | 3.12.5 | Animation Library |
-| **Lenis** | 1.0.42 | Smooth Scroll |
-| **Framer Motion** | 12.18.1 | Additional Animations |
-| **Swiper** | 11.1.14 | Carousel/Slider |
-| **React Router DOM** | 6.26.1 | Client-side Routing |
-| **React Helmet Async** | 2.0.5 | SEO Meta Tags |
-| **FontAwesome** | 6.6.0 | Icons |
-| **jQuery** | 3.7.1 | Cursor Animation |
+| Technology                   | Version | Purpose                 |
+| ---------------------------- | ------- | ----------------------- |
+| **React**              | 18.3.1  | UI Framework            |
+| **Vite**               | 5.4.8   | Build Tool & Dev Server |
+| **GSAP**               | 3.12.5  | Animation Library       |
+| **Lenis**              | 1.0.42  | Smooth Scroll           |
+| **Framer Motion**      | 12.18.1 | Additional Animations   |
+| **Swiper**             | 11.1.14 | Carousel/Slider         |
+| **React Router DOM**   | 6.26.1  | Client-side Routing     |
+| **React Helmet Async** | 2.0.5   | SEO Meta Tags           |
+| **FontAwesome**        | 6.6.0   | Icons                   |
+| **jQuery**             | 3.7.1   | Cursor Animation        |
 
 ---
 
@@ -190,6 +188,7 @@ gsap.fromTo('.threesixty-text',
 ```
 
 **Key Features:**
+
 - Text scales from 0rem to 25rem font-size
 - Container morphs from rounded to full-screen
 - Horizontal text scrolling creates a marquee effect
@@ -355,6 +354,7 @@ useEffect(() => {
 ```
 
 **Configuration Options:**
+
 - `smooth: true` - Enable smooth scrolling
 - `smoothTouch: false` - Disable on touch devices for better performance
 
@@ -376,11 +376,11 @@ const Cursor = () => {
     // Track mouse position
     const updateMousePosition = (e) => {
       coords.current = { x: e.clientX, y: e.clientY };
-      
+    
       // Check if hovering on clickable element
       const hoveredElement = document.elementFromPoint(e.clientX, e.clientY);
       const isClickable = isElementClickable(hoveredElement);
-      
+    
       // Scale up on clickable elements
       circles.forEach((circle) => {
         circle.style.transform = `scale(${isClickable ? 2 : 1})`;
@@ -418,6 +418,7 @@ const Cursor = () => {
 ```
 
 **Clickable Detection:**
+
 ```javascript
 function isElementClickable(element) {
   return element && (
@@ -457,6 +458,7 @@ const WavyText = ({ children, text, fontSize }) => {
 ```
 
 **Usage:**
+
 ```jsx
 <WavyText fontSize="8rem">About Us</WavyText>
 ```
@@ -482,7 +484,7 @@ const runMouseMovement = () => {
     // Calculate angle from center to mouse
     const angle = Math.atan2(e.clientY - centerY, e.clientX - centerX);
     const maxRadius = circle.offsetWidth / 2 - pupil.offsetWidth / 2;
-    
+  
     // Position pupil within eye bounds
     const x = centerX + Math.cos(angle) * maxRadius;
     const y = centerY + Math.sin(angle) * maxRadius;
@@ -496,6 +498,7 @@ const runMouseMovement = () => {
 ```
 
 **Initial Animation Sequence:**
+
 1. Eye circle scales up with elastic easing
 2. Blink animation (height toggles)
 3. Eye bounces into position
@@ -507,6 +510,7 @@ const runMouseMovement = () => {
 ### Swiper Carousels
 
 **Testimonials** (`src/pages/Home/Testimonials.jsx`):
+
 ```javascript
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, EffectFade } from 'swiper/modules';
@@ -525,6 +529,7 @@ import { Navigation, EffectFade } from 'swiper/modules';
 ```
 
 **Client Logos** (`src/pages/Home/Clients.jsx`):
+
 ```javascript
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
@@ -538,15 +543,15 @@ import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
 ### Homepage Sections
 
-| Section | Component | Description |
-|---------|-----------|-------------|
-| Banner | `Banner.jsx` / `BannerMobile.jsx` | Animated logo with eye, waves SVG |
-| 360° Marketing | `Threesixty.jsx` | Scroll-triggered text expansion |
-| About | `About.jsx` | Frame zoom reveal effect |
-| Services | `Services.jsx` | 3D card stack with sticky positioning |
-| Testimonials | `Testimonials.jsx` | Fade slider with navigation |
-| Clients | `Clients.jsx` | Auto-scrolling logo carousels |
-| Partners | `Partners.jsx` | Partner showcase cards |
+| Section         | Component                             | Description                           |
+| --------------- | ------------------------------------- | ------------------------------------- |
+| Banner          | `Banner.jsx` / `BannerMobile.jsx` | Animated logo with eye, waves SVG     |
+| 360° Marketing | `Threesixty.jsx`                    | Scroll-triggered text expansion       |
+| About           | `About.jsx`                         | Frame zoom reveal effect              |
+| Services        | `Services.jsx`                      | 3D card stack with sticky positioning |
+| Testimonials    | `Testimonials.jsx`                  | Fade slider with navigation           |
+| Clients         | `Clients.jsx`                       | Auto-scrolling logo carousels         |
+| Partners        | `Partners.jsx`                      | Partner showcase cards                |
 
 ### Dynamic Pages
 
@@ -563,17 +568,19 @@ import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 A WordPress installation is set up at `https://creo-elements.com/blogs/` which handles:
 
 1. **Blog Content Management**
+
    - All blog posts are managed via WordPress
    - Uses Elementor page builder for templates
    - Blog categories: Going Online 101, Digital Marketing 101, Branding 101, etc.
-
 2. **Form Submissions**
+
    - Contact form data is submitted to WordPress REST API
    - Job applications with CV uploads
 
 ### API Endpoints
 
 **Contact Form Submission:**
+
 ```javascript
 const response = await fetch(
   'https://creo-elements.com/blogs/wp-json/custom/v1/forminator-submit',
@@ -586,6 +593,7 @@ const response = await fetch(
 ```
 
 **Job Application Submission:**
+
 ```javascript
 const formDataObject = new FormData();
 formDataObject.append('name', formData.name);
@@ -603,6 +611,7 @@ const response = await fetch(
 ### Blog Links
 
 Blog posts link directly to WordPress:
+
 ```jsx
 <a href="https://creo-elements.com/blogs/digital-marketing-101">
   Digital Marketing 101
@@ -612,6 +621,7 @@ Blog posts link directly to WordPress:
 ### Media Assets
 
 WordPress also hosts client logos and partner images:
+
 ```javascript
 {
   name: 'Hostinger',
@@ -683,11 +693,13 @@ useEffect(() => {
 ```
 
 **Mobile-specific components:**
+
 - `BannerMobile.jsx` - Simplified banner for mobile
 - `HeaderMobile.jsx` - Mobile navigation menu
 - `StoryMobile.jsx` - Mobile-optimized story section
 
 **Animation Adjustments:**
+
 - 3D rotations disabled on mobile
 - Larger transform perspectives for better mobile rendering
 - Custom cursor hidden on mobile
@@ -723,6 +735,7 @@ npm run production
 ```
 
 This runs:
+
 ```json
 "production": "npm run build && cd .\\react\\ && git add . && git commit -m \"$npm_config_message\" && git push -u origin main && git status"
 ```
@@ -730,6 +743,7 @@ This runs:
 ### Output Structure
 
 Production files are output to `react/build/`:
+
 ```
 react/build/
 ├── index.html
@@ -748,6 +762,7 @@ react/build/
 ### Adding Clickable Elements
 
 To make the custom cursor react to an element:
+
 ```jsx
 <button className="clickable">Click Me</button>
 <a href="..." className="clickable">Link</a>
@@ -756,6 +771,7 @@ To make the custom cursor react to an element:
 ### Z-Index Layering
 
 Use `z-2` class for content above grid overlays:
+
 ```jsx
 <div className="my-component z-2">
   Content above grids
@@ -765,6 +781,7 @@ Use `z-2` class for content above grid overlays:
 ### Adding New Team Members
 
 Edit `src/data/membersData.js`:
+
 ```javascript
 {
   "name": "New Member",
@@ -779,6 +796,7 @@ Edit `src/data/membersData.js`:
 ### Adding New Services
 
 Edit `src/pages/Services/Service.jsx`:
+
 ```javascript
 {
   name: "Service Name",
@@ -815,6 +833,7 @@ const loadFont = async () => {
 ### ScrollTrigger Conflicts
 
 Always cleanup ScrollTrigger instances:
+
 ```javascript
 useEffect(() => {
   // Setup animations...
