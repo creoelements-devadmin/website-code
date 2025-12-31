@@ -865,7 +865,3 @@ Lenis and ScrollTrigger work together automatically. Ensure Lenis is initialized
 5. Submit PR with description of changes
 
 ---
-
-## License
-
-© 2025 Creo Elements LLP. All rights reserved.
