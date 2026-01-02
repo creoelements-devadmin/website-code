@@ -41,14 +41,7 @@ const membersData =[
   "slug":"virali"
 }
 ,
-  {
-    "name": "Aditya",
-    "designation": "",
-    "description": "Aditya is the guy who makes sure every product looks its best before it hits the shelves—digital ones, of course. Whether it's finding the right words for a product title or writing descriptions that actually connect, he brings care and clarity to every listing. With a calm approach and a sharp eye for detail, Aditya quietly keeps things running smoothly behind the scenes, one product at a time.",
-    "meta_description": "Aditya is the guy who makes sure every product looks its best before it hits the shelves—digital ones, of course.",
-    "image": "/images/Aditya.png",
-    "slug": "aditya"
-  },
+  
   // { 
   //   "name": "Rouhan",
   //   "designation": "",
@@ -81,14 +74,7 @@ const membersData =[
     "image": "/images/Aditya-s.png",
     "slug": "additya"
   },
-  {
-  "name": "Siddhi",
-  "designation": "",
-  "description": "Siddhi approaches web like a craft—carefully, curiously, and always with intent. With a growing toolkit and a natural feel for what makes a website work, she brings quiet focus and thoughtful energy to every layout she shapes. Eager to experiment and refine, she’s quickly becoming a dependable hand in turning design into experience.",
-  "meta_description": "Siddhi builds thoughtful, user-focused web interfaces at Creo Elements LLP, with clarity, care, and curiosity.",
-  "image": "/images/Siddhi.png",
-  "slug": "siddhi"
-},
+  
 
   // {
   //   "name": "Anand",
@@ -123,7 +109,23 @@ const membersData =[
     "meta_description":"Harsh, an SEO and content innovation intern, transforms data and ideas into meaningful digital visibility with strategic SEO practices and innovative content thinking.",
     "image":"/images/Harsh.png",
     "slug":"harsh"
-  }
+  },
+  {
+    "name": "Aditya",
+    "designation": "",
+    "description": "Aditya is the guy who makes sure every product looks its best before it hits the shelves—digital ones, of course. Whether it's finding the right words for a product title or writing descriptions that actually connect, he brings care and clarity to every listing. With a calm approach and a sharp eye for detail, Aditya quietly keeps things running smoothly behind the scenes, one product at a time.",
+    "meta_description": "Aditya is the guy who makes sure every product looks its best before it hits the shelves—digital ones, of course.",
+    "image": "/images/Aditya.png",
+    "slug": "aditya"
+  },
+  {
+  "name": "Siddhi",
+  "designation": "",
+  "description": "Siddhi approaches web like a craft—carefully, curiously, and always with intent. With a growing toolkit and a natural feel for what makes a website work, she brings quiet focus and thoughtful energy to every layout she shapes. Eager to experiment and refine, she’s quickly becoming a dependable hand in turning design into experience.",
+  "meta_description": "Siddhi builds thoughtful, user-focused web interfaces at Creo Elements LLP, with clarity, care, and curiosity.",
+  "image": "/images/Siddhi.png",
+  "slug": "siddhi"
+},
 
 
 
