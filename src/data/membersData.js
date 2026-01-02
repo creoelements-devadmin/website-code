@@ -115,6 +115,14 @@ const membersData =[
     "meta_description":"Gaurav, a junior graphic designer, transforms brand ideas into impactful visuals with creativity, precision, and a blend of emotional depth and technical finesse.",
     "image":"/images/Gaurav.png",
     "slug":"gaurav"
+  },
+  {
+    "name": "Harsh",
+    "designation": "",
+    "description":"Harsh is an SEO and content innovation intern who transforms data and ideas into meaningful digital visibility. He brings curiosity, analytical thinking, and creative insight to every task. From keyword research and on-page optimization to content structuring and performance analysis, Harsh approaches each project as an opportunity to experiment, learn, and optimize. His work blends strategic SEO practices with innovative content thinking, helping brands improve discoverability, engagement, and long-term online growth.",
+    "meta_description":"Harsh, an SEO and content innovation intern, transforms data and ideas into meaningful digital visibility with strategic SEO practices and innovative content thinking.",
+    "image":"/images/Harsh.png",
+    "slug":"harsh"
   }
 
 
