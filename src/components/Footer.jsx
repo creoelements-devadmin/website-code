@@ -2,7 +2,7 @@ import './Footer.css'
 function Footer() {
     return (
       <footer className='full-width'>
-        <p>&copy; 2025 Creo Elements LLP</p>
+        <p>&copy; 2026 Creo Elements LLP</p>
       </footer>
     );
   }
