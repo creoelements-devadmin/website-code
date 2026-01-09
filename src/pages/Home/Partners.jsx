@@ -23,10 +23,16 @@ const partnersData = [
     description: 'Simplifying transactions with secure and seamless payment processing services.',
   },
   {
+    name: 'Razarpay',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/01/Razorpay-Logo-removebg-preview.png',
+    description: 'A secure and seamless payment gateway that helps businesses accept, process, and manage online payments with ease.',
+  },
+  {
     name: 'Shopify',
     image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/shopify.png',
     description: 'Powering your e-commerce success with robust and easy-to-use online store solutions.',
-  },
+  }
+  
 ];
 
 export const Partners = () => {
