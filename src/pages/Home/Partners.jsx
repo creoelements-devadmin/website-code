@@ -23,7 +23,7 @@ const partnersData = [
     description: 'Simplifying transactions with secure and seamless payment processing services.',
   },
   {
-    name: 'Razarpay',
+    name: 'Razorpay',
     image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/01/Razorpay-Logo-removebg-preview.png',
     description: 'A secure and seamless payment gateway that helps businesses accept, process, and manage online payments with ease.',
   },
