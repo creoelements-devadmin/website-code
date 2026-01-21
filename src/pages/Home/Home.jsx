@@ -27,18 +27,19 @@ function Home({ updaters }) {
 
 
         {/* On Page SEO */}
-        <title>Creo Elements LLP - 360° Digital Marketing</title>
-        <meta name="description" content="We offer a wide range of services, including website design & development, social media management, performance marketing, SEO, and branding solutions." />
-        <meta property="og:type" content="agency.digital markeing" />
+        <title>Creo Elements LLP - Digital Marketing Agency | SEO, Branding & Growth</title>
+        <meta name="description" content="Creo Elements LLP is a full-service digital marketing agency offering SEO, branding, performance marketing, social media management, and website development for growing businesses." />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creo-elements.com" />
-        <meta property="og:title" content="Creo Elements LLP - 360 Digital Marketing" />
+        <meta property="og:title" content="Creo Elements LLP – Digital Marketing & Branding Agency" />
+        <meta property="og:description" content="Full-service digital marketing agency specializing in SEO, branding, performance marketing, social media management, and web development." />
         <meta property="og:image" content="/images/logo.png" />
-        <meta property="og:description" content="We offer a wide range of services, including website design & development, social media management, performance marketing, SEO, and branding solutions." />
         
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://creo-elements.com" />
+        <meta name="twitter:title" content="Creo Elements LLP – Digital Marketing Agency" />
+        <meta name="twitter:description" content="SEO, branding, performance marketing, social media management, and website development by Creo Elements LLP." />
         <meta property="twitter:logo" content="/images/logo.png" />
-        <meta property="twitter:title" content="Creo Elements LLP - 360 Digital Marketing" />
 
 
 

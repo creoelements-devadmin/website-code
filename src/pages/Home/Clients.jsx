@@ -183,6 +183,22 @@ export const logos2 = [
     name: "360South",
     url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/360South.png'
   }, //360South
+  {
+    name: "Roshanishenazz",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/roshani-logo.png"
+  },
+  {
+    name: "Roshanishenazz",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/RS-Signature.png"
+  },
+  {
+    name: "CooperSilicotex",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/coopersilicotex-logo-cropped.webp"
+  },
+  {
+    name: "Akira Jewels",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/AkiraJewels.png"
+  }
 ];
 
 export const Clients = () => {
