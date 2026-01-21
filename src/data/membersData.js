@@ -90,7 +90,7 @@ const membersData =[
     "designation": "",
     "description":"Rohit approaches web design with curiosity and care, blending creativity with a growing technical edge. As a Web Design Intern, he's learning the art of shaping ideas into clean, functional experiences that feel effortless to use. With a sharp eye for detail and a genuine eagerness to learn, Rohit is steadily building his place in the digital craft one thoughtful pixel at a time.",
     "meta_description":"Rohit Vemula, a Web Design Intern, combines creativity and technical skill to craft clean, user-friendly digital experiences with attention to detail and a passion for learning.",
-    "image":"/images/Rohit.png",
+    "image":"/images/rohit (2).png",
     "slug":"rohit"
 
   },
