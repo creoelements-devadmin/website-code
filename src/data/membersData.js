@@ -99,7 +99,7 @@ const membersData =[
     "designation": "",
     "description":"Gaurav is a junior graphic designer who turns brand ideas into compelling design language. He bring fresh energy and precision to every creative brief. From social media assets to campaign visuals, Gaurav approaches  project as a collaborative canvas—refining layouts, experimenting with tone, and crafting designs that resonate. Their work blends emotional impact with technical finesse, helping brands speak with clarity, style, and authenticity.",
     "meta_description":"Gaurav, a junior graphic designer, transforms brand ideas into impactful visuals with creativity, precision, and a blend of emotional depth and technical finesse.",
-    "image":"/images/Gaurav.png",
+    "image":"/images/gaurav (3).png",
     "slug":"gaurav"
   },
   {
