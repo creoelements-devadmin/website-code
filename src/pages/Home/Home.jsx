@@ -46,24 +46,56 @@ function Home({ updaters }) {
         {/* Technical SEO */}
         <link rel="canonical" href="https://creo-elements.com" />
         <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Creo Elements LLP",
-              "url": "https://creo-elements.com",
-              "logo": "https://creo-elements.com/images/logo.png",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1234567890",
-                "contactType": "customer service"
-              },
-              "sameAs": [
-                "https://www.instagram.com/creoelements/"
-              ]
-            }
-          `}
-        </script>
+        {`
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://creo-elements.com",
+  "name": "Creo Elements",
+  "url": "https://creo-elements.com",
+  "image": "https://creo-elements.com/logo.png",
+  "telephone": "+91XXXXXXXXXX",
+  "priceRange": "$$",
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mulchand Mansion, 1st Floor, Office No. 10, Old Hanuman Lane, Princess Street",
+    "addressLocality": "Kalbadevi, Mumbai",
+    "addressRegion": "MH",
+    "postalCode": "400002",
+    "addressCountry": "IN"
+  },
+
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.9482,
+    "longitude": 72.8296
+  },
+
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "10:30",
+    "closes": "18:30"
+  },
+
+  "sameAs": [
+    "https://www.facebook.com/creoelements",
+    "https://www.instagram.com/creoelements",
+    "https://www.linkedin.com/company/creoelements"
+  ],
+
+  "description": "Creo Elements is a leading 360-degree digital marketing and branding agency based in Kalbadevi, Mumbai. Specialists in SEO, Performance Marketing, and Web Development."
+}
+        `}
+</script>
+
 
 
       </Helmet>
