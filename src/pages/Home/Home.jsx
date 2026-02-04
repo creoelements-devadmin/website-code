@@ -33,7 +33,7 @@ function Home({ updaters }) {
         <meta property="og:url" content="https://creo-elements.com" />
         <meta property="og:title" content="Creo Elements LLP – Digital Marketing & Branding Agency" />
         <meta property="og:description" content="Full-service digital marketing agency specializing in SEO, branding, performance marketing, social media management, and web development." />
-        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:image" content="https://creo-elements.com/images/logo.png" />
         
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://creo-elements.com" />
@@ -53,7 +53,7 @@ function Home({ updaters }) {
   "@id": "https://creo-elements.com",
   "name": "Creo Elements",
   "url": "https://creo-elements.com",
-  "image": "https://creo-elements.com/logo.png",
+  "image": "https://creo-elements.com/images/logo.png",
   "telephone": "+919892360639",
   "priceRange": "$$",
 
