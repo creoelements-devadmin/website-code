@@ -121,7 +121,7 @@ function About() {
   },
   "sameAs": [
     "https://www.instagram.com/creoelements/",
-    "https://www.linkedin.com/company/creo-elements-llp/"
+    "https://www.linkedin.com/company/creoelementsllp//"
   ]
 })}
 </script>

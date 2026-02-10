@@ -71,41 +71,87 @@ export const ContactUS = () => {
     return (
         <div>
             <Helmet>
-                <title>Contact Us | Creo Elements LLP</title>
+                <title>
+                    Contact Creo Elements LLP | Digital Marketing Agency in Mumbai
+                </title>
+
+                {/* Meta Description */}
                 <meta
                     name="description"
-                    content="Get in touch with Creo Elements LLP to discuss your next project. Whether you need web design, SEO, branding, or digital marketing services, we're here to help. Fill out the contact form and we’ll get back to you as soon as possible."
+                    content="Contact Creo Elements LLP, a Mumbai-based digital marketing agency, for SEO, web design, branding, and performance marketing solutions. Speak with our team and get a quick response."
                 />
-                <meta property="og:title" content="Contact Us | Creo Elements LLP" />
+
+                {/* Canonical */}
+                <link
+                    rel="canonical"
+                    href="https://creo-elements.com/contact-us"
+                />
+
+                {/* Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:title"
+                    content="Contact Digital Marketing Agency in Mumbai | Creo Elements LLP"
+                />
                 <meta
                     property="og:description"
-                    content="Get in touch with Creo Elements LLP to discuss your next project. Whether you need web design, SEO, branding, or digital marketing services, we're here to help. Fill out the contact form and we’ll get back to you as soon as possible."
+                    content="Get in touch with Creo Elements LLP, a Mumbai-based digital marketing agency, to discuss SEO, web design, branding, and performance marketing solutions."
                 />
-                <meta property="og:image" content="https://creo-elements.com/images/contact-us-banner.webp" />
-                <meta property="og:url" content="https://creo-elements.com/contact-us" />
+                <meta
+                    property="og:image"
+                    content="https://creo-elements.com/images/contact-us-banner.webp"
+                />
+                <meta
+                    property="og:url"
+                    content="https://creo-elements.com/contact-us"
+                />
+                <meta property="og:site_name" content="Creo Elements LLP" />
+
+                {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Contact Us | Creo Elements LLP" />
+                <meta
+                    name="twitter:title"
+                    content="Contact Digital Marketing Agency in Mumbai | Creo Elements LLP"
+                />
                 <meta
                     name="twitter:description"
-                    content="Get in touch with Creo Elements LLP to discuss your next project. Whether you need web design, SEO, branding, or digital marketing services, we're here to help. Fill out the contact form and we’ll get back to you as soon as possible."
+                    content="Looking for a digital marketing agency in Mumbai? Contact Creo Elements LLP for SEO, branding, web design, and marketing solutions."
                 />
-                <meta name="twitter:image" content="https://creo-elements.com/images/contact-us-banner.webp" />
-                <link rel="canonical" href="https://creo-elements.com/contact-us" />
-
+                <meta
+                    name="twitter:image"
+                    content="https://creo-elements.com/images/contact-us-banner.webp"
+                />
                 {/* Structured Data (JSON-LD) */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "Organization",
+                        "@type": "ProfessionalService",
                         "name": "Creo Elements LLP",
-                        "url": "https://creo-elements.com",
+                        "url": "https://creo-elements.com/contact-us",
                         "logo": "https://creo-elements.com/images/logo.png",
-                        "description": "Get in touch with Creo Elements LLP to discuss your next project. Whether you need web design, SEO, branding, or digital marketing services, we're here to help. Fill out the contact form and we’ll get back to you as soon as possible.",
+                        "image": "https://creo-elements.com/images/contact-us-banner.webp",
+                        "description":
+                            "Creo Elements LLP is a Mumbai-based digital marketing agency providing SEO, performance marketing, web design, branding, and eCommerce solutions.",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Mumbai",
+                            "addressRegion": "MH",
+                            "addressCountry": "IN"
+                        },
+                        "areaServed": {
+                            "@type": "AdministrativeArea",
+                            "name": "Mumbai, Maharashtra, India"
+                        },
                         "contactPoint": {
                             "@type": "ContactPoint",
+                            "contactType": "customer service",
                             "email": "creoelementsllp@gmail.com",
-                            "contactType": "customer service"
-                        }
+                            "telephone": "+91-9892360639"
+                        },
+                        "sameAs": [
+                            "https://www.instagram.com/creoelements/",
+                            "https://www.linkedin.com/company/creoelementsllp/"
+                        ]
                     })}
                 </script>
             </Helmet>

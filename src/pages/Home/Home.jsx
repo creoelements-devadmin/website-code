@@ -88,7 +88,7 @@ function Home({ updaters }) {
   "sameAs": [
     "https://www.facebook.com/creoelements",
     "https://www.instagram.com/creoelements",
-    "https://www.linkedin.com/company/creoelements"
+    "https://www.linkedin.com/company/creoelementsllp/"
   ],
 
   "description": "Creo Elements is a leading 360-degree digital marketing and branding agency based in Kalbadevi, Mumbai. Specialists in SEO, Performance Marketing, and Web Development."
