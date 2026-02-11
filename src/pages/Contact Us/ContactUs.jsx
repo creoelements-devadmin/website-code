@@ -174,8 +174,8 @@ export const ContactUS = () => {
                             onChange={handleChange}
                             required
                         />
-
-                        <label htmlFor="help">I'm looking for help with </label>
+                        <div className="break"></div>
+                        <label htmlFor="help"  >I'm looking for help with </label>
                         <input
                             type="text"
                             name="help"
@@ -184,7 +184,7 @@ export const ContactUS = () => {
                             onChange={handleChange}
                             required
                         />
-
+                        <div className="break"></div>
                         <label htmlFor="budget">My budget is </label>
                         <input
                             type="text"
@@ -195,7 +195,7 @@ export const ContactUS = () => {
                             required
                         />
 
-                        <label htmlFor="deadline">And i need it by</label>
+                        <label htmlFor="deadline">and I need it by</label>
                         <input
                             type="text"
                             name="deadline"
@@ -204,7 +204,7 @@ export const ContactUS = () => {
                             onChange={handleChange}
                             required
                         />
-
+                        <div className="break"></div>
                         <label htmlFor="brand">My brand name is</label>
                         <input
                             type="text"
@@ -224,7 +224,7 @@ export const ContactUS = () => {
                             onChange={handleChange}
                             required
                         />
-
+                        <div className="break"></div>
                         <select
                             name="website"
                             value={formData.website}
@@ -241,7 +241,7 @@ export const ContactUS = () => {
 
                         {formData.website === 'yes' && (
                             <>
-                                <label htmlFor="website_url">It's on</label>
+                                <label htmlFor="website_url">&nbsp;It's on</label>
                                 <input
                                     type="url"
                                     name="website_url"
@@ -251,8 +251,8 @@ export const ContactUS = () => {
                                 />
                             </>
                         )}
-
-                        <label htmlFor="email">Please contact me at</label>
+                        <div className="break"></div>
+                        <label htmlFor="email">Please contact me at </label>
                         <input
                             type="email"
                             name="email"
