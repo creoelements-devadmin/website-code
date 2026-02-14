@@ -198,6 +198,10 @@ export const logos2 = [
   {
     name: "Akira Jewels",
     url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/AkiraJewels.png"
+  },
+  {
+    name: "Tpc",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-14-at-5.20.20-PM.jpeg"
   }
 ];
 

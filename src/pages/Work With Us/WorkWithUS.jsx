@@ -96,26 +96,32 @@ export const WorkWithUS = () => {
     return (
         <div>
             <Helmet>
-                <title>Work With Us | Creo Elements LLP</title>
-                <meta
-                    name="description"
-                    content="Join Creo Elements LLP and be part of a dynamic and innovative team. We are looking for passionate individuals to contribute to our digital marketing, web design, SEO, social media, and branding projects. Apply now to work with a team committed to achieving excellence in every project."
-                />
-                <meta property="og:title" content="Work With Us | Creo Elements LLP" />
-                <meta
-                    property="og:description"
-                    content="Join Creo Elements LLP and be part of a dynamic and innovative team. We are looking for passionate individuals to contribute to our digital marketing, web design, SEO, social media, and branding projects. Apply now to work with a team committed to achieving excellence in every project."
-                />
-                <meta property="og:image" content="https://creo-elements.com/images/work-with-us-banner.webp" />
-                <meta property="og:url" content="https://creo-elements.com/work-with-us" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Work With Us | Creo Elements LLP" />
-                <meta
-                    name="twitter:description"
-                    content="Join Creo Elements LLP and be part of a dynamic and innovative team. We are looking for passionate individuals to contribute to our digital marketing, web design, SEO, social media, and branding projects. Apply now to work with a team committed to achieving excellence in every project."
-                />
-                <meta name="twitter:image" content="https://creo-elements.com/images/work-with-us-banner.webp" />
+                <title>Careers at Creo Elements LLP | Digital Marketing Agency in Mumbai</title>
+
+                <meta name="description" content="Join Creo Elements LLP, a leading digital marketing agency in Mumbai. Build your career in SEO, web design, branding, social media management, and e-commerce development. Apply today and grow with our creative team." />
+
+                <meta name="keywords" content="Digital marketing jobs in Mumbai, SEO jobs Mumbai, Web design careers Mumbai, Branding agency jobs, Social media marketing jobs, Creo Elements careers, Work at Creo Elements LLP" />
+
+                <meta name="author" content="Creo Elements LLP" />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                
                 <link rel="canonical" href="https://creo-elements.com/work-with-us" />
+
+                
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Careers at Creo Elements LLP | Digital Marketing Agency in Mumbai" />
+                <meta property="og:description" content="Looking to grow your career in digital marketing? Join Creo Elements LLP in Mumbai and work on SEO, web development, branding, and performance marketing projects." />
+                <meta property="og:url" content="https://creo-elements.com/work-with-us" />
+                <meta property="og:image" content="https://creo-elements.com/images/work-with-us-banner.webp" />
+                <meta property="og:site_name" content="Creo Elements LLP" />
+
+                
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Careers at Creo Elements LLP | Digital Marketing Agency in Mumbai" />
+                <meta name="twitter:description" content="Apply for SEO, web design, branding, and digital marketing roles at Creo Elements LLP, Mumbai." />
+                <meta name="twitter:image" content="https://creo-elements.com/images/work-with-us-banner.webp" />
 
                 {/* Structured Data (JSON-LD) */}
                 <script type="application/ld+json">
@@ -218,7 +224,7 @@ export const WorkWithUS = () => {
 
                         <div className='submit-button'>
                             <button type="submit" className='callback-button clickable' disabled={loading}>
-                            {loading ? <span className="spinner" /> : 'Apply here'}
+                                {loading ? <span className="spinner" /> : 'Apply here'}
 
                             </button>
                         </div>
