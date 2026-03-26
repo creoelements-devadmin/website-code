@@ -202,6 +202,10 @@ export const logos2 = [
   {
     name: "Tpc",
     url: "https://creo-elements.com/blogs/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-14-at-5.20.20-PM.jpeg"
+  },
+  {
+    name: "Sajeda Lehary",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/03/Sajeda-Lehary-Brand-logo-Final-A@-1-scaled.webp"
   }
 ];
 
