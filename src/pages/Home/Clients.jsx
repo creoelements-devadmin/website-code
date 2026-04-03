@@ -204,7 +204,7 @@ export const logos2 = [
     url: "https://creo-elements.com/blogs/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-14-at-5.20.20-PM.jpeg"
   },
   {
-    name: "Sajeda Lehary",
+    name: "Sajeda A Lehary",
     url: "https://creo-elements.com/blogs/wp-content/uploads/2026/04/Sajeda-A-Lehry-Logo.png"
   }
 ];
