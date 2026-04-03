@@ -205,7 +205,7 @@ export const logos2 = [
   },
   {
     name: "Sajeda Lehary",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/03/Sajeda-Lehary-Brand-logo-Final-A@-1-scaled.webp"
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/04/Sajeda-A-Lehry-Logo.png"
   }
 ];
 
