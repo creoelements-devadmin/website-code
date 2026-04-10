@@ -181,7 +181,7 @@ export const WorkWithUS = () => {
 
                         <label htmlFor="budget">My Phone Number is</label>
                         <input
-                            type="text"
+                            type="number"
                             name="budget"
                             placeholder="+91 1234567890"
                             value={formData.budget}
