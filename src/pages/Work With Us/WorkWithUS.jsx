@@ -114,7 +114,7 @@ export const WorkWithUS = () => {
                 <title>Work With Us | Creo Elements LLP</title>
                 <meta
                     name="description"
-                    content="Join Creo Elements LLP and be part of a dynamic and innovative team. We are looking for passionate individuals to contribute to our digital marketing, web design, SEO, social media, and branding projects. Apply now to work with a team committed to achieving excellence in every project."
+                    content="Join Creo Elements LLP and be part of a dynamic and innovative team. We are looking for passionate individuals to contribute to our digital marketing, web design, SEO, social media, and branding projects. Apply now to work with a team committed to achieving excellence in every project ."
                 />
                 <meta property="og:title" content="Work With Us | Creo Elements LLP" />
                 <meta
