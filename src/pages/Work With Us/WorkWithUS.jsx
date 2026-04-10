@@ -59,8 +59,8 @@ export const WorkWithUS = () => {
 
         const formDataObject = new FormData();
         formDataObject.append('name', formData.name);
-        formDataObject.append('help', formData.help);
-        formDataObject.append('budget', formData.budget);
+        formDataObject.append('email', formData.email);
+        formDataObject.append('phone', formData.phone);
         formDataObject.append('website', formData.website);
         formDataObject.append('cv', formData.cv);
 
@@ -172,9 +172,9 @@ export const WorkWithUS = () => {
                         <label htmlFor="help">My Email is</label>
                         <input
                             type="email"
-                            name="help"
+                            name="email"
                             placeholder="your@emailaddress.com"
-                            value={formData.help}
+                            value={formData.email}
                             onChange={handleChange}
                             required
                         />
@@ -182,9 +182,9 @@ export const WorkWithUS = () => {
                         <label htmlFor="budget">My Phone Number is</label>
                         <input
                             type="number"
-                            name="budget"
+                            name="phone"
                             placeholder="+91 1234567890"
-                            value={formData.budget}
+                            value={formData.phone}
                             onChange={handleChange}
                             required
                         />
