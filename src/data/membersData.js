@@ -103,6 +103,14 @@ const membersData =[
     "slug":"gaurav"
   },
   {
+    "name": "Anshu",
+    "designation": "",
+    "description":"Anshu is a web designer intern who transforms ideas into clean, user-friendly digital experiences. He brings curiosity and attention to detail to every project, turning concepts into visually engaging and functional web designs. From landing pages to responsive layouts, Anshu treats each task as a space to explore creativity—refining structure, experimenting with design elements, and ensuring a seamless user journey. His work combines aesthetic sense with practical usability, helping brands build a strong and modern online presence.",
+    "meta_description":"Anshu, a web designer intern, transforms ideas into clean, user-friendly digital experiences with curiosity and attention to detail.",
+    "image":"/images/Anshu.png",
+    "slug":"anshu"
+  },
+  {
     "name": "Harsh",
     "designation": "",
     "description":"Harsh is an SEO and content innovation intern who transforms data and ideas into meaningful digital visibility. He brings curiosity, analytical thinking, and creative insight to every task. From keyword research and on-page optimization to content structuring and performance analysis, Harsh approaches each project as an opportunity to experiment, learn, and optimize. His work blends strategic SEO practices with innovative content thinking, helping brands improve discoverability, engagement, and long-term online growth.",
