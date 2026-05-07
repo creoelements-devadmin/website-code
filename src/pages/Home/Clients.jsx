@@ -206,6 +206,10 @@ export const logos2 = [
   {
     name: "Sajeda A Lehary ",
     url: "https://creo-elements.com/blogs/wp-content/uploads/2026/04/Sajeda-A-Lehry-Logo.png"
+  },
+  {
+    name: "Treatfully Yours ",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/TreatfullYoursLogo.jpeg"
   }
 ];
 
