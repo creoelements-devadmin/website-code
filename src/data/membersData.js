@@ -14,14 +14,15 @@ const membersData =[
     "meta_description": "Hiral Doctor, Co-founder of Creo Elements LLP, combines banking expertise and creativity to build impactful brands.",
     "image": "/images/Hiral Mam new.png",
     "slug": "hiral-doctor"
-  },{
-  "name": "Vinay",
-  "designation": "",
-  "description": "Vinay brings vision, versatility, and a whole lot of heart to every website he builds. With a strong grasp of both the big picture and the tiniest details, he turns bold ideas into smooth, engaging digital experiences. Always exploring new ways to push the web forward, he’s the steady force behind many of our most dynamic builds—creative, curious, and all in.",
-  "meta_description": "Vinay crafts bold, engaging web experiences with a blend of creative thinking and technical depth at Creo Elements LLP.",
-  "image": "/images/Vinay.webp",
-  "slug": "vinay"
-}
+  },
+//   {
+//   "name": "Vinay",
+//   "designation": "",
+//   "description": "Vinay brings vision, versatility, and a whole lot of heart to every website he builds. With a strong grasp of both the big picture and the tiniest details, he turns bold ideas into smooth, engaging digital experiences. Always exploring new ways to push the web forward, he’s the steady force behind many of our most dynamic builds—creative, curious, and all in.",
+//   "meta_description": "Vinay crafts bold, engaging web experiences with a blend of creative thinking and technical depth at Creo Elements LLP.",
+//   "image": "/images/Vinay.webp",
+//   "slug": "vinay"
+// }
 ,
   // {
   //   "name": "Mihika",
@@ -85,15 +86,15 @@ const membersData =[
   //   "slug": "anand"
   // }
 
-  {
-    "name": "Rohit",
-    "designation": "",
-    "description":"Rohit approaches web design with curiosity and care, blending creativity with a growing technical edge. As a Web Design Intern, he's learning the art of shaping ideas into clean, functional experiences that feel effortless to use. With a sharp eye for detail and a genuine eagerness to learn, Rohit is steadily building his place in the digital craft one thoughtful pixel at a time.",
-    "meta_description":"Rohit Vemula, a Web Design Intern, combines creativity and technical skill to craft clean, user-friendly digital experiences with attention to detail and a passion for learning.",
-    "image":"/images/rohit (2).png",
-    "slug":"rohit"
+  // {
+  //   "name": "Rohit",
+  //   "designation": "",
+  //   "description":"Rohit approaches web design with curiosity and care, blending creativity with a growing technical edge. As a Web Design Intern, he's learning the art of shaping ideas into clean, functional experiences that feel effortless to use. With a sharp eye for detail and a genuine eagerness to learn, Rohit is steadily building his place in the digital craft one thoughtful pixel at a time.",
+  //   "meta_description":"Rohit Vemula, a Web Design Intern, combines creativity and technical skill to craft clean, user-friendly digital experiences with attention to detail and a passion for learning.",
+  //   "image":"/images/rohit (2).png",
+  //   "slug":"rohit"
 
-  },
+  // },
    {
     "name": "Gaurav",
     "designation": "",
@@ -110,30 +111,30 @@ const membersData =[
     "image":"/images/Anshu.png",
     "slug":"anshu"
   },
-  {
-    "name": "Harsh",
-    "designation": "",
-    "description":"Harsh is an SEO and content innovation intern who transforms data and ideas into meaningful digital visibility. He brings curiosity, analytical thinking, and creative insight to every task. From keyword research and on-page optimization to content structuring and performance analysis, Harsh approaches each project as an opportunity to experiment, learn, and optimize. His work blends strategic SEO practices with innovative content thinking, helping brands improve discoverability, engagement, and long-term online growth.",
-    "meta_description":"Harsh, an SEO and content innovation intern, transforms data and ideas into meaningful digital visibility with strategic SEO practices and innovative content thinking.",
-    "image":"/images/Harsh.png",
-    "slug":"harsh"
-  },
-  {
-    "name": "Aditya",
-    "designation": "",
-    "description": "Aditya is the guy who makes sure every product looks its best before it hits the shelves—digital ones, of course. Whether it's finding the right words for a product title or writing descriptions that actually connect, he brings care and clarity to every listing. With a calm approach and a sharp eye for detail, Aditya quietly keeps things running smoothly behind the scenes, one product at a time.",
-    "meta_description": "Aditya is the guy who makes sure every product looks its best before it hits the shelves—digital ones, of course.",
-    "image": "/images/Aditya.png",
-    "slug": "aditya"
-  },
-  {
-  "name": "Siddhi",
-  "designation": "",
-  "description": "Siddhi approaches web like a craft—carefully, curiously, and always with intent. With a growing toolkit and a natural feel for what makes a website work, she brings quiet focus and thoughtful energy to every layout she shapes. Eager to experiment and refine, she’s quickly becoming a dependable hand in turning design into experience.",
-  "meta_description": "Siddhi builds thoughtful, user-focused web interfaces at Creo Elements LLP, with clarity, care, and curiosity.",
-  "image": "/images/Siddhi.png",
-  "slug": "siddhi"
-},
+  // {
+  //   "name": "Harsh",
+  //   "designation": "",
+  //   "description":"Harsh is an SEO and content innovation intern who transforms data and ideas into meaningful digital visibility. He brings curiosity, analytical thinking, and creative insight to every task. From keyword research and on-page optimization to content structuring and performance analysis, Harsh approaches each project as an opportunity to experiment, learn, and optimize. His work blends strategic SEO practices with innovative content thinking, helping brands improve discoverability, engagement, and long-term online growth.",
+  //   "meta_description":"Harsh, an SEO and content innovation intern, transforms data and ideas into meaningful digital visibility with strategic SEO practices and innovative content thinking.",
+  //   "image":"/images/Harsh.png",
+  //   "slug":"harsh"
+  // },
+  // {
+  //   "name": "Aditya",
+  //   "designation": "",
+  //   "description": "Aditya is the guy who makes sure every product looks its best before it hits the shelves—digital ones, of course. Whether it's finding the right words for a product title or writing descriptions that actually connect, he brings care and clarity to every listing. With a calm approach and a sharp eye for detail, Aditya quietly keeps things running smoothly behind the scenes, one product at a time.",
+  //   "meta_description": "Aditya is the guy who makes sure every product looks its best before it hits the shelves—digital ones, of course.",
+  //   "image": "/images/Aditya.png",
+  //   "slug": "aditya"
+  // },
+//   {
+//   "name": "Siddhi",
+//   "designation": "",
+//   "description": "Siddhi approaches web like a craft—carefully, curiously, and always with intent. With a growing toolkit and a natural feel for what makes a website work, she brings quiet focus and thoughtful energy to every layout she shapes. Eager to experiment and refine, she’s quickly becoming a dependable hand in turning design into experience.",
+//   "meta_description": "Siddhi builds thoughtful, user-focused web interfaces at Creo Elements LLP, with clarity, care, and curiosity.",
+//   "image": "/images/Siddhi.png",
+//   "slug": "siddhi"
+// },
 
 
 
