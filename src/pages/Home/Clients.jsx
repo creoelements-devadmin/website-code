@@ -21,7 +21,7 @@ export const logos1 = [
   },
   {
     name: "IVCCI - Indo-Vietnam Chamber of Commerce and Industry",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/IVCCI_-_Indo-Vietnam_Chamber_of_Commerce_and_Industry.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/IVCCI_-_Indo-Vietnam_Chamber_of_Commerce_and_Industry-scaled-e1779259709469.png'
   }, //IVCCI
   {
     name: "The Ke Concept",
@@ -29,7 +29,7 @@ export const logos1 = [
   },
   {
     name: "Experience Jaisalmer",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Experience_Jaisalmer.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Experience_Jaisalmer-e1779259824382.png'
   },
   {
     name: "Puri Developers",
@@ -37,11 +37,11 @@ export const logos1 = [
   }, //Puri
   {
     name: "NYPeas",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/NYPeas.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/NYPeas-e1779260170501.png'
   },
   {
     name: "Sila",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Sila.jpg'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Sila-e1779260244788.jpg'
   }, //Sila
   {
     name: "Radhika Dhawan",
@@ -69,11 +69,11 @@ export const logos1 = [
   },
   {
     name: "EtherWire",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/EtherWire.jpeg'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/EtherWire-e1779263462133.jpeg'
   }, //EtherWire
   {
     name: "Zircon Limited",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Zircon_Limited.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Zircon_Limited-e1779259418106.png'
   },
   // {
   //   name: "Project Co.",
@@ -81,18 +81,15 @@ export const logos1 = [
   // }, //Project Co.
   {
     name: "Kids And Bag Store",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Kids_And_Bag_Store.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Kids_And_Bag_Store-scaled-e1779260439737.png'
   },
   // {
   //   name: "Doodlz",
   //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Doodlz.jpg'
   // }, //Doodlz
-];
-
-export const logos2 = [
   {
     name: "HSBC",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/HSBC.jpg'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/HSBC-e1779263715618.jpg'
   }, //HSBC
   {
     name: "Trupsel",
@@ -100,11 +97,14 @@ export const logos2 = [
   }, //Trupsel
   {
     name: "MMBharwada",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/MMBharwada.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/MMBharwada-e1779260735444.png'
   },
+];
+
+export const logos2 = [
   {
     name: "Allestate",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Allestate.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2026/05/ChatGPT-Image-May-20-2026-01_02_28-AM-e1779264376706.png'
   },
   {
     name: "SSSCPA",
@@ -128,11 +128,11 @@ export const logos2 = [
   },
   {
     name: "Sleepy Tots Nightwear",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Sleepy_Tots_Nightwear.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Sleepy_Tots_Nightwear-scaled-e1779261284427.png'
   },
   {
     name: "Dorii",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Dorii.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Dorii-e1779263581409.png'
   },
   {
     name: "Atelier Shibani",
@@ -140,7 +140,7 @@ export const logos2 = [
   }, //AtelierShibani
   {
     name: "MTBA - Maharashtra Tenpin Bowling Association",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/MTBA_-_Maharashtra_Tenpin_Bowling_Association.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/MTBA_-_Maharashtra_Tenpin_Bowling_Association-e1779260620268.png'
   },
   {
     name: "Meher Roshani Foundation",
@@ -152,20 +152,20 @@ export const logos2 = [
   },
   {
     name: "Natasha The Dentist",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Natasha_The_Dentist.jpg'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Natasha_The_Dentist-e1779261196809.jpg'
   },
   {
     name: "Social Toast",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Social_Toast.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Social_Toast-scaled-e1779261499929.png'
   },
   {
     name: "Artangle90",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Artangle90.jpg'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2026/05/ChatGPT-Image-May-20-2026-12_35_05-AM.png'
   },
   //Artangle
   {
     name: "The Inner Shift",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/The_Inner_Shift.jpg'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/The_Inner_Shift-e1779261586382.jpg'
   }, //The Inner Shift
   // {
   //   name: "CoolLab Project",
@@ -181,7 +181,7 @@ export const logos2 = [
   // }, //FnQ
   {
     name: "360South",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/360South.png'
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/360South-e1779260849443.png'
   }, //360South
   {
     name: "Roshanishenazz",
@@ -209,7 +209,15 @@ export const logos2 = [
   },
   {
     name: "Treatfully Yours ",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/TreatfullYoursLogo.jpeg"
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/TreatfullYoursLogo-e1779263213574.jpeg"
+  },
+  {
+    name: "ODE the futra ",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/ODE-the-futra-.jpg-e1779268004650.jpeg"
+  },
+  {
+    name: "Storeeva ",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/ChatGPT-Image-May-20-2026-02_20_30-AM.png"
   }
 ];
 
