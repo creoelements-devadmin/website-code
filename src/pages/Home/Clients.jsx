@@ -213,11 +213,15 @@ export const logos2 = [
   },
   {
     name: "ODE the futra ",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/ODE-the-futra-.jpg-e1779268004650.jpeg"
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/07/ODE_logo_transparent.png"
   },
   {
     name: "Storeeva ",
     url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/ChatGPT-Image-May-20-2026-02_20_30-AM.png"
+  },
+  {
+    name: "manishadesign ",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/07/ChatGPT-Image-Jul-2-2026-03_39_37-AM.png"
   }
 ];
 
