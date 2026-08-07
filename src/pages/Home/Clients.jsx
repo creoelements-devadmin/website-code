@@ -270,8 +270,8 @@ export const Clients = () => {
   return (
     <section className="clients-container full-width" id="clients-section">
       <div className='clients-container-wrapper'>
-        <h2>Our Clients</h2>
-        <p style={{ textAlign: 'center' }}>We are proud to work with a diverse range of trusted clients and partners.</p>
+        <h2 className='clients-heading'>Our Clients</h2>
+        <p className="clients-p" style={{ textAlign: 'center' }}>We are proud to work with a diverse range of trusted clients and partners.</p>
 
         <div className='clients-swiper-wrapper'>
           <div className='clients-overlay'></div>
