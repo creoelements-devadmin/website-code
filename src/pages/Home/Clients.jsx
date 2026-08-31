@@ -222,7 +222,11 @@ export const logos2 = [
   {
     name: "manishadesign ",
     url: "https://creo-elements.com/blogs/wp-content/uploads/2026/07/ChatGPT-Image-Jul-2-2026-03_39_37-AM.png"
-  }
+  },
+  {
+    name: "The Kin Hotel ",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/08/Kin-Logo.png"
+  },
 ];
 
 export const Clients = () => {
