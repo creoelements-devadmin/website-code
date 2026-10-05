@@ -19,7 +19,7 @@ const InputField = ({ name, label, type = 'text', placeholder, as = 'input', inp
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
-                maxLength={name === 'help' ? 1000 : name === 'phone' ? 10 : 100}
+                maxLength={name === 'help' ? 1000 : name === 'phone' ? 10 : undefined}
                 required
                 className={`w-full mt-1.5 bg-white text-[15px] text-btnPrimary placeholder:text-btnPrimary/30
                   border-b ${error ? 'border-red-500' : 'border-btnPrimary/10'} focus:border-primary outline-none
