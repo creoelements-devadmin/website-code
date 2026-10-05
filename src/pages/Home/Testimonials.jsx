@@ -144,11 +144,11 @@ export const Testimonials = () => {
 
               {/* Card Footer: Author Info */}
               <div className="flex items-center gap-4 pt-6 border-t border-black/5">
-                <div className="relative p-0.5 rounded-full ring-2 ring-primary/30 bg-white">
+                <div className="relative p-0.5   ring-primary/30 bg-white">
                   <img
                     src={slide.image}
                     alt={slide.content.name}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-12 h-12 rounded-2xl  object-contain "
                   />
                 </div>
 

@@ -5,11 +5,10 @@ import { SectionHeading } from '../../components/Gsap/SectionHeading';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// --- Global mobile-scroll smoothing (safe to call multiple times, GSAP dedupes) ---
-if (typeof window !== 'undefined') {
+ if (typeof window !== 'undefined') {
   ScrollTrigger.normalizeScroll(true);       
   ScrollTrigger.config({
-    ignoreMobileResize: true,                 // stop refresh() spam on url-bar show/hide
+    ignoreMobileResize: true,                  
   });
 }
 
@@ -91,7 +90,7 @@ const Projects = () => {
   }, []);
 
   const projectData = [
-    { id: '01', name: 'Little Things Scute', url: 'https://littlethingscute.com/', image: '/images/Projects img/ltc.png', category: 'E-commerce' },
+    { id: '01', name: 'Little Things Cute', url: 'https://littlethingscute.com/', image: '/images/Projects img/ltc.png', category: 'E-commerce' },
     { id: '02', name: 'Atul Kasbekar', url: 'https://atulkasbekar.com/', image: '/images/Projects img/atul.png', category: 'Photographer' },
     { id: '03', name: 'DBS Cricket', url: 'https://dbscricket.org/', image: '/images/Projects img/db.png', category: 'Cricket' },
     { id: '04', name: 'IVCCI', url: 'https://ivcci.org.in/', image: '/images/Projects img/ivcci.png', category: 'Organization' },

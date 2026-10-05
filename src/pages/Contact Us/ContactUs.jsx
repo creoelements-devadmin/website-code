@@ -247,7 +247,7 @@ const ContactUs = () => {
                     
                             <div className="grid grid-cols-2 gap-4">
                                 <Field name="email" label="Email" type="email" placeholder="you@brand.com" value={formData.email} onChange={handleChange} error={errors.email} />
-                                <Field name="phone" label="Phone" type="tel" inputMode="numeric" placeholder="98XXXXXXXX" value={formData.phone} onChange={handleChange} error={errors.phone} />
+                                <Field name="phone" label="Phone" type="tel" placeholder="98XXXXXXXX" value={formData.phone} onChange={handleChange} error={errors.phone} />
                             </div>
 
                             {message && <p className="text-sm text-red-500 pl-1">{message}</p>}

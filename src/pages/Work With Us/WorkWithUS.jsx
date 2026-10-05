@@ -4,15 +4,12 @@ import { OPEN_ROLES } from '../../data/Role';
 import { RoleItem } from './RoleItem';
 
 const API_URL = 'https://creo-elements.com/blogs/wp-json/custom/v1/application-submit';
-
 const SEO_TITLE = 'Work With Us | Creo Elements LLP';
-const SEO_DESCRIPTION =
-    'Creo Elements LLP is hiring interns in Mumbai for e-commerce, graphic design and website development. See open roles and apply.';
+const SEO_DESCRIPTION = 'Creo Elements LLP is hiring interns in Mumbai for e-commerce, graphic design and website development. See open roles and apply.';
 const SEO_IMAGE = 'https://creo-elements.com/images/work-with-us-banner.webp';
 const SEO_URL = 'https://creo-elements.com/work-with-us';
 
-const inputClass =
-    'w-full bg-transparent border-b border-btnPrimary/15 focus:border-primary outline-none font-primary text-sm text-btnPrimary py-2 placeholder:text-btnPrimary/30 transition-colors';
+const inputClass = 'w-full bg-transparent border-b border-btnPrimary/15 focus:border-primary outline-none font-primary text-sm text-btnPrimary py-2 placeholder:text-btnPrimary/30 transition-colors';
 
 const TEAM_DETAILS = [
     { title: 'Based in Mumbai', text: 'A studio you can walk into.' },
@@ -33,8 +30,11 @@ export const WorkWithUS = () => {
     const [openRole, setOpenRole] = useState(null);
     const [showForm, setShowForm] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [sent, setSent] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [formData, setFormData] = useState(INITIAL_FORM);
+    const [errors, setErrors] = useState({});
+    const [message, setMessage] = useState('');
     const formRef = useRef(null);
 
     useEffect(() => {
@@ -48,55 +48,73 @@ export const WorkWithUS = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-
-        // Phone: digits only, max 10. Other fields: no limit, just no leading spaces.
-        const cleaned =
-            name === 'phone' ? value.replace(/\D/g, '').slice(0, 10) : value.replace(/^\s+/, '');
-
+        const cleaned = name === 'phone' ? value.replace(/\D/g, '').slice(0, 10) : value.replace(/^\s+/, '');
         setFormData((prev) => ({ ...prev, [name]: cleaned }));
+        setErrors((prev) => ({ ...prev, [name]: '' }));
+        setMessage('');
     };
 
-    const handleFileChange = (e) =>
+    const handleFileChange = (e) => {
         setFormData((prev) => ({ ...prev, cv: e.target.files[0] || null }));
+        setErrors((prev) => ({ ...prev, cv: '' }));
+        setMessage('');
+    };
 
     const toggleRole = (role) => setOpenRole((prev) => (prev === role.id ? null : role.id));
 
     const applyForRole = (role) => {
-        setFormData((prev) => ({ ...prev, role: role.name }));
+        setFormData({ ...INITIAL_FORM, role: role.name.trim() });
+        setErrors({});
+        setMessage('');
+        setSent(false);
         setShowForm(true);
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
+        const foundErrors = {};
+        const role = formData.role.trim();
 
-        if (!formData.role) {
-            alert('Please pick a role first.');
-            setShowForm(false);
+        if (!formData.name.trim()) foundErrors.name = 'Please enter your name.';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+            foundErrors.email = 'Please enter a correct email.';
+        }
+        if (!/^\d{10}$/.test(formData.phone)) foundErrors.phone = 'Please enter a 10-digit phone number.';
+        if (!formData.cv) foundErrors.cv = 'Please upload your CV.';
+        if (!form.elements.mumbai_based.checked) foundErrors.mumbai_based = 'Please confirm you are based in Mumbai.';
+        if (!role) foundErrors.role = 'Please pick a role first.';
+
+        setErrors(foundErrors);
+        if (Object.keys(foundErrors).length > 0) {
+            setMessage('Please fill all required fields correctly.');
             return;
         }
 
         setLoading(true);
 
         const body = new FormData();
-        Object.entries(formData).forEach(([key, value]) => body.append(key, value));
+        body.append('name', formData.name);
+        body.append('email', formData.email);
+        body.append('phone', formData.phone);
+        body.append('website', role); // the PHP plugin reads the position from "website"
+        body.append('cv', formData.cv);
 
         try {
             const response = await fetch(API_URL, { method: 'POST', body });
             const result = await response.json();
 
             if (response.ok) {
-                alert('Application sent. We will get back to you soon.');
                 form.reset(); // clears the uncontrolled file input
                 setFormData(INITIAL_FORM);
+                setSent(true);
                 setOpenRole(null);
-                setShowForm(false);
             } else {
-                alert('Something went wrong: ' + (result?.message || 'please try again.'));
+                setMessage('Something went wrong: ' + (result?.message || 'please try again.'));
             }
         } catch (error) {
             console.error('Error submitting application:', error);
-            alert('There was an error sending your application. Please try again.');
+            setMessage('There was an error sending your application. Please try again.');
         } finally {
             setLoading(false);
         }
@@ -146,9 +164,7 @@ export const WorkWithUS = () => {
                         </h1>
 
                         <p className={`font-primary text-sm text-btnPrimary/60 lg:max-w-[30%] mt-8 leading-relaxed ${reveal('delay-200')}`}>
-                            Creo Elements is a collaborative creative and digital agency based in Mumbai. We are
-                            building a team of designers, developers, strategists and creators who care about
-                            thoughtful ideas, strong execution and work that creates genuine value.
+                            Creo Elements is a collaborative creative and digital agency based in Mumbai. We are building a team of designers, developers, strategists and creators who care about thoughtful ideas, strong execution and work that creates genuine value.
                         </p>
                     </div>
 
@@ -189,94 +205,126 @@ export const WorkWithUS = () => {
                             ref={formRef}
                             className="bg-secondary rounded-4xl border-gray-200 border p-8 md:p-10 mt-10 scroll-mt-10"
                         >
-                            <div className="flex items-center justify-between mb-6">
-                                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary font-primary text-xs px-3 py-1.5 rounded-full">
-                                    Applying as {formData.role}
+                            {!sent && (
+                                <div className="flex items-center justify-end mb-6">
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowForm(false)}
+                                        className="font-primary text-xs text-btnPrimary/50 hover:text-primary cursor-pointer"
+                                    >
+                                        Close ✕
+                                    </button>
                                 </div>
-                                <button
-                                    type="button"
-                                    onClick={() => setShowForm(false)}
-                                    className="font-primary text-xs text-btnPrimary/50 hover:text-primary cursor-pointer"
-                                >
-                                    Close ✕
-                                </button>
-                            </div>
+                            )}
 
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <Field label="Your name">
-                                    <input
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="Full name"
-                                        className={inputClass}
-                                    />
-                                </Field>
-
-                                <Field label="Email">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="you@example.com"
-                                        className={inputClass}
-                                    />
-                                </Field>
-
-                                <Field label="Phone">
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        inputMode="numeric"
-                                        pattern="[0-9]{10}"
-                                        maxLength={10}
-                                        required
-                                        placeholder="9876543210"
-                                        className={inputClass}
-                                    />
-                                </Field>
-
-                                <div>
-                                    <p className="font-primary text-xs text-btnPrimary/50 mb-2">CV</p>
-                                    <label className="flex items-center justify-between border border-dashed border-btnPrimary/25 rounded-2xl px-4 py-3 cursor-pointer hover:border-primary transition-colors">
-                                        <span className="font-primary text-sm text-btnPrimary/70 truncate">
-                                            {formData.cv ? formData.cv.name : 'Upload your CV'}
-                                        </span>
-                                        <input
-                                            type="file"
-                                            name="cv"
-                                            accept=".pdf,application/pdf"
-                                            onChange={handleFileChange}
-                                            required
-                                            className="hidden"
-                                        />
-                                        <span className="font-primary text-xs text-primary shrink-0 ml-3">Browse</span>
-                                    </label>
-                                    <p className="font-primary text-xs text-btnPrimary/50 mt-2 ml-2">
-                                        CV must be in PDF format
-                                    </p>
+                            {sent ? (
+                                <div className="py-10" role="status">
+                                    <p className="font-display text-4xl text-btnPrimary">Application sent — thank you.</p>
+                                    <p className="text-btnPrimary/55 mt-3">We&apos;ll get back to you soon.</p>
                                 </div>
+                            ) : (
+                                <>
+                                    <form onSubmit={handleSubmit} noValidate className="space-y-6">
+                                        <Field label="Position">
+                                            <input
+                                                name="role"
+                                                value={formData.role}
+                                                readOnly
+                                                className={`${inputClass} cursor-default`}
+                                            />
+                                        </Field>
 
-                                <label className="flex items-start gap-3 cursor-pointer">
-                                    <input type="checkbox" required className="mt-1 accent-primary w-4 h-4" />
-                                    <span className="font-primary text-xs text-btnPrimary/60">
-                                        I'm currently based in Mumbai
-                                    </span>
-                                </label>
+                                        <Field label="Your name">
+                                            <input
+                                                name="name"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                placeholder="Full name"
+                                                aria-invalid={Boolean(errors.name)}
+                                                className={`${inputClass} ${errors.name ? 'border-red-500' : ''}`}
+                                            />
+                                            {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
+                                        </Field>
 
-                                <button
-                                    type="submit"
-                                    disabled={loading}
-                                    className="w-full bg-primary cursor-pointer text-secondary font-primary text-sm rounded-full py-4 mt-2 transition-opacity hover:opacity-90 disabled:opacity-60"
-                                >
-                                    {loading ? 'Sending…' : 'Send application'}
-                                </button>
-                            </form>
+                                        <Field label="Email">
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                placeholder="you@example.com"
+                                                aria-invalid={Boolean(errors.email)}
+                                                className={`${inputClass} ${errors.email ? 'border-red-500' : ''}`}
+                                            />
+                                            {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
+                                        </Field>
+
+                                        <Field label="Phone">
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                inputMode="numeric"
+                                                pattern="[0-9]{10}"
+                                                maxLength={10}
+                                                placeholder="9876543210"
+                                                aria-invalid={Boolean(errors.phone)}
+                                                className={`${inputClass} ${errors.phone ? 'border-red-500' : ''}`}
+                                            />
+                                            {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
+                                        </Field>
+
+                                        <div>
+                                            <p className="font-primary text-xs text-btnPrimary/50 mb-2">CV</p>
+                                            <label className="flex items-center justify-between border border-dashed border-btnPrimary/25 rounded-2xl px-4 py-3 cursor-pointer hover:border-primary transition-colors">
+                                                <span className="font-primary text-sm text-btnPrimary/70 truncate">
+                                                    {formData.cv ? formData.cv.name : 'Upload your CV'}
+                                                </span>
+                                                <input
+                                                    type="file"
+                                                    name="cv"
+                                                    accept=".pdf,application/pdf"
+                                                    onChange={handleFileChange}
+                                                    className="hidden"
+                                                />
+                                                <span className="font-primary text-xs text-primary shrink-0 ml-3">Browse</span>
+                                            </label>
+                                            <p className="font-primary text-xs text-btnPrimary/50 mt-2 ml-2">
+                                                CV must be in PDF format
+                                            </p>
+                                            {errors.cv && <p className="text-xs text-red-500 mt-1">{errors.cv}</p>}
+                                        </div>
+
+                                        <label className="flex items-start gap-3 cursor-pointer">
+                                            <input
+                                                type="checkbox"
+                                                name="mumbai_based"
+                                                onChange={() => {
+                                                    setErrors((prev) => ({ ...prev, mumbai_based: '' }));
+                                                    setMessage('');
+                                                }}
+                                                aria-invalid={Boolean(errors.mumbai_based)}
+                                                className="mt-1 accent-primary w-4 h-4"
+                                            />
+                                            <span className="font-primary text-xs text-btnPrimary/60">
+                                                I'm currently based in Mumbai
+                                            </span>
+                                        </label>
+                                        {errors.mumbai_based && <p className="text-xs text-red-500 -mt-4">{errors.mumbai_based}</p>}
+
+                                        {message && <p role="alert" className="text-sm text-red-500">{message}</p>}
+
+                                        <button
+                                            type="submit"
+                                            disabled={loading}
+                                            className="w-full bg-primary cursor-pointer text-secondary font-primary text-sm rounded-full py-4 mt-2 transition-opacity hover:opacity-90 disabled:opacity-60"
+                                        >
+                                            {loading ? 'Sending…' : 'Send application'}
+                                        </button>
+                                    </form>
+                                </>
+                            )}
                         </div>
                     )}
                 </div>
