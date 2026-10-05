@@ -1,14 +1,23 @@
-import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import './index.css';
 
-import { HelmetProvider } from 'react-helmet-async';  // import HelmetProvider
-createRoot(document.getElementById('root')).render(
+import { HelmetProvider } from 'react-helmet-async';
+import { PageTransitionProvider } from './components/PageTransition.jsx';
 
-  <HelmetProvider>
-    <Router>
-      <App />
-    </Router></HelmetProvider>,
+window.history.scrollRestoration = 'manual';
+
+ createRoot(document.getElementById('root')).render(
+
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true, }}>
+            <HelmetProvider>
+                  <PageTransitionProvider>
+                        <App />
+                  </PageTransitionProvider>
+            </HelmetProvider>,
+      </BrowserRouter>
 );
+
+
+

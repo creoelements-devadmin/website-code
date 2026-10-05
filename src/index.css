@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* ================================
+   Global Variables
+================================ */
+@theme {
+  --color-bggray: #F9F8F6;
+  --color-btnPrimary: #141414;
+  --color-primary: #3EB8A2;
+  --color-secondary: #ffff;
+
+  --font-primary: "Poppins", sans-serif;
+  --font-sukar: "Sukar", sans-serif;
+  --font-futura: "Futura", sans-serif;
+  --font-display: "Instrument Serif", serif;
+}
+
+:root {
+  color-scheme: light;
+  --cursor-ring-bg: rgba(255, 61, 0, 0.12);
+  --cursor-dot-bg: #ff3d00;
+  --cursor-trail-bg: rgba(255, 61, 0, 0.08);
+}
+
+/* ================================
+   Custom Fonts
+================================ */
+@font-face {
+  font-family: "Sukar";
+  src: url("/src/assets/fonts/sukar.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("/src/assets/fonts/Futura URW Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================
+   Base & Global Ambient Aura
+================================ */
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--font-primary);
+  background-color: #F7F6F3;
+  
+  /* Global fixed ambient radial gradients */
+  background-image: 
+    radial-gradient(circle 500px at 75% -5%, rgba(62, 184, 162, 0.12) 0%, transparent 70%),
+    radial-gradient(circle 450px at 5% 105%, rgba(62, 184, 162, 0.10) 0%, transparent 70%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Required by Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* ================================
+   Utilities
+================================ */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+              rgba(0, 0, 0, 0.2) 0px 1.5px 3px 0px, 
+              rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, 
+              rgba(0, 0, 0, 0.3) 0px 12px 24px -6px;
+}
+
+@media (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+ 
+
+/* cta creo elements  */
+.brand-text {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 32px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.brand-title {
+  margin: 0;
+  display: inline-block;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  font-size: 12vw;
+  line-height: 0.8;
+  text-align: center;
+
+  background: radial-gradient(
+    ellipse 420px 240px at var(--light-x, -20%) 50%,
+    #17181c 0%,
+    #888 38%,
+    #d8d8d8 75%,
+    #ebebeb 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  transition: background-position 0.075s ease;
+  will-change: transform;
+}
+ 
+
+@media (max-width: 640px) {
+  .brand-text {
+    padding: 16px 0;
+  }
+
+  .brand-title {
+    font-size: 18vw;
+  }
+}
+
+::selection{
+  background-color:#3EB8A2;
+  color: white;
+  border-radius: 30px;
+}

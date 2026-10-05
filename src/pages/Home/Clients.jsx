@@ -1,330 +1,149 @@
-import React, { useEffect, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-import './Clients.css';
-import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ClientsLogo } from "../../data/ClientsData.js";
+import { SectionHeading } from "../../components/Gsap/SectionHeading.jsx";
 
-export const logos1 = [
-  {
-    name: 'Atul Kasbekar',
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Atul_Kasbekar.png'
-  },
-  {
-    name: "Eesha Amiin",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/07/eshaa-amiin-logo.webp'
-  }, //Eesha Amiin
-  {
-    name: "Preeti McConkey",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Preeti_McConkey.jpeg'
-  },
-  {
-    name: "IVCCI - Indo-Vietnam Chamber of Commerce and Industry",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/IVCCI_-_Indo-Vietnam_Chamber_of_Commerce_and_Industry-scaled-e1779259709469.png'
-  }, //IVCCI
-  {
-    name: "The Ke Concept",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/The_Ke_Concept.jpg'
-  },
-  {
-    name: "Experience Jaisalmer",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Experience_Jaisalmer-e1779259824382.png'
-  },
-  {
-    name: "Puri Developers",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/PuriDevelopers.png'
-  }, //Puri
-  {
-    name: "NYPeas",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/NYPeas-e1779260170501.png'
-  },
-  {
-    name: "Sila",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Sila-e1779260244788.jpg'
-  }, //Sila
-  {
-    name: "Radhika Dhawan",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/06/Radhika-Logo.png'
-  }, //Radhika
-  {
-    name: "Inara by Sana Pathella",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/06/Inara-by-sana.png'
-  }, 
-  {
-    name: "DBSmashers (Hong Kong)",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/DBSmashers_Hong_Kong.png'
-  },
-  {
-    name: "United Surgical Traders",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/United_Surgical_Traders.png'
-  },
-  {
-    name: "Little Things Cute",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Little_Things_Cute.webp'
-  },
-  {
-    name: "Cute Style Pick (Kalbadevi)",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Cute_Style_Pick_Kalbadevi.webp'
-  },
-  {
-    name: "EtherWire",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/EtherWire-e1779263462133.jpeg'
-  }, //EtherWire
-  {
-    name: "Zircon Limited",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Zircon_Limited-e1779259418106.png'
-  },
-  // {
-  //   name: "Project Co.",
-  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Project_Co.jpg'
-  // }, //Project Co.
-  {
-    name: "Kids And Bag Store",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Kids_And_Bag_Store-scaled-e1779260439737.png'
-  },
-  // {
-  //   name: "Doodlz",
-  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Doodlz.jpg'
-  // }, //Doodlz
-  {
-    name: "HSBC",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/HSBC-e1779263715618.jpg'
-  }, //HSBC
-  {
-    name: "Trupsel",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Trupsel.png'
-  }, //Trupsel
-  {
-    name: "MMBharwada",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/MMBharwada-e1779260735444.png'
-  },
-];
-
-export const logos2 = [
-  {
-    name: "Allestate",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2026/05/ChatGPT-Image-May-20-2026-01_02_28-AM-e1779264376706.png'
-  },
-  {
-    name: "SSSCPA",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/07/SSSCPALOGO-scaled.png'
-  },
-  {
-    name: "Irah Lifespace",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Irah_Lifespace.png'
-  },
-  {
-    name: "RAY",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/RAY.png'
-  },
-  {
-    name: "House Of EEKKTA",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/House_Of_EEKKTA.png'
-  },
-  {
-    name: "Here Comes The Bride",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/06/HCTB-logo-with-tagline.png'
-  },
-  {
-    name: "Sleepy Tots Nightwear",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Sleepy_Tots_Nightwear-scaled-e1779261284427.png'
-  },
-  {
-    name: "Dorii",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Dorii-e1779263581409.png'
-  },
-  {
-    name: "Atelier Shibani",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Atelier_Shibani.png'
-  }, //AtelierShibani
-  {
-    name: "MTBA - Maharashtra Tenpin Bowling Association",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/MTBA_-_Maharashtra_Tenpin_Bowling_Association-e1779260620268.png'
-  },
-  {
-    name: "Meher Roshani Foundation",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Meher_Roshani_Foundation.webp'
-  },
-  {
-    name: "Parinie",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Parinie.png'
-  },
-  {
-    name: "Natasha The Dentist",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Natasha_The_Dentist-e1779261196809.jpg'
-  },
-  {
-    name: "Social Toast",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Social_Toast-scaled-e1779261499929.png'
-  },
-  {
-    name: "Artangle90",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2026/05/ChatGPT-Image-May-20-2026-12_35_05-AM.png'
-  },
-  //Artangle
-  {
-    name: "The Inner Shift",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/The_Inner_Shift-e1779261586382.jpg'
-  }, //The Inner Shift
-  // {
-  //   name: "CoolLab Project",
-  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/CoolLab_Project.jpg'
-  // }, //CoolLab Project
-  // {
-  //   name: "Be Desi",
-  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Be_Desi.jpg'
-  // }, //Be Desi
-  // {
-  //   name: "FNQ",
-  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/FNQ.jpg'
-  // }, //FnQ
-  {
-    name: "360South",
-    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/360South-e1779260849443.png'
-  }, //360South
-  {
-    name: "Roshanishenazz",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/roshani-logo.png"
-  },
-  {
-    name: "Roshanishenazz",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/RS-Signature.png"
-  },
-  {
-    name: "CooperSilicotex",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/coopersilicotex-logo-cropped.webp"
-  },
-  {
-    name: "Akira Jewels",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/01/AkiraJewels.png"
-  },
-  {
-    name: "Tpc",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-14-at-5.20.20-PM.jpeg"
-  },
-  {
-    name: "Sajeda A Lehary ",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/04/Sajeda-A-Lehry-Logo.png"
-  },
-  {
-    name: "Treatfully Yours ",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/TreatfullYoursLogo-e1779263213574.jpeg"
-  },
-  {
-    name: "ODE the futra ",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/07/ODE_logo_transparent.png"
-  },
-  {
-    name: "Storeeva ",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/05/ChatGPT-Image-May-20-2026-02_20_30-AM.png"
-  },
-  {
-    name: "manishadesign ",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/07/ChatGPT-Image-Jul-2-2026-03_39_37-AM.png"
-  },
-  {
-    name: "The Kin Hotel ",
-    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/08/Kin-Logo.png"
-  },
-];
+gsap.registerPlugin(ScrollTrigger);
 
 export const Clients = () => {
-  const firstSwiperRef = useRef(null);
-  const secondSwiperRef = useRef(null);
+  const containerRef = useRef(null);
+  const rowTopRef = useRef(null);
+  const rowMiddleRef = useRef(null);
+  const rowBottomRef = useRef(null);
 
-  const handleVisibility = (entries, swiperRef) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        swiperRef.current?.swiper?.autoplay.start();
-      } else {
-        swiperRef.current?.swiper?.autoplay.stop();
-      }
-    });
-  };
+  // Split all clients evenly across 3 rows
+  const chunkSize = Math.ceil(ClientsLogo.length / 3);
+  const row1 = ClientsLogo.slice(0, chunkSize);
+  const row2 = ClientsLogo.slice(chunkSize, chunkSize * 2);
+  const row3 = ClientsLogo.slice(chunkSize * 2);
+
+  // Duplicate items 4x to ensure uninterrupted looping
+  const loop1 = [...row1, ...row1, ...row1, ...row1];
+  const loop2 = [...row2, ...row2, ...row2, ...row2];
+  const loop3 = [...row3, ...row3, ...row3, ...row3];
 
   useEffect(() => {
-    const firstObserver = new IntersectionObserver(
-      (entries) => handleVisibility(entries, firstSwiperRef),
-      { threshold: 0.5 }
-    );
+    const ctx = gsap.context(() => {
+      // Row 1: Leftward
+      const anim1 = gsap.to(rowTopRef.current, { xPercent: -50, repeat: -1, duration: 90, ease: "none", });
 
-    const secondObserver = new IntersectionObserver(
-      (entries) => handleVisibility(entries, secondSwiperRef),
-      { threshold: 0.5 }
-    );
+      // Row 2: Rightward
+      gsap.set(rowMiddleRef.current, { xPercent: -50 });
+      const anim2 = gsap.to(rowMiddleRef.current, { xPercent: 0, repeat: -1, duration: 95, ease: "none", });
 
-    if (firstSwiperRef.current) {
-      firstObserver.observe(firstSwiperRef.current);
-    }
-    if (secondSwiperRef.current) {
-      secondObserver.observe(secondSwiperRef.current);
-    }
+      // Row 3: Leftward
+      const anim3 = gsap.to(rowBottomRef.current, { xPercent: -50, repeat: -1, duration: 90, ease: "none", });
 
-    return () => {
-      if (firstSwiperRef.current) {
-        firstObserver.unobserve(firstSwiperRef.current);
-      }
-      if (secondSwiperRef.current) {
-        secondObserver.unobserve(secondSwiperRef.current);
-      }
-    };
+      // Mouseenter / Mouseleave pause handlers per row
+      const setupHoverPause = (el, anim) => {
+        if (!el) return;
+        const enter = () => gsap.to(anim, { timeScale: 0, duration: 0.5 });
+        const leave = () => gsap.to(anim, { timeScale: 1, duration: 0.5 });
+
+        el.addEventListener("mouseenter", enter);
+        el.addEventListener("mouseleave", leave);
+
+        return () => {
+          el.removeEventListener("mouseenter", enter);
+          el.removeEventListener("mouseleave", leave);
+        };
+      };
+
+      const cleanup1 = setupHoverPause(rowTopRef.current, anim1);
+      const cleanup2 = setupHoverPause(rowMiddleRef.current, anim2);
+      const cleanup3 = setupHoverPause(rowBottomRef.current, anim3);
+
+      // Dynamic scroll velocity steering
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        onUpdate: (self) => {
+          const velocity = self.getVelocity();
+          const boost = Math.min(Math.max(Math.abs(velocity) / 100, 10), 1);
+
+          const dir = self.direction === 1 ? 1 : -1;
+          gsap.to([anim1, anim3], { timeScale: dir * boost, duration: 0.25, overwrite: "auto" });
+          gsap.to(anim2, { timeScale: dir * boost, duration: 0.25, overwrite: "auto" });
+
+          gsap.delayedCall(0.35, () => {
+            gsap.to([anim1, anim3], { timeScale: 1, duration: 0.8 });
+            gsap.to(anim2, { timeScale: 1, duration: 0.8 });
+          });
+        },
+      });
+
+      return () => {
+        cleanup1 && cleanup1();
+        cleanup2 && cleanup2();
+        cleanup3 && cleanup3();
+      };
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className="clients-container full-width" id="clients-section">
-      <div className='clients-container-wrapper'>
-        <h2 className='clients-heading'>Our Clients</h2>
-        <p className="clients-p" style={{ textAlign: 'center' }}>We are proud to work with a diverse range of trusted clients and partners.</p>
+    <section ref={containerRef} className="relative w-full  py-20   overflow-hidden   " >
+      <div className="">
+      <SectionHeading
+      tag=" Our Clients"
+      title="Trusted across industries "
+      highlight="Connected across borders."
+      text="We empower ambitious brands across automotive, retail, and finance to build impactful digital experiences and drive sustainable growth."/>
+ </div>
+      
 
-        <div className='clients-swiper-wrapper'>
-          <div className='clients-overlay'></div>
-          <div className='firstswiper-wrapper' ref={firstSwiperRef}>
-            <Swiper
-              slidesPerView={5}
-              spaceBetween={30}
-              freeMode={true}
-              loop={true}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-              }}
-              speed={6000}
-              modules={[FreeMode, Pagination, Autoplay]}
-              className="mySwiper"
-            >
-              {logos1.map((logo, index) => (
-                <SwiperSlide key={index}>
-                  <img src={logo.url} alt={logo.name} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+      {/* Marquee Wrapper with Left & Right Gradient Blur Overlays */}
+      <div className="relative w-full px-3  md:px-5 lg:px-10 ">
+        {/* Left Side Blur and right side / Mask */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-20 sm:w-20 z-20 bg-gradient-to-r from-[#F7F6F3] via-[#F7F6F3]/80 to-transparent backdrop-blur-[2px]" />
+         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-20 sm:w-20 z-20 bg-gradient-to-l from-[#F7F6F3] via-[#F7F6F3]/80 to-transparent backdrop-blur-[2px]" />
+
+        {/* Row 1: Leftward */}
+        <div className="relative w-full overflow-hidden   py-4">
+          <div ref={rowTopRef} className="flex items-center gap-6 w-max will-change-transform cursor-pointer" >
+            {loop1.map((client, index) => (
+              <LogoCard key={`row1-${index}`} client={client} />
+            ))}
           </div>
+        </div>
 
-          <div className='secondswiper-wrapper' ref={secondSwiperRef}>
-            <Swiper
-              slidesPerView={5}
-              spaceBetween={30}
-              freeMode={true}
-              loop={true}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                reverseDirection: true,
-              }}
-              speed={6000}
-              modules={[FreeMode, Pagination, Autoplay]}
-              className="mySwiper reverseSwiper"
-            >
-              {logos2.map((logo, index) => (
-                <SwiperSlide key={index}>
-                  <img src={logo.url} alt={logo.name} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+        {/* Row 2: Rightward */}
+        <div className="relative w-full overflow-hidden  py-4">
+          <div ref={rowMiddleRef} className="flex items-center gap-6 w-max will-change-transform cursor-pointer" >
+            {loop2.map((client, index) => (
+              <LogoCard key={`row2-${index}`} client={client} />
+            ))}
+          </div>
+        </div>
+
+        {/* Row 3: Leftward */}
+        <div className="relative w-full overflow-hidden   py-4">
+          <div
+            ref={rowBottomRef}
+            className="flex items-center gap-6 w-max will-change-transform cursor-pointer"
+          >
+            {loop3.map((client, index) => (
+              <LogoCard key={`row3-${index}`} client={client} />
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+// Reusable Logo Tile
+const LogoCard = ({ client }) => {
+  return (
+    <div
+      className="group relative flex items-center justify-center  w-44 h-24 sm:w-52 sm:h-32.5 shadow-md bg-white rounded-xl border border-black/4 transition-all duration-500 ease-out  hover:border-transparent hover:-translate-y-1" >
+      <img src={client.url} alt={client.name} loading="lazy" className="max-h-full rounded-2xl    max-w-full object-cover  transition-all duration-500 p-2 "/>
+      <span className="absolute w-full h-full backdrop-blur-2xl p-2 text-gray-600 text-center flex items-center justify-center rounded-2xl   left-1/2 -translate-x-1/2 text-xs sm:text-sm   font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        {client.name}
+      </span>
+    </div>
+  );
+} 

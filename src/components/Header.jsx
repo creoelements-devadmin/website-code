@@ -1,122 +1,181 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './Header.css';
-import { Link, NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { faTwitter, faFontAwesome, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { useEffect, useRef, useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa';
+import gsap from 'gsap';
+import { useLocation } from 'react-router-dom';
+import { Button } from './Button';
+import { TransitionLink } from './PageTransition';
+import MobileMenu from './MobileMneu';
+import { primaryLinks, servicesLinks,  formatNumber } from '../data/HeaderLink';
 
-library.add(fas, faTwitter, faFontAwesome, faInstagram);
 
-const servicesLinks = [
-  { to: '/services/social-media', label: 'Social Media' },
-  { to: '/services/web-development', label: 'Web Design / Development' },
-  { to: '/services/seo', label: 'SEO' },
-  { to: '/services/digital-marketing', label: 'Digital Marketing' },
-  { to: '/services/branding', label: 'Branding' },
-  { to: '/services/performance-marketing', label: 'Performance Marketing' },
-  { to: '/services/packaging', label: 'Packaging' },
-  { to: '/services/gifting-solutions', label: 'Gifting Solutions' },
-  { to: '/services/print-solutions', label: 'Print Solutions' },
-  { to: '/services/photography', label: 'Photography' },
-  { to: '/services/pr', label: 'Public Relations (PR)' },
-];
-
-const primaryLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About Us' },
-  { to: '/work-with-us', label: 'Work With Us' },
-  { to: '/clients', label: 'Our Clients' },
-  { to: '/contact-us', label: 'Contact Us' },
-  { to: '/blog', label: 'Blogs' },
-];
+// Where the circle reveal starts: the hamburger button (top right)
+const CIRCLE_ORIGIN = 'calc(100% - 44px) 36px';
+const CIRCLE_CLOSED = `circle(0px at ${CIRCLE_ORIGIN})`;
+const CIRCLE_OPEN = `circle(150% at ${CIRCLE_ORIGIN})`;
 
 export const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const navRef = useRef(null);
-  const hamburgerRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  const bgRef = useRef(null);
+  const overlayRef = useRef(null);
+  const menuRef = useRef(null);
+  const linesRef = useRef([]);
+  const tlRef = useRef(null);
+  const location = useLocation();
+
+  const closeMenu = () => setIsOpen(false);
+ const hideBtn = location.pathname === '/contact-us';
+  // Header background on scroll
   useEffect(() => {
-    const closeOnClickOutside = (event) => {
-      if (
-        navRef.current &&
-        hamburgerRef.current &&
-        !navRef.current.contains(event.target) &&
-        !hamburgerRef.current.contains(event.target)
-      ) {
-        setMenuOpen(false);
-        setMobileServicesOpen(false);
-      }
-    };
-    document.addEventListener('click', closeOnClickOutside);
-    return () => document.removeEventListener('click', closeOnClickOutside);
+    const handleScroll = () => setScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    document.body.classList.toggle('nav-open', menuOpen);
-    return () => document.body.classList.remove('nav-open');
-  }, [menuOpen]);
+    gsap.to(bgRef.current, {
+      opacity: scrolled ? 1 : 0,
+      duration: 0.5,
+      ease: 'power2.out',
+    });
+  }, [scrolled]);
 
-  const closeAll = () => {
-    setMenuOpen(false);
-    setMobileServicesOpen(false);
-  };
+ 
+
+  // Mobile menu open / close animation
+  useEffect(() => {
+    const overlay = overlayRef.current;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const t = (n) => (reduce ? 0 : n);
+
+    tlRef.current?.kill();
+
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+
+      gsap.to(linesRef.current[0], { rotate: 45, y: 6, duration: t(0.35) });
+      gsap.to(linesRef.current[1], { opacity: 0, duration: t(0.2) });
+      gsap.to(linesRef.current[2], { rotate: -48, y: -8, duration: t(0.35) });
+
+      const items = menuRef.current.querySelectorAll('.menu-item');
+
+      tlRef.current = gsap
+        .timeline()
+        .fromTo( overlay,
+          { clipPath: CIRCLE_CLOSED },
+          { clipPath: CIRCLE_OPEN, duration: t(0.8), ease: 'power3.inOut' }
+        )
+        .fromTo( items,
+          { y: 28, opacity: 0 },
+          { y: 0, opacity: 1, duration: t(0.5), stagger: t(0.06), ease: 'power3.out' },
+          '-=0.4'
+        );
+    } else {
+      document.body.style.overflow = '';
+      setServicesOpen(false);
+
+      gsap.to(linesRef.current, { rotate: 0, y: 0, opacity: 1, duration: t(0.3) });
+
+      tlRef.current = gsap.to(overlay, {
+        clipPath: CIRCLE_CLOSED,
+        duration: t(0.55),
+        ease: 'power3.inOut',
+      });
+    } return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
 
   return (
-    <header className={menuOpen ? 'is-open' : ''}>
-      {/* <Link to="/" className="header-brand" onClick={closeAll}>
-        Creo Elements
-      </Link> */}
+    <>
+      <header className="fixed top-0 left-0 z-50 w-full">
+        <div ref={bgRef} className="absolute inset-0 opacity-0 backdrop-blur-lg transition-opacity duration-500" />
 
-      <button
-        ref={hamburgerRef}
-        className="hamburger"
-        aria-label={menuOpen ? 'Close Menu' : 'Open Menu'}
-        aria-expanded={menuOpen}
-        onClick={() => setMenuOpen((open) => !open)}
-      >
-        <span className="hamburger-bar" />
-        <span className="hamburger-bar" />
-        <span className="hamburger-bar" />
-      </button>
+        <div className="relative flex items-center justify-between px-5 py-2 md:px-8">
+          {/* Logo */}
+          <TransitionLink to="/" className="relative z-50" onClick={isOpen ? closeMenu : undefined}>
+            <img
+              src="/images/CreoLogo.png"
+              loading="lazy"
+              alt="Creo Elements LLP"
+              className="w-20 md:w-24"
+            />
+          </TransitionLink>
 
-      <nav aria-label="Main Navigation" ref={navRef}>
-        <ul className={`main-menu ${menuOpen ? 'open' : ''}`}>
-          <li className="menu-items">
-            <NavLink to="/" end className="clickable" onClick={closeAll}>Home</NavLink>
-          </li>
+          {/* Desktop navigation (unchanged) */}
+          <nav className="hidden items-center gap-9 text-sm text-[#17181C] lg:flex">
+            <div className="group relative">
+              <div className="flex cursor-pointer items-center gap-1">
+                <span>Services</span>
+                <FaChevronDown className="text-xs transition-transform duration-300 group-hover:rotate-180" />
+              </div>
 
-          <li className={`menu-items has-sub-menu ${mobileServicesOpen ? 'sub-open' : ''}`}>
+              <div className="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 translate-y-1 scale-[0.97] pt-3 opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100">
+                <div className="w-[420px] rounded-md border border-black/[0.08] bg-[#F5F3EF] p-2 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)]">
+                  {servicesLinks.map((item, index) => (
+                    <TransitionLink
+                      key={item.to}
+                      to={item.to}
+                      className="group/link flex items-center justify-between border-black/[0.05] px-4 py-2.5 text-sm text-[#33343A] transition-colors last:border-0 hover:text-primary"
+                    >
+                      <span>{item.label}</span>
+                      <span className="text-xs text-black/30">{formatNumber(index)}</span>
+                    </TransitionLink>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {primaryLinks.map((item) => (
+              <TransitionLink key={item.to} to={item.to} className="group relative py-2">
+                {item.label}
+                <span className="absolute bottom-0 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
+              </TransitionLink>
+            ))}
+          </nav>
+
+          {/* Actions */}
+          <div className="flex items-center gap-5">
+            <div className="hidden lg:block">
+              {!hideBtn && ( <Button name="Contact" target="/contact-us" />)}
+            </div>
+
             <button
               type="button"
-              className="clickable sub-menu-trigger"
-              onClick={() => setMobileServicesOpen((open) => !open)}
-              aria-expanded={mobileServicesOpen}
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              onClick={() => setIsOpen((open) => !open)}
+              className={`relative z-50 flex h-12 w-12 flex-col items-center justify-center gap-1.5 shadow rounded-full lg:hidden ${
+                isOpen ? 'bg-primary' : 'bg-btnPrimary text-white'
+              }`}
             >
-              What We Do
-              <svg className="sub-menu-caret" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              {[0, 1, 2].map((index) => (
+                <span
+                  key={index}
+                  ref={(el) => (linesRef.current[index] = el)}
+                  className="block h-[1.5px] w-7 bg-white"
+                />
+              ))}
             </button>
-            <div className="sub-menu-container">
-              <ul className="sub-menu">
-                {servicesLinks.map((item) => (
-                  <li className="sub-menu-items" key={item.to}>
-                    <Link to={item.to} className="clickable" onClick={closeAll}>{item.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </li>
+          </div>
+        </div>
+      </header>
 
-          {primaryLinks.slice(1).map((item) => (
-            <li className="menu-items" key={item.to}>
-              <NavLink to={item.to} className="clickable" onClick={closeAll}>{item.label}</NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+      <MobileMenu
+        isOpen={isOpen}
+        closeMenu={closeMenu}
+        overlayRef={overlayRef}
+        menuRef={menuRef}
+        servicesOpen={servicesOpen}
+        setServicesOpen={setServicesOpen}
+        circleClosed={CIRCLE_CLOSED}
+      />
+
+
+      {/* ---------- Mobile menu ---------- */}
+      
+    </>
   );
 };

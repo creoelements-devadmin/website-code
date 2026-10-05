@@ -1,496 +1,345 @@
-// import React, { useRef, useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import './Service.css';
-
-
-// const servicesData = [
-//   {
-//     title: "Social Media Management",
-//     image: "/images/social-media.webp",
-//     description: "Enhance brand engagement with expert social media strategies. We manage your presence across platforms, ensuring optimal audience reach.",
-//     link: "/services/social-media",
-//   },
-//   {
-//     title: "Web Design & Development",
-//     image: "/images/web-design.webp",
-//     description: "Your website is your brand's digital storefront. We build user-friendly, fast, and SEO-optimized websites that align with your business goals.",
-//     link: "/services/web-development",
-//   },
-//   {
-//     title: "SEO & Search Visibility",
-//     image: "/images/seo.webp",
-//     description: "Boost organic traffic with cutting-edge SEO techniques. Our strategies improve search rankings and ensure long-term visibility for your brand.",
-//     link: "/services/seo",
-//   },
-//   {
-//     title: "Digital Marketing Solutions",
-//     image: "/images/digital-marketing.webp",
-//     description: "Drive conversions with data-driven digital marketing campaigns. We focus on ROI-driven strategies to maximize your online impact.",
-//     link: "/services/digital-marketing",
-//   },
-//   {
-//     title: "Brand Identity & Positioning",
-//     image: "/images/branding.webp",
-//     description: "Strengthen your brand presence with compelling storytelling and strategic positioning. We craft unique brand identities that stand out.",
-//     link: "/services/branding",
-//   },
-//   {
-//     title: "Performance Marketing",
-//     image: "/images/target-marketing.webp",
-//     description: "Maximize returns with performance-driven marketing strategies. We focus on measurable growth and targeted campaign execution.",
-//     link: "/services/performance-marketing",
-//   },
-//   {
-//     title: "Creative Packaging Design",
-//     image: "/images/packaging.webp",
-//     description: "Transform packaging into an effective marketing tool. Our innovative packaging solutions enhance brand perception and consumer appeal.",
-//     link: "/services/packaging",
-//   },
-//   {
-//     title: "Corporate Gifting Solutions",
-//     image: "/images/gifting-solutions.webp",
-//     description: "Simplify corporate gifting with tailored solutions. We curate, customize, and deliver premium gifts that strengthen client relationships.",
-//     link: "/services/gifting-solutions",
-//   },
-//   {
-//     title: "Premium Print Solutions",
-//     image: "/images/print-solutions.webp",
-//     description: "Ensure high-quality prints with our end-to-end printing services. From brochures to business cards, we offer seamless print solutions.",
-//     link: "/services/print-solutions",
-//   },
-//   {
-//     title: "Professional Photography",
-//     image: "/images/photography.webp",
-//     description: "Capture stunning visuals that define your brand. Our professional photography services enhance brand storytelling and engagement.",
-//     link: "/services/photography",
-//   },
-//   {
-//     title: "Public Relations & Media",
-//     image: "/images/pr.webp",
-//     description: "Shape public perception with strategic PR campaigns. We craft compelling narratives that build trust and enhance brand reputation.",
-//     link: "/services/pr",
-//   },
-// ];
-
-// export const Services = () => {
-//   const sectionRef = useRef(null);
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const cardsRef = useRef([]);
-
-//   useEffect(() => {
-//     // Responsive perspective for mobile
-//     const isMobile = window.matchMedia('(max-width: 900px)').matches;
-//     cardsRef.current.forEach((card, index) => {
-//       gsap.to(card, {
-//         scrollTrigger: {
-//           trigger: card,
-//           start: "top 150%",
-//           end: "top 75%",
-//           scrub: true,
-//           markers: false, // set to true for debugging
-//           onUpdate: (self) => {
-//             // Update active index based on scroll position
-//             if (self.progress > 0.5) {
-//               setActiveIndex(index);
-//             }
-//           }
-//         },
-//         opacity: 1,
-//         y: 0,
-//         rotationX: isMobile ? 0 : 0,
-//         transformOrigin: "top center",
-//         transformPerspective: isMobile ? 1200 : 800,
-//         ease: "none"
-//       });
-
-//       // Set initial state
-//       gsap.set(card, {
-//         opacity: 1,
-//         y: 100,
-//         rotationX: isMobile ? 0 : 90,
-//         transformPerspective: isMobile ? 1200 : 800
-//       });
-//     });
-
-//     // Clean up ScrollTrigger instances on unmount
-//     return () => {
-//       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-//     };
-//   }, []);
-
-//   return (
-//     <section className="services-section" ref={sectionRef}>
-//       <div className="services-header">
-//         <h2 className="services-heading">Our Expertise</h2>
-//         <p className="services-subtext">
-//           Discover our range of professional services designed to elevate your brand.
-//         </p>
-//       </div>
-//       <div className="services-container">
-//         <div className="service-cards-wrapper">
-//           {servicesData.map((service, index) => (
-//             <div
-//               ref={el => cardsRef.current[index] = el}
-              
-//               className={`service-card-link clickable ${index === activeIndex ? 'active' : ''}`}
-//               key={index}
-//               style={{
-//                 '--card-index': index,
-//                 position: 'sticky',
-//                 top: `calc(6rem + 60px + (${index} * 15px))`
-//               }}
-//             >
-//               <div className="service-card horizontal-card">
-//                 <div className="service-card-image large-left-image">
-//                   <img src={service.image} alt={service.title} loading="lazy" />
-//                 </div>
-//                 <div className="service-card-content right-content">
-//                   <h3 className="service-card-title">{service.title}</h3>
-//                   <p className="service-card-description">{service.description}</p>
-//                   <Link to={service.link} className="service-card-link-button">
-//                     Learn More 
-                   
-//                   </Link>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//           <div className='service-cards-wrapper-overlay'></div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-
-import React, { useRef, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './Service.css';
+import React, { useRef, useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SectionHeading } from "../../components/Gsap/SectionHeading";
+import { Button } from "../../components/Button";
+import { servicesData as serviceRegistry } from "../../data/ServiceData";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const servicesData = [
-    {
-    title: "Professional Photography",
-    image: "/images/photography.webp",
-    description: "Capture stunning visuals that define your brand. Our professional photography services enhance brand storytelling and engagement.",
-    link: "/services/photography",
+  {
+    title: 'Website Design and Development',
+    image: '/images/servies image/web.png',
+    description:
+      'Strategic, responsive websites that combine distinctive design, intuitive user experiences and reliable technology to help businesses grow.',
+    tags: ['Web Development', 'UI/UX Web Design', 'Responsive Websites', 'Performance Optimization'],
+    link: '/services/website-design-development',
   },
   {
-    title: "Social Media Management",
-    image: "/images/social-media.webp",
-    description: "Enhance brand engagement with expert social media strategies. We manage your presence across platforms, ensuring optimal audience reach.",
-    link: "/services/social-media",
+    title: 'E-commerce Website Development',
+    image: '/images/servies image/E-com.png',
+    description:
+      'Customer-focused online stores designed to make discovering products, building trust and completing purchases feel effortless.',
+    tags: ['Online Store Design', 'Product UX', 'Checkout Experience', 'E-commerce Growth'],
+    link: '/services/ecommerce-website-development',
   },
   {
-    title: "Web Design & Development",
-    image: "/images/web-design.webp",
-    description: "Your website is your brand's digital storefront. We build user-friendly, fast, and SEO-optimized websites that align with your business goals.",
-    link: "/services/web-development",
+    title: 'Search Engine Optimisation (SEO)',
+    image: '/images/servies image/seo.png',
+    description:
+      'Sustainable SEO strategies that improve search visibility, attract relevant audiences and support long-term organic growth.',
+    tags: ['Search Engine Optimization', 'Technical SEO', 'Keyword Strategy', 'Organic Rankings'],
+    link: '/services/search-engine-optimisation',
   },
   {
-    title: "SEO & Search Visibility",
-    image: "/images/seo.webp",
-    description: "Boost organic traffic with cutting-edge SEO techniques. Our strategies improve search rankings and ensure long-term visibility for your brand.",
-    link: "/services/seo",
+    title: 'Social Media Management',
+    image: '/images/servies image/socal.png',
+    description:
+      'Thoughtful strategies and consistent creative content that keep brands relevant, recognisable and connected to their audiences.',
+    tags: ['Social Media Marketing', 'Content Strategy', 'Community Management', 'Social Growth'],
+    link: '/services/social-media-management',
   },
   {
-    title: "Digital Marketing Solutions",
-    image: "/images/digital-marketing.webp",
-    description: "Drive conversions with data-driven digital marketing campaigns. We focus on ROI-driven strategies to maximize your online impact.",
-    link: "/services/digital-marketing",
+    title: 'Branding and Brand Identity',
+    image: '/images/servies image/brand.png',
+    description:
+      'Distinctive brand identities shaped through thoughtful strategy, visual clarity and a language your audience can recognise.',
+    tags: ['Brand Strategy', 'Logo Design', 'Visual Identity', 'Brand Positioning'],
+    link: '/services/branding-brand-identity',
   },
   {
-    title: "Brand Identity & Positioning",
-    image: "/images/branding.webp",
-    description: "Strengthen your brand presence with compelling storytelling and strategic positioning. We craft unique brand identities that stand out.",
-    link: "/services/branding",
+    title: 'Performance Marketing',
+    image: '/images/servies image/markting.png',
+    description:
+      'Focused digital advertising campaigns designed to reach relevant audiences, generate meaningful actions and improve marketing efficiency.',
+    tags: ['Google Ads', 'Meta Ads', 'Paid Media', 'Campaign Optimization'],
+    link: '/services/performance-marketing',
   },
   {
-    title: "Performance Marketing",
-    image: "/images/target-marketing.webp",
-    description: "Maximize returns with performance-driven marketing strategies. We focus on measurable growth and targeted campaign execution.",
-    link: "/services/performance-marketing",
+    title: 'Product Photography and Creative Shoots',
+    image: '/images/servies image/Photography.png',
+    description:
+      'Thoughtfully planned product imagery created for websites, marketplaces, catalogues, campaigns and social media.',
+    tags: ['Commercial Photography', 'Product Shoots', 'E-commerce Photos', 'Editorial Visuals'],
+    link: '/services/product-photography',
   },
   {
-    title: "Creative Packaging Design",
-    image: "/images/packaging.webp",
-    description: "Transform packaging into an effective marketing tool. Our innovative packaging solutions enhance brand perception and consumer appeal.",
-    link: "/services/packaging",
+    title: 'Graphic Design',
+    image: '/images/servies image/Graphica.png',
+    description:
+      'Clear, considered visual communication created for digital platforms, campaigns, presentations, packaging and print.',
+    tags: ['Marketing Design', 'Brand Collateral', 'Campaign Creative', 'Visual Communication'],
+    link: '/services/graphic-design',
   },
   {
-    title: "Corporate Gifting Solutions",
-    image: "/images/gifting-solutions.webp",
-    description: "Simplify corporate gifting with tailored solutions. We curate, customize, and deliver premium gifts that strengthen client relationships.",
-    link: "/services/gifting-solutions",
-  },
-  {
-    title: "Premium Print Solutions",
-    image: "/images/print-solutions.webp",
-    description: "Ensure high-quality prints with our end-to-end printing services. From brochures to business cards, we offer seamless print solutions.",
-    link: "/services/print-solutions",
-  },
-
-  {
-    title: "Public Relations & Media",
-    image: "/images/pr.webp",
-    description: "Shape public perception with strategic PR campaigns. We craft compelling narratives that build trust and enhance brand reputation.",
-    link: "/services/pr",
+    title: 'Corporate Gifting and Brand Merchandise',
+    image: '/images/servies image/gift.png',
+    description:
+      'Considered corporate gifts and branded merchandise created for employees, clients, events and meaningful business occasions.',
+    tags: ['Client Gifting', 'Executive Merchandise', 'Branded Gifts', 'Event Solutions'],
+    link: '/services/corporate-gifting',
   },
 ];
 
-const DIAL_RADIUS = 25;
-const DIAL_CIRCUMFERENCE = 2 * Math.PI * DIAL_RADIUS;
+const ORBIT_RADIUS = 480;
+const ANGLE_STEP = 11;
+const MAX_DELTA = 3;
+const MOBILE_ORBIT_RADIUS = 320;
+const MOBILE_ANGLE_STEP = 16;
+const MOBILE_MAX_DELTA = 2.4;
+const DESKTOP_MQ = "(min-width: 1024px)";
+const serviceCategories = Object.fromEntries(
+  serviceRegistry.map((service) => [service.name, service.category])
+);
 
 export const Services = () => {
   const sectionRef = useRef(null);
-  const trackRefs = useRef([]);
-  const indicatorRef = useRef(null);
   const stageRef = useRef(null);
-  const imageMaskRef = useRef(null);
-  const dialRef = useRef(null);
-  const headerRef = useRef(null);
-  const mobileCardsRef = useRef([]);
+  const ringRef = useRef(null);
+  const progressCircleRef = useRef(null);
+  const contentRef = useRef(null);
+  const imageRef = useRef(null);
+  const dialItemsRef = useRef([]);
+  const continuousRef = useRef(0);
 
   const [activeIndex, setActiveIndex] = useState(0);
   const total = servicesData.length;
-  const active = servicesData[activeIndex];
+  const activeService = servicesData[activeIndex];
 
-  // Entrance + scroll-linked index tracking
-  useEffect(() => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const mm = gsap.matchMedia();
+  // Updates number dial: left-side orbit on desktop, top arc on mobile
+  const updateDial = useCallback(
+    (continuous) => {
+      const isDesktop = window.matchMedia(DESKTOP_MQ).matches;
+      const radius = isDesktop ? ORBIT_RADIUS : MOBILE_ORBIT_RADIUS;
+      const angleStep = isDesktop ? ANGLE_STEP : MOBILE_ANGLE_STEP;
+      const maxDelta = isDesktop ? MAX_DELTA : MOBILE_MAX_DELTA;
 
-    if (reduceMotion) {
-      gsap.set(headerRef.current, { opacity: 1, y: 0 });
-    } else {
-      gsap.fromTo(
-        headerRef.current,
-        { opacity: 0, y: 24 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: headerRef.current, start: 'top 85%' },
+      for (let i = 0; i < total; i++) {
+        const el = dialItemsRef.current[i];
+        if (!el) continue;
+
+        const delta = i - continuous;
+        const absDelta = Math.abs(delta);
+
+        if (absDelta > maxDelta + 0.5) {
+          gsap.set(el, { autoAlpha: 0 });
+          continue;
         }
+
+        const angleRad = ((delta * angleStep) * Math.PI) / 180;
+        const x = isDesktop
+          ? -radius * (1 - Math.cos(angleRad))
+          : radius * Math.sin(angleRad);
+        const y = isDesktop
+          ? radius * Math.sin(angleRad)
+          : -radius * (1 - Math.cos(angleRad));
+
+        const progress = Math.max(0, 1 - absDelta / (maxDelta + 0.2));
+        const opacity = Math.pow(progress, 1.6);
+        const scale = 0.8 + 0.2 * Math.max(0, 1 - absDelta / 1.6);
+
+        gsap.set(el, {
+          x,
+          y,
+          scale,
+          autoAlpha: opacity,
+        });
+      }
+    },
+    [total]
+  );
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      updateDial(0);
+
+      // SVG progress stroke total length calculation
+      const circleLength = 2 * Math.PI * 460;
+      if (progressCircleRef.current) {
+        gsap.set(progressCircleRef.current, {
+          strokeDasharray: circleLength,
+          strokeDashoffset: circleLength,
+        });
+      }
+
+      ScrollTrigger.create({
+        trigger: stageRef.current,
+        start: "top top",
+        end: () => `+=${(total - 1) * window.innerHeight * 0.9}`,
+        pin: true,
+        pinSpacing: true,
+        scrub: 0.6,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        onUpdate: (self) => {
+          const continuous = self.progress * (total - 1);
+          continuousRef.current = continuous;
+          updateDial(continuous);
+
+          const isDesktop = window.matchMedia(DESKTOP_MQ).matches;
+          const angleStep = isDesktop ? ANGLE_STEP : MOBILE_ANGLE_STEP;
+
+          if (ringRef.current) {
+            gsap.set(ringRef.current, {
+              rotate: -continuous * angleStep,
+              transformOrigin: "center center",
+            });
+          }
+
+          // Progressively fill the border stroke with primary color
+          if (progressCircleRef.current) {
+            const offset = circleLength - self.progress * (circleLength * 0.35);
+            gsap.set(progressCircleRef.current, { strokeDashoffset: offset });
+          }
+
+          const idx = Math.min(total - 1, Math.max(0, Math.round(continuous)));
+          setActiveIndex((prev) => (prev === idx ? prev : idx));
+        },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, [total, updateDial]);
+
+  // Smooth text & image transition on index change
+  useEffect(() => {
+    if (!contentRef.current) return;
+
+    gsap.fromTo(
+      contentRef.current.children,
+      { opacity: 0, y: 24, filter: "blur(6px)" },
+      {
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+        duration: 0.5,
+        stagger: 0.05,
+        ease: "power2.out",
+      }
+    );
+
+    if (imageRef.current) {
+      gsap.fromTo(
+        imageRef.current,
+        { opacity: 0.4, scale: 0.94 },
+        { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" }
       );
     }
-
-    mm.add('(min-width: 901px)', () => {
-      const triggers = trackRefs.current.map((item, i) => {
-        if (!item) return null;
-        return ScrollTrigger.create({
-          trigger: item,
-          start: 'top center',
-          end: 'bottom center',
-          onEnter: () => setActiveIndex(i),
-          onEnterBack: () => setActiveIndex(i),
-        });
-      });
-      return () => triggers.forEach((t) => t && t.kill());
-    });
-
-    mm.add('(max-width: 900px)', () => {
-      if (reduceMotion) {
-        mobileCardsRef.current.forEach((card) => card && gsap.set(card, { opacity: 1, y: 0 }));
-        return;
-      }
-      mobileCardsRef.current.forEach((card) => {
-        if (!card) return;
-        gsap.fromTo(
-          card,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power2.out',
-            scrollTrigger: { trigger: card, start: 'top 88%' },
-          }
-        );
-      });
-    });
-
-    return () => mm.revert();
-  }, []);
-
-  // Slide the rail indicator + sweep the progress dial to match the active row
-  useEffect(() => {
-    const el = trackRefs.current[activeIndex];
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (el && indicatorRef.current) {
-      const vars = { y: el.offsetTop, height: el.offsetHeight };
-      reduceMotion
-        ? gsap.set(indicatorRef.current, vars)
-        : gsap.to(indicatorRef.current, { ...vars, duration: 0.45, ease: 'power3.out' });
-    }
-
-    if (dialRef.current) {
-      const progress = total > 1 ? activeIndex / (total - 1) : 1;
-      const offset = DIAL_CIRCUMFERENCE * (1 - progress);
-      reduceMotion
-        ? gsap.set(dialRef.current, { strokeDashoffset: offset })
-        : gsap.to(dialRef.current, { strokeDashoffset: offset, duration: 0.6, ease: 'power3.out' });
-    }
-  }, [activeIndex, total]);
-
-  // Mask-wipe the stage image and stagger the copy in on change
-  useEffect(() => {
-    if (!stageRef.current) return;
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const lines = stageRef.current.querySelectorAll('.reveal-line');
-
-    if (reduceMotion) {
-      gsap.set(imageMaskRef.current, { clipPath: 'inset(0 0% 0 0)' });
-      gsap.set(lines, { opacity: 1, y: 0 });
-      return;
-    }
-
-    const tl = gsap.timeline();
-    tl.fromTo(
-      imageMaskRef.current,
-      { clipPath: 'inset(0 100% 0 0)' },
-      { clipPath: 'inset(0 0% 0 0)', duration: 0.6, ease: 'power3.inOut' }
-    ).fromTo(
-      lines,
-      { y: 18, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.45, stagger: 0.06, ease: 'power2.out' },
-      '-=0.3'
-    );
   }, [activeIndex]);
 
-  const goTo = (index) => {
-    trackRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
-
   return (
-    <section className="services-section" ref={sectionRef}>
-      <div className="services-header" ref={headerRef}>
-        <span className="services-eyebrow">What we do</span>
-        <h2 className="services-heading">Our Expertise</h2>
-        <p className="services-subtext">
-          Discover our range of professional services designed to elevate your brand.
-        </p>
-      </div>
-
-      {/* Ticker strip — signature texture element */}
-      <div className="services-ticker" aria-hidden="true">
-        <div className="ticker-track">
-          {[...servicesData, ...servicesData].map((s, i) => (
-            <span className="ticker-item" key={`${s.title}-${i}`}>
-              {s.title}
-              <span className="ticker-dot">•</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Desktop / tablet: scroll-linked index + sticky docket */}
-      <div className="services-stage-wrapper">
-        <div className="services-track">
-          <div className="track-indicator" ref={indicatorRef}></div>
-          {servicesData.map((service, index) => (
-            <div
-              key={service.title}
-              ref={(el) => (trackRefs.current[index] = el)}
-              className={`track-item ${index === activeIndex ? 'active' : ''}`}
-              onClick={() => goTo(index)}
-            >
-              <span className="track-index">{String(index + 1).padStart(2, '0')}</span>
-              <span className="track-title">{service.title}</span>
-              <span className="track-arrow" aria-hidden="true">→</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="services-stage">
-          <div className="stage-inner" ref={stageRef}>
-            <div className="stage-image-wrap">
-              <div className="stage-image-mask" ref={imageMaskRef}>
-                <img src={active.image} alt={active.title} loading="lazy" />
-              </div>
-              <div className="stage-scrim" aria-hidden="true"></div>
-
-              <svg className="stage-dial" viewBox="0 0 60 60" aria-hidden="true">
-                <circle className="dial-track" cx="30" cy="30" r={DIAL_RADIUS} />
-                <circle
-                  className="dial-progress"
-                  ref={dialRef}
-                  cx="30"
-                  cy="30"
-                  r={DIAL_RADIUS}
-                  style={{ strokeDasharray: DIAL_CIRCUMFERENCE }}
-                />
-                <text x="30" y="34" textAnchor="middle" className="dial-label">
-                  {String(activeIndex + 1).padStart(2, '0')}
-                </text>
-              </svg>
-            </div>
-
-            <div className="stage-body">
-              <span className="stage-count reveal-line">
-                {String(activeIndex + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
-              </span>
-              <h3 className="stage-title reveal-line">{active.title}</h3>
-              <p className="stage-description reveal-line">{active.description}</p>
-              <Link to={active.link} className="stage-cta reveal-line">
-                <span>Learn More</span>
-                <span className="stage-cta-arrow" aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </div>
-
-          <div className="stage-nav" aria-hidden="true">
-            <button
-              type="button"
-              className="stage-nav-btn"
-              disabled={activeIndex === 0}
-              onClick={() => goTo(Math.max(0, activeIndex - 1))}
-              aria-label="Previous service"
-            >
-              ↑
-            </button>
-            <button
-              type="button"
-              className="stage-nav-btn"
-              disabled={activeIndex === total - 1}
-              onClick={() => goTo(Math.min(total - 1, activeIndex + 1))}
-              aria-label="Next service"
-            >
-              ↓
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile: reveal cards */}
-      <div className="services-mobile-list">
-        {servicesData.map((service, index) => (
+    <section ref={sectionRef} className="relative w-full py-20     ">
+       <SectionHeading
+        tag="What we do"
+        title="Everything your brand needs"
+        highlight="to show up stronger."
+        text="Strategy, creativity and execution brought together through one collaborative team."
+      />
+        
+      <div
+        ref={stageRef}
+        className="relative h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 sm:px-12 lg:px-20 pt-16 pb-6 lg:py-0 overflow-hidden"
+      >
+        {/* ================= Dial & rotating orbit (top arc on mobile, left on desktop) ================= */}
+        <div className="relative w-full lg:w-72 h-28 sm:h-36 lg:h-145 flex items-end lg:items-center justify-center lg:justify-start shrink-0">
           <div
-            key={service.title}
-            ref={(el) => (mobileCardsRef.current[index] = el)}
-            className="mobile-service-card"
+            ref={ringRef}
+            className="absolute left-1/2 -translate-x-1/2 bottom-7 w-160 h-160 lg:top-1/2 lg:bottom-auto  lg:-left-190 lg:translate-x-0 lg:-translate-y-1/2 lg:w-230 lg:h-230 pointer-events-none"
           >
-            <div className="mobile-service-image">
-              <img src={service.image} alt={service.title} loading="lazy" />
-              <span className="mobile-service-index">{String(index + 1).padStart(2, '0')}</span>
-            </div>
-            <div className="mobile-service-body">
-              <h3 className="mobile-service-title">{service.title}</h3>
-              <p className="mobile-service-description">{service.description}</p>
-              <Link to={service.link} className="mobile-service-cta">
-                <span>Learn More</span>
-                <span className="stage-cta-arrow" aria-hidden="true">→</span>
-              </Link>
-            </div>
+            <svg className="w-full h-full -rotate-90" viewBox="0 0 920 920">
+              <circle
+                cx="460"
+                cy="460"
+                r="458"
+                fill="none"
+                stroke="rgba(0,0,0,0.08)"
+                strokeWidth="1.5"
+              />
+              <circle
+                ref={progressCircleRef}
+                cx="460"
+                cy="460"
+                r="458"
+                fill="none"
+                stroke="#3EB8A2"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            </svg>
           </div>
-        ))}
+
+          <div className="relative w-full h-full">
+            {servicesData.map((_, idx) => {
+              const isActive = idx === activeIndex;
+              return (
+                <div
+                  key={idx}
+                  ref={(el) => (dialItemsRef.current[idx] = el)}
+                  className="absolute left-1/2 bottom-0 -translate-x-1/2 lg:left-38 lg:top-1/2 lg:bottom-auto lg:translate-x-0 -translate-y-1/2 flex flex-col-reverse lg:flex-row items-center gap-1.5 lg:gap-3 will-change-transform"
+                >
+                  <span
+                    className={`w-2 h-2 lg:w-2.5 lg:h-2.5 rounded-full bg-primary transition-all duration-300 ${
+                      isActive ? "scale-100 opacity-100 shadow-[0_0_12px_#3EB8A2]" : "scale-0 opacity-0"
+                    }`}
+                  />
+                  <span
+                    className={` transition-all  duration-300 ease-in-out ${ isActive ? "text-primary font-medium text-4xl sm:text-5xl " : "text-btnPrimary/50 italic text-2xl sm:text-3xl " }`} >
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ================= Editorial copy ================= */}
+        <div
+          ref={contentRef}
+          className="w-full max-w-xl text-center lg:text-start mx-auto flex flex-col items-center lg:items-start justify-center px-1 lg:px-4 z-10 flex-1 lg:flex-none"
+        >
+          <h2 className=" text-[1.85rem] font-display sm:text-5xl lg:text-6xl text-btnPrimary font-normal leading-[1.08] tracking-tight mb-3 sm:mb-5">
+            {activeService.title}
+          </h2>
+
+          <p className="mb-3 text-[10px] uppercase tracking-[0.18em] text-primary">
+            {serviceCategories[activeService.title]}
+          </p>
+
+          <p className="text-neutral-600 text-[13px] sm:text-sm lg:text-base font-light leading-relaxed max-w-md lg:max-w-lg mb-5 sm:mb-8">
+            {activeService.description}
+          </p>
+
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-2.5 mb-5 sm:mb-8">
+            {activeService.tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-[11px] sm:text-xs font-normal text-neutral-600 bg-white border border-black/8 px-3.5 sm:px-4 py-3 rounded-full shadow-sm"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+
+         <Button  target={activeService.link} name=" Explore service " />
+        
+        </div>
+
+        {/* ================= 3D artwork — visible on mobile, right column on desktop ================= */}
+        <div className="flex relative w-full lg:w-96 md:w-[80vw] h-[40vh] pb-10 lg:pb-0 min-h-45 max-h-96 lg:h-115 md:h-full lg:max-h-none lg:min-h-0 items-center justify-center shrink-0">
+          <div
+            ref={imageRef}
+            className="w-full h-full   flex items-center justify-center will-change-transform"
+          >
+            <img
+              src={activeService.image}
+              alt={activeService.title}
+              className="max-h-full w-full object-contain lg:object-cover drop-shadow-[0_20px_35px_rgba(0,0,0,0.06)] pointer-events-none"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

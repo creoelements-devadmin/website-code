@@ -1,100 +1,199 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Link } from 'react-router-dom';
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
+// import Button from "../../components/Button";
 
-import './About.css'
-
+gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
+  const sectionRef = useRef(null);
+  const desktopFrameRef = useRef(null);
+  const mobileFrameRef = useRef(null);
+  const cardRef = useRef(null);
+  const marqueeTrackRef = useRef(null);
 
-    
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // 1. Continuous, buttery-smooth infinite loop for "360° Marketing" (No scroll lag)
+      gsap.to(marqueeTrackRef.current, {
+        xPercent: -50,
+        repeat: -1,
+        duration: 25,
+        ease: "none",
+      });
 
+      // 2. Main Pinned Timeline for Frame & Card
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=150%",
+          pin: true,
+          scrub: 0.6,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
 
-    const aboutframeRef = useRef(null);
+      // Zoom through white frame smoothly
+      tl.to(
+        [desktopFrameRef.current, mobileFrameRef.current],
+        {
+          scale: 12,
+          opacity: 0,
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        0
+      );
 
-    useEffect(() => {
-        // GSAP timeline for container animation
-        gsap.to(aboutframeRef.current, {
-            scale: 10,
-            // duration: 2,
-            ease: 'power2.inOut',
-            scrollTrigger: {
-                trigger: '.about_section',
-                scroller: 'body',
-                start: 'top 0%',
-                end: 'top -100%',
-                scrub: 1,
-                pin: true,
-                // markers: true, // Show markers for debugging
-                pinSpacer: false,
-            }
-        });
+      // Card smoothly floats into view with clean opacity & Y lift
+      tl.fromTo(
+        cardRef.current,
+        {
+          y: 60,
+          opacity: 0,
+          scale: 0.95,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          ease: "power2.out",
+          duration: 1,
+        },
+        0.3
+      );
+    }, sectionRef);
 
+    return () => ctx.revert();
+  }, []);
 
-        gsap.to('.about_us_content', {
-            scale: 1,
-            duration: 2,
-            scrollTrigger: {
-                trigger: '.about_section',
-                scroller: 'body',
-                start: '-5% 0%',
-                end: 'bottom 0%',
-                // pin: true,
-                scrub: 1,
-                // markers: true, // Show markers for debugging
-                pinSpacer: false,
-            }
-        });
-
-
-
-    }
-
-
-
-
-
-    )
-
-
-
-
-
-
-
-
-
-    return (
-        <div className="about_section">
-
-            <div className='frame'>
-                <img ref={aboutframeRef} src="/images/frame.webp" className="about_frame" alt="your road to endless possibilities"/>
-            </div>
-            <div className="background">
-                <div className="background-image">
-                    <div className='about_us_container'>
-                        <div className="about_us_content">
-                            <h2>About Us</h2>
-                            <p>
-                            Creo Elements is your one-stop shop for all things digital marketing. We help businesses of all sizes to
-                            achieve success in the ever-evolving online world. Our comprehensive suite of services helps you build a
-                            strong brand presence and drive results.
-                            <br /><br />
-                            We offer a wide range of services, including website design &amp; development, social media management,
-                            performance marketing, SEO, and branding solutions. We take a collaborative approach, working closely with
-                            you to understand your specific needs and develop a strategy that gets noticed.
-                            <br />
-                            Let's make an impact together...
-                            <br /><br />
-                            </p>
-                            <Link to="/about" ><u className="clickable">Read More about Creo Elements</u></Link>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+  return (
+    <section
+      ref={sectionRef}
+      className="relative w-full h-auto  overflow-hidden     py-6   flex items-center justify-center"
+    >
+      {/* Background Infinite Marquee Track (Independent of Scroll) */}
+      <div className="absolute inset-0 pointer-events-none z-[1] flex items-center overflow-hidden">
+        <div
+          ref={marqueeTrackRef}
+          className="flex w-max will-change-transform"
+        >
+          <span className="whitespace-nowrap font-Instrument text-[20vw] leading-none text-black/4   pr-8">
+            360° Marketing • Digital Growth • Brand Systems • 360° Marketing •&nbsp;
+          </span>
+          <span className="whitespace-nowrap font-Instrument text-[20vw] leading-none text-black/4   pr-8">
+            360° Marketing • Digital Growth • Brand Systems • 360° Marketing •&nbsp;
+          </span>
         </div>
-    )
-}
+      </div>
+
+      {/* Unchanged Original Frame with Centered Scale Pivot */}
+      <div className="absolute inset-0 pointer-events-none z-[3] flex items-center justify-center overflow-hidden">
+        <img
+          ref={desktopFrameRef}
+          src="/images/Great Experience.png"
+          alt="Frame overlay"
+          className="w-full hidden lg:block h-full object-contain lg:object-cover origin-center will-change-transform"
+          style={{ transform: "translateZ(0)" }}
+        />
+
+         <img
+          ref={mobileFrameRef}
+          src="/images/Final3.jpeg"
+          alt="Frame overlay"
+          className="w-full h-auto lg:hidden block object-cover  origin-center will-change-transform"
+          style={{ transform: "translateZ(0)" }}
+        />
+      </div>
+
+      {/* Floating Glassmorphic Editorial Card */}
+      <div className="relative z-[2] w-full h-screen lg:h-auto max-w-4xl mx-auto px-3 sm:px-10 flex items-center justify-center">
+        <div
+          ref={cardRef}
+          className="w-full rounded-[2.25rem] p-8 sm:p-12 lg:p-14  bg-white/90 backdrop-blur-xl border border-gray-300"
+          style={{ transform: "translateZ(0)" }}
+        >
+          {/* Header Tag */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/40 bg-primary/10 mb-6">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-[11px] font-Poppins tracking-[0.25em] uppercase text-primary  ">
+              About Creo &amp; Vision
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h2 className="font-Instrument text-4xl sm:text-6xl    text-btnPrimary font-normal leading-[1.08] tracking-tight mb-6">
+            Creativity shaped by<span className="italic text-primary lg:text-5xl"> Technology built around people.</span>
+          </h2>
+
+          {/* Clean, Non-Laggy Text Layout */}
+          <div className="font-Poppins text-btnPrimary text-sm sm:text-base leading-relaxed font-light space-y-4 mb-8">
+            <p>
+              Creo Elements is a Mumbai-based creative and digital agency working with businesses across industries and geographies. We bring website design, development, branding, SEO, content and digital marketing together to create experiences that look distinctive, work seamlessly and support meaningful business growth.
+
+            </p>
+            {/* <p className="hidden sm:block text-neutral-600">
+              We provide bespoke website design &amp; development, performance
+              SEO, and high-impact visual branding solutions. Taking a
+              collaborative approach, we work alongside your team to craft
+              strategies that stand out.
+            </p> */}
+          </div>
+          <div className="w-full grid grid-cols-3 border border-gray-200 rounded-2xl ">
+            <div className="p-2 py-6   border-gray-200 border-r">
+              <h4 className="text-2xl">India + Global</h4>
+              <span className="text-xs">Client partnerships</span>
+            </div>
+
+            <div className=" p-2 py-6   border-gray-200">
+              <h4 className="text-2xl">Multi-sector</h4>
+              <span className="text-xs">Industry experience</span>
+            </div>
+
+            <div className="p-2 py-6 border-l border-gray-200">
+              <h4 className="text-2xl">One team</h4>
+              <span className="text-xs">Strategy to execution</span>
+            </div>
+
+          </div>
+
+          {/* Action Row */}
+          <div className="pt-6  flex items-center justify-between">
+            <Link
+              to="/about"
+              className="group inline-flex items-center gap-3 text-xs sm:text-sm font-Poppins uppercase  text-btnPrimary hover:text-primary transition-colors"
+            >
+              <span>Discover our studio </span>
+              <div className="w-8 h-8 rounded-full bg-[#F7F6F3] border border-btnPrimary  flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:translate-x-1">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </div>
+            </Link>
+{/* 
+           <Button
+              text="Discover our studio"
+              link="/about"
+              className="text-xs sm:text-sm font-Poppins uppercase  text-btnPrimary hover:text-primary transition-colors"
+            /> */}
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

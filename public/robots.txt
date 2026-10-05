@@ -5,4 +5,4 @@ Disallow:
 # (Add disallowed pages here in the future)
 
 # Sitemap location (important for SEO)
-Sitemap: https://creo-elements.com/sitemap.xml
+Sitemap: https://creo-elements.com/sitemap_index.xml

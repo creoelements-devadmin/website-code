@@ -1,34 +1,43 @@
-import React, { useState, useEffect } from 'react'
-import { Grids } from '../../components/Grids'
-import './Banner.css'
-import WavyText from '../../components/elements/WavyText'
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { PageHeroBanner } from '../../components/Gsap/PageHeroBanner';
 
 export const Banner = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const marqueeRef = useRef(null);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    
-    return () => window.removeEventListener('resize', handleResize);
+    const ctx = gsap.context(() => {
+       gsap.to(marqueeRef.current, {
+        xPercent: -50,
+        repeat: -1,
+        duration: 28,
+        ease: 'none',
+      });
+    });
+
+    return () => ctx.revert();
   }, []);
+
   return (
-    <div className='banner z-2'>
-      <div className='about-wrapper'>
-        <h1> 
-        
-        {isMobile ? <WavyText fontSize="3rem">About Us</WavyText> : <WavyText fontSize="8rem">About Us</WavyText>}
-        </h1>
-        <div className='about-us'>
-          Creo Elements is your one-stop shop for all things digital marketing. We help businesses of all sizes to achieve success in the ever-evolving online world. Our comprehensive suite of services helps you build a strong brand presence and drive results.
-          <br />
-          We offer a wide range of services, including website design & development, social media management, performance marketing, SEO, and branding solutions. We take a collaborative approach, working closely with you to understand your specific needs and develop a strategy that gets noticed.
-          <br />
-          Let’s make an impact together.
-          <br />
-          With Creo Elements as your partner, you can be confident that your brand is reaching the right audience and achieving tangible results
+    <div className="relative w-full lg-h-screen  overflow-hidden flex flex-col justify-center items-center select-none">
+      
+      
+       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none opacity-[0.045] whitespace-nowrap z-0">
+        <div
+          ref={marqueeRef}
+          className="inline-block    text-[14vw] font-bold uppercase tracking-widest text-btnPrimary will-change-transform"
+        >
+          Creo Elements — Digital Architecture — Creative Engineering — Creo Elements — Digital Architecture — Creative Engineering —{' '}
         </div>
       </div>
+
+       <div className="relative z-10 w-full">
+        <PageHeroBanner
+          title="We Craft Digital"
+          highlightTitle="Experiences"
+          description="Founded in 2021, we turn ideas into impactful digital work through design, strategy, and creative thinking."
+        />
+      </div>
     </div>
-  )
-}
+  );
+};
