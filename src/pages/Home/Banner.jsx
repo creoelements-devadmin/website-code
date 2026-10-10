@@ -1,9 +1,7 @@
-import { lazy, Suspense, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Button } from "../../components/Button";
-import { Link } from "react-router-dom";
-import { GoArrowUpRight } from "react-icons/go";
-const Ballpit = lazy(() => import("./Ballpit"));
- import gsap from "gsap";
+import { DecorativeBallpit } from "../../components/DecorativeBallpit";
+import gsap from "gsap";
 import SplitText from "../../components/Gsap/Splittext";
  
 export const Banner = () => {
@@ -43,17 +41,15 @@ export const Banner = () => {
   return (
     <div ref={bannerRef} className="w-full md:min-h-screen">
       <div className="relative w-full min-h-screen overflow-hidden flex flex-col justify-center items-center text-center border border-gray-200 rounded-3xl">
-        <Suspense fallback={null}>
-          <Ballpit
-            className="absolute inset-0 z-0 pointer-events-none"
-            count={100}
-            gravity={0.01}
-            friction={0.9975}
-            wallBounce={0.95}
-            followCursor={false}
-            colors={[4104354, 16777215, 4104354]}
-          />
-        </Suspense>
+        <DecorativeBallpit
+          className="absolute inset-0 z-0 pointer-events-none"
+          count={100}
+          gravity={0.01}
+          friction={0.9975}
+          wallBounce={0.95}
+          followCursor={false}
+          colors={[4104354, 16777215, 4104354]}
+        />
 
         <div ref={contentRef} className="relative z-10 w-full flex flex-col items-center">
           {/* Heading */}

@@ -73,7 +73,7 @@ export const About = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-auto  overflow-hidden     py-6   flex items-center justify-center"
+      className="relative w-full md:h-auto  lg:h-screen  overflow-hidden     py-6   flex items-center justify-center"
     >
       {/* Background Infinite Marquee Track (Independent of Scroll) */}
       <div className="absolute inset-0 pointer-events-none z-[1] flex items-center overflow-hidden">

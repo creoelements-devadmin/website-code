@@ -79,15 +79,15 @@ export const Ourteam = () => {
         text="Meet the strategists, designers, and storytellers powering Creo Elements. We blend commercial insight with digital craftsmanship to scale ambitious brands."
       />
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2  lg:gap-6 lg:p-4 px-6 lg:px-12">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2  lg:gap-6 lg:p-4 px-6 lg:px-12  ">
         {membersData.map((member, index) => (
           <div className="group relative" key={member.slug || index}>
             <div
 
               ref={(el) => (imageRef.current[index] = el)}
-              className="w-full h-125 border-white bg-[#aaa9a9] border-2 overflow-hidden rounded-4xl relative"
+              className="w-full h-125 xl:w-[30vw] xl:m-auto  xl:h-[34vw] border-white bg-[#aaa9a9] border-2 overflow-hidden rounded-4xl relative"
             >
-              <div className="parallax-inner absolute inset-0 h-[130%] top-[-10%]">
+              <div className="parallax-inner absolute inset-0 h-[130%]  top-[-10%]">
                 <div 
                  
                  className="block relative w-full h-full ">

@@ -8,18 +8,7 @@ import MapBox from './MapBox';
 const API_URL = 'https://creo-elements.com/blogs/wp-json/custom/v1/forminator-submit';
 
 // Starting values of the form (all empty)
-const emptyForm = {
-    name: '',
-    brand: '',
-    industry: '',
-    help: '',
-    budget: '',
-    deadline: '',
-    website: 'yes',
-    website_url: '',
-    email: '',
-    phone: '',
-};
+const emptyForm = { name: '', brand: '', industry: '', help: '', budget: '', deadline: '', website: 'yes', website_url: '', email: '', phone: '', };
 
 // Remove HTML tags like <script> and extra spaces
 const clean = (text) => text.replace(/<[^>]*>/g, '').trim();
@@ -58,9 +47,7 @@ const ContactUs = () => {
     // Runs every time the person types
     const handleChange = (e) => {
         const { name, value } = e.target;
-
         const newValue = ['phone', 'budget'].includes(name) ? value.replace(/\D/g, '') : value;
-
         setFormData({ ...formData, [name]: newValue });
         setErrors({ ...errors, [name]: '' }); // remove the old error
         setMessage('');
@@ -102,7 +89,7 @@ const ContactUs = () => {
         }
     };
 
-    // Style for the Yes / Not yet buttons
+    // Style for the Yes  / No buttons for "Do you have a website?"
     const choiceClass = (active) =>
         `text-sm font-medium px-4 py-2 rounded-full border transition-colors duration-200 ${
             active ? 'bg-btnPrimary text-secondary border-btnPrimary' : 'bg-white text-btnPrimary/50 border-btnPrimary/10'

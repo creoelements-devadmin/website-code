@@ -120,7 +120,7 @@ const Projects = () => {
             className="group relative flex flex-col overflow-hidden rounded-4xl border-2 border-gray-200 bg-white backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
             style={{ transform: 'translateZ(0)' }} // own compositing layer, less mobile repaint jank
           >
-            <div className="relative h-80 w-full overflow-hidden">
+            <div className="relative h-80 lg:h-96 w-full overflow-hidden">
               <img
                 className="parallax-inner project-img absolute inset-0 h-[130%] w-full object-cover"
                 src={item.image}

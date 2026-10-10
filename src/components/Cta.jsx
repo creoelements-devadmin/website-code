@@ -94,7 +94,8 @@ export const CTA = () => {
 
   return (
     <>
-      <section ref={containerRef}
+      <div className="max-w-8xl mx-auto relative z-10">
+        <div ref={containerRef}
         className="relative w-full mt-10 sm:pt-32 pb-8 px-2 sm:px-6 lg:px-20 overflow-hidden select-none  ">
         {/* ================= TOP: Main Dark Editorial Card ================= */}
         <div className="  relative z-10 mb-20 sm:mb-28">
@@ -176,7 +177,8 @@ export const CTA = () => {
             <p>© {new Date().getFullYear()} Creo Elements LLP. All rights reserved.</p>
           </div>
         </div>
-      </section>
+      </div>
+      </div>
     </>
   );
 };

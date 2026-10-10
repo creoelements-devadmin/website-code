@@ -52,7 +52,7 @@ export const Button = ({ name, target }) => {
       {...(isExternal ? { href: target } : { to: target })}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
-      className="group relative flex h-11 z-20 hover:scale-105   w-fit px-4 items-center justify-center overflow-hidden rounded-full bg-btnPrimary shadow text-white transition-all duration-500 ease-in-out"
+      className="group relative flex h-10 z-20 hover:scale-105   w-fit px-4 items-center justify-center overflow-hidden rounded-full bg-btnPrimary shadow text-white transition-all duration-500 ease-in-out"
     >
       <span
         ref={fillRef}
@@ -65,7 +65,7 @@ export const Button = ({ name, target }) => {
 
       <span
         ref={labelHoverRef}
-        className="absolute inset-0 z-10 flex translate-y-[132%] items-center justify-center gap-2 text-sm"
+        className="absolute inset-0 z-10 flex translate-y-[135%] items-center justify-center gap-2 text-sm"
       >
         {name} <GoArrowUpRight />
       </span>

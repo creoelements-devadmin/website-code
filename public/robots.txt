@@ -6,3 +6,7 @@ Disallow:
 
 # Sitemap location (important for SEO)
 Sitemap: https://creo-elements.com/sitemap_index.xml
+
+
+
+
