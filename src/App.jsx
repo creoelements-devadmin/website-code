@@ -6,6 +6,7 @@ import SmoothScroll from './components/SmoothScroll';
 import { Header } from './components/Header';
 import { CTA } from './components/Cta.jsx';
 import { CustomCursor } from './components/CustomCursor.jsx';
+import RouteSEO from './components/RouteSEO.jsx';
 
 const About = lazy(() => import('./pages/About/About.jsx').then(({ About }) => ({ default: About })));
 const WorkWithUS = lazy(() => import('./pages/Work With Us/WorkWithUS.jsx').then(({ WorkWithUS }) => ({ default: WorkWithUS })));
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="max-w-[1920px] mx-auto relative overflow-x-clip">
        <CustomCursor />
+       <RouteSEO />
       <Header />
       <SmoothScroll />
       <Suspense fallback={null}>

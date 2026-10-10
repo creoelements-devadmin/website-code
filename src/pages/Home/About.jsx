@@ -73,7 +73,7 @@ export const About = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full md:h-auto  lg:h-screen  overflow-hidden     py-6   flex items-center justify-center"
+      className="relative w-full md:h-auto  2xl:h-screen  overflow-hidden     py-6   flex items-center justify-center"
     >
       {/* Background Infinite Marquee Track (Independent of Scroll) */}
       <div className="absolute inset-0 pointer-events-none z-[1] flex items-center overflow-hidden">
@@ -92,30 +92,27 @@ export const About = () => {
 
       {/* Unchanged Original Frame with Centered Scale Pivot */}
       <div className="absolute inset-0 pointer-events-none z-[3] flex items-center justify-center overflow-hidden">
-        <img
+        <img loading="eager|lazy"
           ref={desktopFrameRef}
-          src="/images/Great Experience.png"
+          src="https://creo-elements.com/blogs/wp-content/uploads/2026/10/Great-Experience.png"
           alt="Frame overlay"
           className="w-full hidden lg:block h-full object-contain lg:object-cover origin-center will-change-transform"
-          style={{ transform: "translateZ(0)" }}
-        />
+         />
 
          <img
           ref={mobileFrameRef}
           src="/images/Final3.jpeg"
           alt="Frame overlay"
           className="w-full h-auto lg:hidden block object-cover  origin-center will-change-transform"
-          style={{ transform: "translateZ(0)" }}
-        />
+         />
       </div>
 
       {/* Floating Glassmorphic Editorial Card */}
-      <div className="relative z-[2] w-full h-screen lg:h-auto max-w-4xl mx-auto px-3 sm:px-10 flex items-center justify-center">
+      <div className="relative z-2 w-full md:h-[80vh]  md:mt-10 2xl:h-screen lg:h-auto max-w-4xl mx-auto px-3 sm:px-10 flex items-center justify-center">
         <div
           ref={cardRef}
           className="w-full rounded-[2.25rem] p-8 sm:p-12 lg:p-14  bg-white/90 backdrop-blur-xl border border-gray-300"
-          style={{ transform: "translateZ(0)" }}
-        >
+         >
           {/* Header Tag */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/40 bg-primary/10 mb-6">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />

@@ -5,13 +5,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SectionHeading } from "../../components/Gsap/SectionHeading";
 import { Button } from "../../components/Button";
 import { servicesData as serviceRegistry } from "../../data/ServiceData";
-
+ 
 gsap.registerPlugin(ScrollTrigger);
 
 const servicesData = [
   {
     title: 'Website Design and Development',
-    image: '/images/servies image/web.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/web.png',
     description:
       'Strategic, responsive websites that combine distinctive design, intuitive user experiences and reliable technology to help businesses grow.',
     tags: ['Web Development', 'UI/UX Web Design', 'Responsive Websites', 'Performance Optimization'],
@@ -19,7 +19,7 @@ const servicesData = [
   },
   {
     title: 'E-commerce Website Development',
-    image: '/images/servies image/E-com.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/E-com.png',
     description:
       'Customer-focused online stores designed to make discovering products, building trust and completing purchases feel effortless.',
     tags: ['Online Store Design', 'Product UX', 'Checkout Experience', 'E-commerce Growth'],
@@ -27,7 +27,7 @@ const servicesData = [
   },
   {
     title: 'Search Engine Optimisation (SEO)',
-    image: '/images/servies image/seo.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/seo.png',
     description:
       'Sustainable SEO strategies that improve search visibility, attract relevant audiences and support long-term organic growth.',
     tags: ['Search Engine Optimization', 'Technical SEO', 'Keyword Strategy', 'Organic Rankings'],
@@ -35,7 +35,7 @@ const servicesData = [
   },
   {
     title: 'Social Media Management',
-    image: '/images/servies image/socal.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/socal.png',
     description:
       'Thoughtful strategies and consistent creative content that keep brands relevant, recognisable and connected to their audiences.',
     tags: ['Social Media Marketing', 'Content Strategy', 'Community Management', 'Social Growth'],
@@ -43,7 +43,7 @@ const servicesData = [
   },
   {
     title: 'Branding and Brand Identity',
-    image: '/images/servies image/brand.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/brand.png',
     description:
       'Distinctive brand identities shaped through thoughtful strategy, visual clarity and a language your audience can recognise.',
     tags: ['Brand Strategy', 'Logo Design', 'Visual Identity', 'Brand Positioning'],
@@ -51,7 +51,7 @@ const servicesData = [
   },
   {
     title: 'Performance Marketing',
-    image: '/images/servies image/markting.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/markting.png',
     description:
       'Focused digital advertising campaigns designed to reach relevant audiences, generate meaningful actions and improve marketing efficiency.',
     tags: ['Google Ads', 'Meta Ads', 'Paid Media', 'Campaign Optimization'],
@@ -59,7 +59,7 @@ const servicesData = [
   },
   {
     title: 'Product Photography and Creative Shoots',
-    image: '/images/servies image/Photography.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/Photography.png',
     description:
       'Thoughtfully planned product imagery created for websites, marketplaces, catalogues, campaigns and social media.',
     tags: ['Commercial Photography', 'Product Shoots', 'E-commerce Photos', 'Editorial Visuals'],
@@ -67,7 +67,7 @@ const servicesData = [
   },
   {
     title: 'Graphic Design',
-    image: '/images/servies image/Graphica.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/Graphica.png',
     description:
       'Clear, considered visual communication created for digital platforms, campaigns, presentations, packaging and print.',
     tags: ['Marketing Design', 'Brand Collateral', 'Campaign Creative', 'Visual Communication'],
@@ -75,7 +75,7 @@ const servicesData = [
   },
   {
     title: 'Corporate Gifting and Brand Merchandise',
-    image: '/images/servies image/gift.png',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/gift.png',
     description:
       'Considered corporate gifts and branded merchandise created for employees, clients, events and meaningful business occasions.',
     tags: ['Client Gifting', 'Executive Merchandise', 'Branded Gifts', 'Event Solutions'],
@@ -129,12 +129,8 @@ export const Services = () => {
         }
 
         const angleRad = ((delta * angleStep) * Math.PI) / 180;
-        const x = isDesktop
-          ? -radius * (1 - Math.cos(angleRad))
-          : radius * Math.sin(angleRad);
-        const y = isDesktop
-          ? radius * Math.sin(angleRad)
-          : -radius * (1 - Math.cos(angleRad));
+        const x = isDesktop ? -radius * (1 - Math.cos(angleRad)) : radius * Math.sin(angleRad);
+        const y = isDesktop ? radius * Math.sin(angleRad) : -radius * (1 - Math.cos(angleRad));
 
         const progress = Math.max(0, 1 - absDelta / (maxDelta + 0.2));
         const opacity = Math.pow(progress, 1.6);
@@ -210,13 +206,7 @@ export const Services = () => {
     gsap.fromTo(
       contentRef.current.children,
       { opacity: 0, y: 24, filter: "blur(6px)" },
-      {
-        opacity: 1,
-        y: 0,
-        filter: "blur(0px)",
-        duration: 0.5,
-        stagger: 0.05,
-        ease: "power2.out",
+      { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, stagger: 0.05, ease: "power2.out",
       }
     );
 
@@ -249,24 +239,8 @@ export const Services = () => {
             className="absolute left-1/2 -translate-x-1/2 bottom-7 w-160 h-160 lg:top-1/2 lg:bottom-auto  lg:-left-190 lg:translate-x-0 lg:-translate-y-1/2 lg:w-230 lg:h-230 pointer-events-none"
           >
             <svg className="w-full h-full -rotate-90" viewBox="0 0 920 920">
-              <circle
-                cx="460"
-                cy="460"
-                r="458"
-                fill="none"
-                stroke="rgba(0,0,0,0.08)"
-                strokeWidth="1.5"
-              />
-              <circle
-                ref={progressCircleRef}
-                cx="460"
-                cy="460"
-                r="458"
-                fill="none"
-                stroke="#3EB8A2"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
+              <circle cx="460" cy="460" r="458" fill="none" stroke="rgba(0,0,0,0.08)" strokeWidth="1.5" />
+              <circle ref={progressCircleRef} cx="460" cy="460" r="458" fill="none" stroke="#3EB8A2" strokeWidth="2.5" strokeLinecap="round" />
             </svg>
           </div>
 

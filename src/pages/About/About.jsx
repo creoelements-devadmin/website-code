@@ -3,11 +3,13 @@ import { Helmet } from 'react-helmet-async';
 import { Banner } from './Banner';
 import { Story } from './Story';
 import { Ourteam } from './Ourteam';
+import SEO from '../../components/SEO'
 
 export const About = () => {
   return (
     <>
       <div className="">
+        <SEO />
         <Helmet>
           {/* Page Title */}
           <title>

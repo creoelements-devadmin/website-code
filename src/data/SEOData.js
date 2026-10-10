@@ -4,7 +4,7 @@ export const seo = {
     description: "Creo Elements helps ambitious businesses build distinctive websites, brands, and digital experiences.",
   },
   "/about":{
-    title: "About Us | Creo Elements",
+    title: "About Creo Elements LLP | Digital Marketing Agency in Mumbai",
     description: "Meet the team behind Creo Elements and how we help brands grow through design, technology, and marketing.",
   },
   "/work-with-us": {

@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { Button } from '../../components/Button';
 import { servicesData } from '../../data/ServiceData';
 import FAQ from '../FAQ';
+import SEO from '../../components/SEO';
+import { seo } from "../../data/SEOData";
 
 
 
@@ -23,50 +25,22 @@ export const Service = () => {
         );
     }
 
-    const cleanText = (str = '') =>
-        str.replace(/<\/?p>/g, ' ').replace(/<br\s*\/?>/g, ' ').trim();
+    const cleanText = (str = '') => str.replace(/<\/?p>/g, ' ').replace(/<br\s*\/?>/g, ' ').trim();
 
     return (
         <div className="service-page min-h-screen  font-primary">
             {/* SEO */}
-            <Helmet>
-                <title>{seo.seoTitle || `${cleanText(service.name)} | Creo Elements LLP`}</title>
-                <meta name="description" content={seo.metaDescription || cleanText(service.meta_description)} />
-                {seo.primaryKeyword && <meta name="keywords" content={[seo.primaryKeyword, ...(seo.supportingKeywords || [])].join(', ')} />}
-                <meta property="og:title" content={seo.seoTitle || cleanText(service.name)} />
-                <meta property="og:description" content={seo.metaDescription || cleanText(service.meta_description)} />
-                <meta property="og:image" content={service.icon} />
-                <meta property="og:url" content={`https://creo-elements.com/services/${service.slug}`} />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={seo.seoTitle || cleanText(service.name)} />
-                <meta name="twitter:description" content={seo.metaDescription || cleanText(service.meta_description)} />
-                <meta name="twitter:image" content={service.icon} />
-                <link rel="canonical" href={`https://creo-elements.com/services/${service.slug}`} />
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Service",
-                        "name": cleanText(service.name),
-                        "description": seo.metaDescription || cleanText(service.description),
-                        "image": `https://creo-elements.com${service.icon}`,
-                        "provider": {
-                            "@type": "Organization",
-                            "name": "Creo Elements LLP",
-                            "url": "https://creo-elements.com"
-                        }
-                    })}
-                </script>
-            </Helmet>
+           <SEO {...seo["/services/seo"]} path="/services/seo" />
+          
 
-            <div className="mx-auto max-w-[1600px] px-5 lg:px-10">
+            <div className="mx-auto   px-5 lg:px-10">
 
                 <header className="pt-32 pb-10 md:pt-44 md:pb-14">
                     <span className="text-xs uppercase tracking-[0.18em] text-black/45"> {service.mobilename}</span>
                     <div className="mt-4 flex lg:flex-row flex-col lg:items-end ">
                         <h1 className="  leading-[0.92] tracking-tight lg:text-8xl py-10 lg:py-0 text-[10vw] font-display italic text-primary">
                             {service.name}{' '}
-                            {/* <span className="font-display italic text-primary">{service.higlight}</span> */}
-                        </h1>
+                         </h1>
                         <p className="max-w-lg text-sm leading-relaxed text-black/55 lg:pb-2">
                             {seo.metaDescription || cleanText(service.meta_description)}
                         </p>
@@ -81,9 +55,7 @@ export const Service = () => {
                             alt={seo.imageAlt || cleanText(service.name)}
                             loading="lazy"
                         />
-                        {/* <figcaption className="absolute bottom-4 left-4 rounded-full border border-black/10 bg-white/85 px-4 py-2 text-[11px] uppercase tracking-[0.14em] text-black/55 backdrop-blur-sm md:bottom-6 md:left-6">
-                            {service.mobilename}
-                        </figcaption> */}
+                      
                     </div>
                 </div>
 

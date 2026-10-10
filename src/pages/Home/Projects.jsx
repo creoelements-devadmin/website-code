@@ -5,12 +5,7 @@ import { SectionHeading } from '../../components/Gsap/SectionHeading';
 
 gsap.registerPlugin(ScrollTrigger);
 
- if (typeof window !== 'undefined') {
-  ScrollTrigger.normalizeScroll(true);       
-  ScrollTrigger.config({
-    ignoreMobileResize: true,                  
-  });
-}
+ 
 
 const Projects = () => {
   const containerRef = useRef(null);
@@ -35,37 +30,14 @@ const Projects = () => {
             const target = [card, text].filter(Boolean);
             if (!target.length) return;
 
-            // Fade + rise in on scroll (actually animates now)
-            gsap.fromTo(
-              target,
-              { opacity: 0, y: isMobile ? 30 : 60 },
-              {
-                opacity: 1,
-                y: 0,
-                ease: 'power2.out',
-                force3D: true,
-                overwrite: 'auto',
-                scrollTrigger: {
-                  trigger: card,
-                  start: 'top bottom',
-                  end: 'top 70%',
-                  scrub: isMobile ? 0.5 : 1.2, // tighter/snappier on touch
-                  fastScrollEnd: true,
-                  invalidateOnRefresh: true,
-                },
-              }
-            );
+            
 
-            // Parallax: move the actual <img>, not the mask that clips it
-            const innerImage = card.querySelector('.parallax-inner');
+             const innerImage = card.querySelector('.parallax-inner');
             if (innerImage) {
               gsap.set(innerImage, { force3D: true, willChange: 'transform' });
 
               gsap.to(innerImage, {
-                yPercent: isMobile ? -10 : -18, // less travel on mobile = less visible jank
-                ease: 'none',                    // 'none' tracks scroll 1:1, feels smoother than eased scrub
-                force3D: true,
-                overwrite: 'auto',
+                yPercent: isMobile ? -15 : -25,  ease: 'none',                      force3D: true, overwrite: 'auto',
                 scrollTrigger: {
                   trigger: card,
                   start: 'top bottom',
@@ -90,12 +62,36 @@ const Projects = () => {
   }, []);
 
   const projectData = [
-    { id: '01', name: 'Little Things Cute', url: 'https://littlethingscute.com/', image: '/images/Projects img/ltc.png', category: 'E-commerce' },
-    { id: '02', name: 'Atul Kasbekar', url: 'https://atulkasbekar.com/', image: '/images/Projects img/atul.png', category: 'Photographer' },
-    { id: '03', name: 'DBS Cricket', url: 'https://dbscricket.org/', image: '/images/Projects img/db.png', category: 'Cricket' },
-    { id: '04', name: 'IVCCI', url: 'https://ivcci.org.in/', image: '/images/Projects img/ivcci.png', category: 'Organization' },
-    { id: '05', name: 'Artangle90', url: 'https://artangle90.com/', image: '/images/Projects img/art90.png', category: 'E-commerce' },
-    { id: '06', name: 'House of eekkta', url: 'https://www.houseofeekkta.com/', image: '/images/Projects img/ekta.png', category: 'Fashion Services' },
+    { 
+      id: '01', name: 'Little Things Cute',
+       url: 'https://littlethingscute.com/', 
+       image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/ltc.png', 
+       category: 'E-commerce' },
+    { 
+      id: '02', name: 'Atul Kasbekar',
+       url: 'https://atulkasbekar.com/', 
+       image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/atul.png', 
+       category: 'Photographer' },
+    { 
+      id: '03', name: 'DBS Cricket',
+       url: 'https://dbscricket.org/', 
+       image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/db.png', 
+       category: 'Cricket' },
+    { 
+      id: '04', name: 'IVCCI',
+       url: 'https://ivcci.org.in/', 
+       image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/ivcci.png', 
+       category: 'Organization' },
+    { 
+      id: '05', name: 'Artangle90',
+       url: 'https://artangle90.com/', 
+       image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/art90.png', 
+       category: 'E-commerce' },
+    { 
+      id: '06', name: 'House of eekkta',
+       url: 'https://www.houseofeekkta.com/', 
+       image: 'https://creo-elements.com/blogs/wp-content/uploads/2026/10/ekta.png', 
+       category: 'Fashion Services' },
   ];
 
   return (
@@ -115,12 +111,10 @@ const Projects = () => {
             key={item.id}
             href={item.url}
             target="_blank"
-            rel="noopener noreferrer"
             ref={(el) => (cardRef.current[index] = el)}
-            className="group relative flex flex-col overflow-hidden rounded-4xl border-2 border-gray-200 bg-white backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
-            style={{ transform: 'translateZ(0)' }} // own compositing layer, less mobile repaint jank
-          >
-            <div className="relative h-80 lg:h-96 w-full overflow-hidden">
+            className="group relative flex flex-col     overflow-hidden rounded-4xl border-2 border-gray-200 bg-white backdrop-blur-sm transition-all duration-500 hover:-translate-y-5 hover:shadow-xl"
+           >
+            <div className="relative h-80 2xl:h-96 w-full  overflow-hidden">
               <img
                 className="parallax-inner project-img absolute inset-0 h-[130%] w-full object-cover"
                 src={item.image}
@@ -128,7 +122,7 @@ const Projects = () => {
                 loading="lazy"
                 style={{ willChange: 'transform', backfaceVisibility: 'hidden' }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/0 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="absolute bottom-5 right-5 font-display text-4xl text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 {item.id}
               </span>
@@ -151,7 +145,6 @@ const Projects = () => {
               </span>
             </div>
 
-            <span className="absolute bottom-0 left-0 h-[3px] w-0 bg-primary transition-all duration-500 group-hover:w-full" />
           </a>
         ))}
       </div>
