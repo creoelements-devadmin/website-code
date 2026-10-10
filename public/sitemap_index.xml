@@ -1,20 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://creo-elements.com/</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/about</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/work-with-us</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/contact-us</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/blog</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/clients</loc><lastmod>2026-10-10</lastmod></url>
+  <url>
+    <loc>https://creo-elements.com/</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>1.00</priority>
+  </url> 
 
-  <!-- Services -->
-  <url><loc>https://creo-elements.com/services/search-engine-optimisation</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/services/website-design-development</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/services/ecommerce-website-development</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/services/social-media-management</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/services/performance-marketing</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/services/branding-brand-identity</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/services/graphic-design</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/services/corporate-gifting</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://creo-elements.com/services/product-photography</loc><lastmod>2026-10-10</lastmod></url>
+  
+  <url>
+    <loc>https://creo-elements.com/about</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/work-with-us</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/contact-us</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/blog</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/clients</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.80</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/web-development</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/social-media</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/seo</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/digital-marketing</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/branding</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/performance-marketing</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/packaging</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/gifting-solutions</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/print-solutions</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/photography</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
+  <url>
+    <loc>https://creo-elements.com/services/pr</loc>
+    <lastmod>2025-02-01</lastmod>
+    <priority>0.90</priority>
+  </url> 
+
+  
 </urlset>
