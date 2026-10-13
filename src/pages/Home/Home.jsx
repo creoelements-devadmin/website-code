@@ -21,7 +21,7 @@ function Home() {
 
 
         {/* On Page SEO */}
-        <title>Creo Elements LLP - Digital Marketing Agency | SEO, Branding & Growth</title>
+        <title>Creo Elements LLP - Digital Marketing Agency | Search Engine Optimisation, Branding & Growth</title>
         <meta name="description" content="Creo Elements LLP is a full-service digital marketing agency offering SEO, branding, performance marketing, social media management, and website development for growing businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://creo-elements.com" />
@@ -110,3 +110,4 @@ function Home() {
 }
 
 export default Home;
+ 

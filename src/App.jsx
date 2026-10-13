@@ -21,7 +21,7 @@ function App() {
   const {pathname, search} = location;
 
     useLayoutEffect(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, [ pathname, search ])
   
 
@@ -40,7 +40,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/work-with-us" element={<WorkWithUS />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blogs" element={<BlogList />} />
           <Route path="/clients" element={<ClientPage />} />
           <Route path="/services/:serviceSlug" element={<Service />} />
           <Route path="*" element={<NotFound />} />

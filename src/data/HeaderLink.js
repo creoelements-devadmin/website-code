@@ -61,7 +61,7 @@ export const primaryLinks = [
   { to: '/about', label: 'About Us' },
   { to: '/work-with-us', label: 'Work With Us' },
   { to: '/clients', label: 'Our Clients' },
-  { to: '/blog', label: 'Blogs' },
+  { to: '/blogs', label: 'Blogs' },
 ];
 
 export const mobileLinks = [

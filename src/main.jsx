@@ -10,7 +10,7 @@ window.history.scrollRestoration = 'manual';
 
  createRoot(document.getElementById('root')).render(
 
-      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true, }}>
+      <BrowserRouter>
             <HelmetProvider>
                   <PageTransitionProvider>
                         <App />
@@ -21,3 +21,5 @@ window.history.scrollRestoration = 'manual';
 
 
 
+
+// future={{ v7_startTransition: true, v7_relativeSplatPath: true, }}
