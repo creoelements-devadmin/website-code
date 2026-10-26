@@ -221,6 +221,10 @@ export const ClientsLogo = [
     name: "Prairie by shabnam",
     url: "https://prairiebyshabnam.com/wp-content/uploads/2026/07/PS-Logo-819x1024.png"
   },
+  {
+    name: "Bank of Baroda",
+    url: "https://creo-elements.com/blogs/wp-content/uploads/2026/10/bob.png"
+  },
    
 ];
 

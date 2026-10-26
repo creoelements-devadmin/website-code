@@ -27,6 +27,16 @@ const membersData = [
     image: "/images/Anshu.png",
     slug: "anshu",
   },
+   {
+    name: "Jiya",
+    designation: " E-commerce executive",
+    description:
+      "Jiya supports e-commerce operations by uploading and managing product listings across websites and marketplaces like Amazon and Flipkart, ensuring accurate product details and images. ",
+    meta_description:
+      "Meet Jiya, E-commerce Executive at Creo Elements LLP, managing product listings, catalogue updates, and product data across online marketplaces. ",
+    image: "https://creo-elements.com/blogs/wp-content/uploads/2026/10/Jiya.png",
+    slug: "virali",
+  },
   {
     name: "Virali",
     designation: "Social Media Manager",
@@ -67,6 +77,8 @@ const membersData = [
     image: "/images/Aditya-s.png",
     slug: "aditya-s",
   },
+
+   
   // {
   //   name: "Gaurav",
   //   designation: "Junior Graphic Designer",

@@ -97,7 +97,7 @@ export const WorkWithUS = () => {
         body.append('name', formData.name);
         body.append('email', formData.email);
         body.append('phone', formData.phone);
-        body.append('website', role); // the PHP plugin reads the position from "website"
+        body.append('website', role); 
         body.append('cv', formData.cv);
 
         try {
@@ -307,8 +307,8 @@ export const WorkWithUS = () => {
                                                 aria-invalid={Boolean(errors.mumbai_based)}
                                                 className="mt-1 accent-primary w-4 h-4"
                                             />
-                                            <span className="font-primary text-xs text-btnPrimary/60">
-                                                I'm currently based in Mumbai
+                                            <span className="font-primary text-md font-semibold text-btnPrimary/60">
+                                                I'm currently based in mumbai
                                             </span>
                                         </label>
                                         {errors.mumbai_based && <p className="text-xs text-red-500 -mt-4">{errors.mumbai_based}</p>}
