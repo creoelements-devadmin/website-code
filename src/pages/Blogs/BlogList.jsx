@@ -11,7 +11,7 @@ const blogSeriesData = [
     title:
       'Going Online 101: Why Your Business Needs to Go Digital',
     url: 'https://creo-elements.com/blogs/going-online-101',
-    image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/02/Going-Online-101-1536x864.jpeg',
+    image: '/images/servies image/dgm.png',
   },
 
   {
@@ -20,7 +20,8 @@ const blogSeriesData = [
       'Discover advanced e-commerce strategies to attract customers, increase conversions, and grow your online sales.',
     title: 'Selling Online: Advanced E-commerce Strategies',
     url: 'https://creo-elements.com/blogs/selling-online-advanced-strategies-for-e-commerce-growth/',
-    image:  'https://creo-elements.com/blogs/wp-content/uploads/2025/03/Selling-Online-1024x576.jpeg',
+    image:
+      '/images/servies image/E-com.png',
   },
 
   {
@@ -29,7 +30,7 @@ const blogSeriesData = [
       'Explore the basics of digital marketing and learn how online strategies can help your business reach and engage more customers.',
     title: 'Digital Marketing 101: A Beginner’s Guide to Online Success',
     url: 'https://creo-elements.com/blogs/digital-marketing-101',
-    image:'https://creo-elements.com/blogs/wp-content/uploads/2025/02/Digital-Marketing-1536x864.jpeg',
+    image:'/images/servies image/markting.png',
   },
 
   {
@@ -39,7 +40,7 @@ const blogSeriesData = [
     title: 'Beyond the ‘What’: The Critical ‘How’ of Digital Strategy',
     // title: 'Ultimate Digital Marketing Strategy: Moving Beyond the ‘What’ to the Critical ‘How’',
     url: 'https://creo-elements.com/blogs/ultimate-digital-marketing-strategy',
-    image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/03/Marketing-1024x576.jpeg',
+    image: '/images/servies image/markting.png',
   },
 
   {
@@ -49,7 +50,8 @@ const blogSeriesData = [
     title:
       'Branding 101: A Business Owner’s Guide to Building a Powerful Brand',
     url: 'https://creo-elements.com/blogs/branding-101',
-    image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/02/branding101-1536x864.jpeg',
+    image:
+      '/images/servies image/brand.png',
   },
 
   {
