@@ -5,7 +5,7 @@ const sharedMeta = {
 
     export const servicesData = [
         {
-            name: "  Web Design & Development",
+            name: "Web Design & Development",
              mobilename: "Web Design  Development",
             slug: "website-design-development",
             meta_description: "Distinctive, responsive websites shaped around your brand, your audience and what your business needs to achieve.",
@@ -66,24 +66,7 @@ const sharedMeta = {
             icon: "/images/service Banner/PhotoShoot.png",
         },
         
-        // {
-        //     name: "Digital Marketing",
-        //     mobilename: "Digital Marketing",
-        //     slug: "digital-marketing",
-        //     meta_description: "Unlock the power of digital marketing with a winning strategy. Boost your brand’s online presence through SEO, content marketing, social media, paid ads, and email marketing. Partner with our agency today to reach your target audience, improve conversions, and stay ahead of the competition.",
-        //     description: "<p>The Digital Age Demands a Digital Edge: Why Your Brand Needs a Winning Digital Marketing Strategy<br>Imagine a world where potential customers can't find your brand online. In today's digital landscape, that's a harsh reality for businesses without a strong digital marketing strategy.<p><em>What is Digital Marketing?<br></em>Digital marketing encompasses all your online efforts to reach your target audience, promote your brand, and drive conversions. It's a vast toolbox filled with strategies like:<p>Search Engine Optimization (SEO): Improving your website's ranking in search results for relevant keywords.<br>Content Marketing: Creating valuable and engaging content (blogs, articles, videos) to attract and educate your audience.<br>Social Media Marketing: Building a strong online presence and engaging with your audience on social media platforms.<br>Paid Advertising: Utilizing platforms like Google Ads and social media advertising to reach a wider audience with targeted campaigns.<br>Email Marketing: Nurturing relationships with potential and existing customers through email campaigns.<p>Why is Digital Marketing Crucial for Brands?<p>The benefits of a well-crafted digital marketing strategy are undeniable:<br>Increased Brand Awareness: Reach a wider audience online and establish your brand as a leader in your industry.<br>Targeted Audience Engagement: Connect with potential customers who are actively searching for products or services like yours.<br>Measurable Results: Track the success of your campaigns and make data-driven decisions to optimize your strategy for maximum impact.<br>Improved Conversion Rates: Turn website visitors into paying customers with targeted marketing efforts.<br>Competitive Edge: Stay ahead of the curve and outshine your competitors in the digital space.<p>Don't Go It Alone in the Digital World<p>Building a winning digital marketing strategy requires dedication and expertise. Partnering with a reputable digital marketing agency gives your brand the edge it needs to thrive online.<p>Ready to unlock the power of digital marketing for your brand? Contact us today for a free consultation and learn how our agency can craft a strategy that delivers real results!",
-        //     icon: "/images/digital-marketing.webp",
-        // },
-       
-        
-        // {
-        //     name: "Packaging",
-        //     mobilename: "Packaging",
-        //     slug: "packaging",
-        //     meta_description: "Your packaging is a silent salesperson and a key element in customer experience. CREO Elements offers creative, functional, and eco-friendly packaging solutions, from design to prototyping. Protect your products, enhance brand appeal, and drive sales with customized packaging that stands out. Contact us today for a consultation!",
-        //     description: "<p><strong>Your packaging is more than just a box.</strong><p>It's a silent salesperson, a brand ambassador on every shelf, and a crucial element in the customer experience. At CREO Elements, we understand the power of packaging and offer a complete suite of solutions to bring your brand vision to life.<br><strong><br>From concept to creation, we'll guide you through every step:</strong><br><strong>• Packaging Design:</strong> Our team of experienced designers will collaborate with you to develop creative and functional packaging solutions that perfectly align with your brand identity and target audience. We consider factors like:<ul><li><ul><li><strong>Target Market:</strong> Who are you trying to reach? We'll design packaging that resonates with their preferences.<li><strong>Product Protection:</strong> Your packaging needs to keep your product safe during transport and storage.<li><strong>Sustainability:</strong> We also offer eco-friendly materials and printing options to minimize environmental impact.<li><strong>Shelf Appeal:</strong> Your packaging needs to stand out from the competition and grab attention on store shelves.</ul><li><strong>Prototyping & Mock-ups:</strong> Before committing to a final design, we'll create physical prototypes and mock-ups so you can visualize the packaging in 3D and make fine-tune adjustments.<li><strong> Structural Design:</strong> We offer a variety of packaging options to suit your needs, including boxes, bags, pouches, tubes, and more. Our structural engineers will ensure your packaging is both visually appealing and functionally sound.<li><strong>Printing Solutions:</strong> We leverage cutting-edge printing technology and high-quality materials to deliver exceptional print results. Whether you need vibrant colours, intricate details, or specialty finishes, we have the expertise to make your packaging stand out.</ul><p><strong>Benefits of Partnering with Us:</strong><br><strong>• One-Stop Shop:</strong> We handle the entire packaging process, saving you time and resources.<br><strong>• Experienced Team:</strong> Our team of designers, printing specialists are passionate about creating exceptional packaging solutions.<br><strong>• Customizable Solutions:</strong> We don't offer a one-size-fits-all approach. We tailor our solutions to your specific brand and product needs.<br><strong>• Sustainability Focus:</strong> We offer eco-friendly materials and printing options to support your sustainability goals.<br><strong>• Competitive Pricing:</strong> Get the best value without compromising on quality.<br><strong>Invest in Packaging that Makes a Statement.<br></strong><br>Contact us today to discuss your packaging needs and discover how we can help you create packaging that elevates your brand, protects your products, and drives sales.",
-        //     icon: "/images/seo.webp",
-        // },
+             
          {
             category: "Graphic Design",
             name: "Graphic Design",
@@ -102,28 +85,17 @@ const sharedMeta = {
             description: "<p>Crafting the perfect corporate gift can be time-consuming and stressful.<p>CREO Elements takes the guesswork out of gifting with our Corporate Gifting Service. We handle everything, from selecting thoughtful gifts that align with your brand to personalized messaging and seamless delivery. Let us create lasting impressions and strengthen your relationships with employees, clients, and partners.<p><strong>Why Choose CREO Elements</strong><ul><li><strong>Unparalleled Selection:</strong> We offer an extensive range of gifts, catering to diverse tastes and preferences. From personalised keepsakes to gourmet gift baskets, our selection is carefully curated to ensure there’s something for everyone.<li><strong>Personalisation:</strong> Make your gift truly special with our personalised options. Add a name, date, or heartfelt message to create a one-of-a-kind present that will be cherished forever.<li><strong>Convenience:</strong> Say goodbye to the hassle of hunting for the perfect gift. Our user-friendly website allows you to browse, choose, and order from the comfort of your home.<li><strong>Expert Curation:</strong> Our team of gift experts stays updated on the latest trends and timeless classics. Rest assured, every item in our collection has been handpicked for its quality and appeal.<li><strong>Prompt Delivery:</strong> We understand the importance of timely gifting. With our efficient delivery system, your gift will arrive exactly when you want it to, ensuring that your surprise is well-timed and memorable.</ul><p><strong>Our Gifting Solutions</strong><ul><li><strong>Personalised Gifts:</strong><br>Make your loved ones feel truly special with personalised gifts that reflect their personality and interests. From engraved jewellery to custom photo frames, our selection lets you add a personal touch to every present.<li><strong>Gift Baskets:</strong><br>Indulge the senses with our gourmet gift baskets filled with delectable treats, wines, and more. Perfect for corporate gifting, celebrations, or simply showing appreciation.<li><strong>Occasion-specific Gifts:</strong><br>We’ve categorised our gifts to match every occasion. Whether it’s a wedding, baby shower, or retirement party, our thoughtfully curated options ensure you find the ideal gift.<li><strong>Subscription Boxes:</strong><br>Surprise your loved ones with the gift that keeps on giving. Our subscription boxes offer a delightful experience with carefully selected items delivered straight to their doorstep.</ul><p>Join Us in Celebrating Every Moment<p>Gifting is an art, and at CREO Elements, we’re here to help you master it. Whether you’re celebrating a milestone, expressing gratitude, or simply brightening someone’s day, our gifting solutions ensure that your message of love and care shines through.",
             icon: "/images/service Banner/Corporate Gifting.png",
         },
-        // {
-        //     name: "Print Solutions",
-        //     mobilename: "Print Solutions",
-        //     slug: "print-solutions",
-        //     meta_description: "Make a lasting impression with high-quality print solutions from CREO Elements. We offer everything from business essentials to vibrant marketing materials and custom packaging. Whether you need brochures, promotional products, or unique print jobs, we deliver exceptional quality and fast turnaround. Get in touch today for a free consultation!",
-        //     description: "<p>Make a lasting impression across all touch points with our one-stop shop for premium printing solutions.<p>We cater to all your branding needs, from classic essentials to eye-catching promotional materials.<p><strong>Our comprehensive services include:</strong><br><strong>• Business Essentials:</strong> Create a professional first impression with high-quality business cards, letterheads, and envelopes. We offer a variety of paper stocks, finishes, and customization options to reflect your unique brand identity.<br><strong>• Marketing Materials:</strong> Capture attention and drive brand awareness with vibrant brochures, flyers, posters, and banners. Our printing experts will ensure your message stands out with exceptional colour accuracy and durability.<br><strong>• Promotional Products:</strong> Generate excitement and brand loyalty with customizable t-shirts, mugs, tote bags, and more. We offer a wide range of apparel and product options to suit your campaign or event.<br><strong>• Packaging Solutions:</strong> Make your products shine with eye-catching custom packaging. We offer a variety of materials and printing techniques to create packaging that's both functional and visually stunning. It's a powerful marketing tool right on your product shelf!<br><strong>• Calendar Printing:</strong> Stay top-of-mind year-round with branded calendars featuring your logo, images, and important dates. Choose from a variety of sizes and styles to fit your needs.<br><strong>• Custom Printing:</strong> We don't stop there! Have a unique printing need? Our team is here to help. We offer custom printing services for a wide range of materials and products.<p>Benefits of Partnering with Us:<p><strong>• Exceptional Quality:</strong> We use state-of-the-art printing technology and premium materials to ensure your printed materials look their absolute best.<br><strong>• Expert Guidance:</strong> Our experienced team will work closely with you to understand your brand vision and recommend the perfect printing solutions to meet your goals.<br><strong>• Seamless Ordering:</strong> Enjoy a user-friendly online platform for easy ordering and design collaboration.<br><strong>• Fast Turnaround Times:</strong> We understand your deadlines, so we offer quick turnaround times without compromising on quality.<br><strong>• Competitive Pricing:</strong> Get the best value for your budget with our competitive pricing and bulk order discounts.<br><strong><br>Grow your brand and make a lasting impression. Contact us today for a free consultation and discover how our printing solutions can help you achieve your marketing goals!</strong>",
-        //     icon: "/images/print-solutions.webp",
-        // },
-        
-        // {
-        //     name: "Public Relations (PR)",
-        //     mobilename: "Public Relations (PR)",
-        //     slug: "pr",
-        //     meta_description: "Build a strong reputation and drive brand success with CREO Elements' PR services. From media relations to crisis communication, influencer partnerships, and thought leadership campaigns, we help shape your brand's narrative. Let us help you cultivate, protect, and amplify your brand’s reputation. Contact us today to start your PR journey!",
-        //     description: "<p><strong>Building a good reputation for your business is important!</strong> Public Relations (PR) can help you with that.<p>PR is like building a positive reputation for a company or person. It involves crafting messages that get people to trust and recognize the brand. PR uses various tools to spread awareness and shape how the public sees the company, ultimately helping it grow.<p><strong>Our PR Services</strong><ul><li><strong>Media Relations:<br></strong>Our PR experts excel in building and nurturing relationships with key media outlets to secure positive coverage, interviews, and features that tell your brand’s story.</ul><ul><li><strong>Brand Messaging:<br></strong>Crafting a compelling brand narrative is at the heart of effective PR. We work closely with you to develop and refine your brand’s messaging to resonate with your target audience.</ul><ul><li><strong>Crisis Communication:<br></strong>When challenges arise, our crisis communication team steps in to manage the situation swiftly and effectively, minimizing damage and safeguarding your reputation.</ul><ul><li><strong>Influencer Partnerships:<br></strong>Leverage the power of influencers to authentically connect with your audience. We identify and collaborate with influencers who align with your brand’s values and objectives.</ul><ul><li><strong>Thought Leadership:<br></strong>Establish your brand as an industry authority with thought leadership campaigns. We position your experts as go-to sources in your field, enhancing your credibility.</ul><p><strong>Let’s Shape Your Narrative Together</strong><p>Your brand’s reputation is one of your most valuable assets. At Creo Elements, we’re passionate about helping you cultivate, protect, and amplify it through strategic PR initiatives. Join us in harnessing the power of PR to tell your story, build trust, and drive success.<div> </div>",
-        //     icon: "/images/pr.webp",
-        // },
+       
         
         
-        // Add more services as needed
-    ];
+        
+        
+     ];
 
+
+
+
+    // services SEO Data
 const serviceSeoData = {
     "web-development": {
         seoTitle: "Website Design Company in Mumbai | Creo Elements",
@@ -283,6 +255,10 @@ const serviceSeoData = {
     }
 };
 
+
+
+
+// service Categories
 const serviceCategories = {
     'website-design-development': 'Web Design & Development',
     'ecommerce-website-development': 'Web Design & Development',

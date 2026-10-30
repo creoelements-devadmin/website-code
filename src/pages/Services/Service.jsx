@@ -5,8 +5,7 @@ import { Button } from '../../components/Button';
 import { servicesData } from '../../data/ServiceData';
 import FAQ from '../FAQ';
 import SEO from '../../components/SEO';
-import { seo } from "../../data/SEOData";
-
+ 
 
 
 export const Service = () => {
