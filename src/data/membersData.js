@@ -16,8 +16,8 @@ const membersData = [
       "A former banker turned entrepreneur, brings a unique perspective to her role as co-founder. Her years of experience in commercial banking at a multinational institution honed her analytical skills, which she now seamlessly blends with creativity to develop impactful brands.",
     meta_description:
       "Hiral Doctor, Co-founder of Creo Elements LLP, combines banking expertise and creativity to build impactful brands.",
-    image: "/images/Hiral Mam.png",
-    slug: "https://creo-elements.com/blogs/wp-content/uploads/2026/10/Hiral-Mam.png",
+    image: "https://creo-elements.com/blogs/wp-content/uploads/2026/10/Hiral-Mam.png",
+    slug: "hiral doctor",
   },
    {
     name: "Anshu",
