@@ -173,8 +173,9 @@ export const CTA = () => {
           </div>
 
           {/* Sub-Footer Rail */}
-          <div className="w-full pt-8 mt-2 border-t text-center border-black/8 flex flex-col sm:flex-row items-center justify-center gap-4 text-[11px] sm:text-xs font-Poppins ">
+          <div className="w-full pt-8 mt-2 border-t text-center border-black/8 flex flex-col   items-center justify-center gap-4 text-[11px] sm:text-xs font-Poppins ">
             <p>© {new Date().getFullYear()} Creo Elements LLP. All rights reserved.</p>
+            <p className="text-[9px] w-full">All client logos, brand names, and trademarks displayed on this website are the property of their respective owners and are used solely to acknowledge and showcase our professional engagements and work. All rights belong to their respective trademark holders.</p>
           </div>
         </div>
       </div>

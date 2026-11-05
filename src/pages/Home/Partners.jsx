@@ -61,9 +61,7 @@ export const Partners = () => {
       const validCards = cardsRef.current.filter(Boolean);
       gsap.fromTo(
         validCards,
-        {
-          opacity: 0,
-          y: 50,
+        { opacity: 0, y: 50,
           scale: 0.96,
         },
         {
@@ -154,6 +152,20 @@ export const Partners = () => {
               </div>
             </article>
           ))}
+        </div>
+
+
+
+        <div className="md:px-10 pt-10 px-5 ">
+          <p className="text-[10px]"><strong className="text-primary">Client Logo & Trademark Disclaimer : </strong>
+
+All brand names, logos, and trademarks displayed on this website belong to their respective owners and are the property of their respective companies.
+
+These logos are displayed solely for the purpose of showcasing our past and present client relationships, projects, collaborations, and professional work undertaken by Creo Elements LLP.
+
+All trademarks and intellectual property rights remain with their respective owners. The display of these logos does not imply any additional endorsement, sponsorship, or affiliation beyond the professional engagement or work undertaken.
+
+If any brand owner or authorised representative has concerns regarding the display of their logo, they may contact us for clarification or resolution.</p>
         </div>
       </div>
     </section>
